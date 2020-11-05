@@ -1,7 +1,7 @@
 'use strict';
 const {CoreProcessor2, CommonErrorCodes, AWSTransactionalWriteService, AWSDynamoTokenService, AWSDynamoGlobalAddressService}
     = require("@payburner/keyburner-sidewinder-core/dist/npm");
-var AWS = require('aws-sdk');
+let AWS = require('aws-sdk');
 module.exports.process = async event => {
 
     const docClient = new AWS.DynamoDB.DocumentClient();
@@ -38,6 +38,8 @@ module.exports.process = async event => {
         }
     }
     catch(error) {
+        console.log('Processing error:' + error);
+        console.log('Processing error:' + JSON.stringify(error, null, 2));
         return {
             statusCode: 500,
             body: JSON.stringify(CommonErrorCodes.SYSTEM_PROBLEM_UNKNOWN)
