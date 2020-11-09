@@ -333,6 +333,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/salt/pillars/xrapid/domains/api-us-staging.sls">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/salt/pillars/xrapid/init.sls">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/salt/states/xrapid/files/xrapid.properties.jinja">
           <value>
             <set />
@@ -484,6 +494,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/main/resources/xrapid-DEV.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/test/java/com/ripple/xrapid/server/helper/Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/test/java/com/ripple/xrapid/server/rest/controllers/v1/SupportedValuesControllerTest.java">
           <value>
             <set />
           </value>

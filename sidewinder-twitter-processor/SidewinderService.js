@@ -5,7 +5,7 @@ const {DataService}  = require( "./DataService" );
 class SidewinderService {
 
     constructor( secret, docClient ) {
-        this.environment = 'PayburnerBot';
+        this.environment = 'Payburner';
         this.token = 'JIMMYJAY';
         this.initialAmount = 10000000000000000000;
         this.grantAmount = 100000000;
@@ -83,7 +83,7 @@ class SidewinderService {
             const payload = self.transactionFactory.newCreateTokenTransaction(
                 environmentAccount.data.sequence+1, environmentAccount.data.last_txn_id, e,
                 t,
-                6, 10, true, false, false);
+                10, 6, true, false, false);
             payload.initial_amount = i
 
             console.log('INITIALIZING TOKEN:' + JSON.stringify(payload, null, 2));
@@ -202,7 +202,7 @@ class SidewinderService {
 
     getApi( platform, id ) {
         const self = this;
-        if (platform === 'twitter' && (id === '1296063505984966656' || id === 1296063505984966656) ) {
+        if (platform === 'twitter' && (id === '1296063505984966656' || id === 1296063505984966656 || id === 'PayburnerBot') ) {
             return new Promise((resolve) => {
                 console.log('Returning owner api for id:' + id);
                 self.owner.isNew = false;

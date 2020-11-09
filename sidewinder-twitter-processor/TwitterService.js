@@ -9,6 +9,7 @@ class TwitterService {
         this.config = config;
         this.T = null;
         this.sidewinderService = sidewinderService;
+        this.botName = 'PayburnerBot';
 
     }
 
@@ -84,20 +85,20 @@ class TwitterService {
         });
     }
 
-    getAccount(senderId) {
+    getAccount(senderScreenName) {
         const comp = this;
         return new Promise((resolve, reject) => {
-            comp.sidewinderService.getApi('twitter', senderId).then((e) => {
+            comp.sidewinderService.getApi('twitter', senderScreenName).then((e) => {
                 if (e.isNew) {
-                    comp.sidewinderService.fund(senderId).then(
+                    comp.sidewinderService.fund(senderScreenName).then(
                         (funding) => {
 
                             comp.sidewinderService.getTokenAccount(
                                 e).then((account) => {
                                 console.log(
-                                    'Got Token Account IsNew:' + senderId);
+                                    'Got Token Account IsNew:' + senderScreenName);
                                 resolve({
-                                    senderId: senderId,
+                                    senderId: senderScreenName,
                                     api: e,
                                     account: account,
                                     isNew: true
@@ -107,9 +108,9 @@ class TwitterService {
                 } else {
                     comp.sidewinderService.getTokenAccount(
                         e).then((account) => {
-                        console.log('Got Token Account Is Not New:' + senderId);
+                        console.log('Got Token Account Is Not New:' + senderScreenName);
                         resolve({
-                            senderId: senderId,
+                            senderId: senderScreenName,
                             api: e,
                             account: account,
                             isNew: false
@@ -119,8 +120,6 @@ class TwitterService {
             });
         })
     }
-
-
 
     handleMessage(payload, messageEvent) {
         const comp = this;
@@ -133,21 +132,31 @@ class TwitterService {
                     + (typeof messageEvent.message_create.sender_id));
 
                 const senderId = messageEvent.message_create.sender_id;
-                if (senderId === '1296063505984966656') {
-                    console.log('Ignoring dm by the bot');
-                    returnVal.push('Ignoring dm by the bot');
-                } else {
-                    const senderUser = comp.getUser(payload, senderId);
-                    console.log('user:' + senderId + ' '
-                        + messageEvent.message_create.message_data.text);
-                    if (senderUser !== null) {
+                const senderUser = comp.getUser(payload, senderId);
+
+                if (senderUser !== null) {
+
+                    const senderScreenName = senderUser.screen_name;
+                    console.log('SCREEN NAME:' + senderScreenName + ', BOT NAME:'
+                        + comp.botName);
+
+
+                    // -- let us test to see if the source name is the name of the bot
+                    if (senderScreenName === comp.botName) {
+                        console.log('Ignoring dm by the bot');
+                        returnVal.push('Ignoring dm by the bot');
+                    } else {
+
+                        console.log('! user:' + senderId + ' '
+                            + messageEvent.message_create.message_data.text
+                            + ' ' + senderUser.screen_name);
 
                         const accountResponse = await comp.getAccount(
-                            senderId);
+                           senderScreenName );
                         if (accountResponse.isNew) {
                             const tweetResponse = await comp.tweet(
                                 'Welcome @'
-                                + senderUser.screen_name
+                                + senderScreenName
                                 + '. Your initial tipping balance is '
                                 + AccountUtils.calculateUnit(
                                 accountResponse.account.data.available_balance.toFixed(),
@@ -223,15 +232,17 @@ class TwitterService {
             if (followEvent.type === 'follow'
                 && followEvent.target.screen_name
                 === 'PayburnerBot') {
+                const sourceScreenName = followEvent.source.screen_name;
+                console.log('SCREEN NAME:' + sourceScreenName);
                 const isFollowing = await comp.sidewinderService.isFollowing(
-                    followEvent.source.id)
+                    sourceScreenName)
                 if (!isFollowing) {
                     const accountResponse = await comp.getAccount(
-                        followEvent.source.id)
+                        sourceScreenName)
                     if (accountResponse.isNew) {
                         const tweetResponse = await comp.tweet(
                             'Welcome @'
-                            + followEvent.source.screen_name
+                            + sourceScreenName
                             + '. Your initial tipping balance is '
                             + AccountUtils.calculateUnit(
                             accountResponse.account.data.available_balance.toFixed(),
@@ -244,7 +255,7 @@ class TwitterService {
 
                     }
                     const followMarked = await comp.sidewinderService.dataService.markFollow(
-                        'twitter', followEvent.source.id);
+                        'twitter', sourceScreenName);
                     console.log('MARKED FOLLOWED:' + followMarked);
                     console.log(
                         'MARKED FOLLOWED:' + JSON.stringify(followMarked, null,
@@ -263,7 +274,7 @@ class TwitterService {
 
                 } else {
                     console.log('re-follow by '
-                        + followEvent.source.id
+                        + sourceScreenName
                         + '. Ignoring.');
                 }
             }
@@ -275,19 +286,20 @@ class TwitterService {
         const comp = this;
         return new Promise(async (resolve) => {
             const returnVal = [];
-            if (typeof tweetCreateEvent.in_reply_to_user_id
+            if (typeof tweetCreateEvent.in_reply_to_screen_name
                 !== 'undefined') {
-                const userId = tweetCreateEvent.user.id;
-                if (userId === 1296063505984966700 || userId
-                    === 1296063505984966656) {
+
+                const sourceScreenName = tweetCreateEvent.user.screen_name;
+                console.log('SCREEN NAME:' + sourceScreenName + ' ' + comp.botName);
+                if (sourceScreenName === comp.botName) {
                     console.log('Ignoring tweet by the bot:'
-                        + tweetCreateEvent.text);
+                        + tweetCreateEvent.text + ' ' + sourceScreenName);
                     return;
                 }
                 const text = tweetCreateEvent.text; // @toocool2betrue @PayburnerBot +1
                 if (typeof text !== 'undefined' && text !== null) {
                     const accountResponse = await comp.getAccount(
-                        userId)
+                        sourceScreenName)
                     const regex = /(.+)(\+)([\d]+$|[\d]+\.[\d]+$|\.[\d]+$)/;
                     const matches = text.match(regex);
                     console.log(
@@ -298,7 +310,7 @@ class TwitterService {
                         console.log('Amount:' + parseInt(
                             AccountUtils.calculateRaw(amount, 6)));
                         const inReplyToUserIdAccount = await comp.getAccount(
-                            tweetCreateEvent.in_reply_to_user_id);
+                            tweetCreateEvent.in_reply_to_screen_name);
                         const transfer = await comp.sidewinderService.transfer(
                             accountResponse.api,
                             inReplyToUserIdAccount.api,
