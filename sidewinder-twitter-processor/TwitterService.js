@@ -169,7 +169,7 @@ class TwitterService {
                         }
 
                         if (messageEvent.message_create.message_data.text
-                            === 'balance') {
+                            === '/balance') {
                             returnVal.push('sending balance');
                             const sendMessageResponse = await comp.sendMessage(
                                 senderId,
@@ -183,17 +183,17 @@ class TwitterService {
                                 sendMessageResponse));
 
                         } else if (messageEvent.message_create.message_data.text
-                            === 'help') {
+                            === '/help') {
                             returnVal.push('sending help');
                             const sendHelpMessage = await comp.sendMessage(
                                 senderId,
-                                'Welcome to @PayburnerBot.  Commands include: help, balance, info')
+                                'Welcome to @PayburnerBot.  Commands include: /help, /balance, /info')
                             returnVal.push('sent help');
                             console.log(
                                 'HELP DM Sent:' + JSON.stringify(
                                 sendHelpMessage));
                         } else if (messageEvent.message_create.message_data.text
-                            === 'info') {
+                            === '/info') {
                             returnVal.push('sending info');
                             const sendMessageResult = await comp.sendMessage(
                                 senderId,
@@ -210,7 +210,7 @@ class TwitterService {
                             returnVal.push('sending generic');
                             const sendMessageResult = await comp.sendMessage(
                                 senderId,
-                                'Welcome to the Payburner Bot.  Commands include: help, balance, info')
+                                'Welcome to the Payburner Bot.  Commands include: /help, /balance, /info')
                             returnVal.push('sent generic');
                             console.log(
                                 'GENERIC DM Sent:' + JSON.stringify(

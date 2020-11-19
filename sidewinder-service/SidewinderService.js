@@ -171,7 +171,6 @@ class SidewinderService {
                 environmentAccount.data.last_txn_id, e,
                 t,
                 from.getAddress(), to.getAddress(), a );
-            console.log('XFER REQUEST:' + JSON.stringify(payload, null, 2));
             const signedTransaction = from.signTokenCreateRequest(
                 payload);
 
@@ -181,7 +180,6 @@ class SidewinderService {
                     signedTransaction.signedTransaction, {
                         headers: {'Content-Type': 'text/plain'}
                     });
-                console.log('XFER RESULT:' + JSON.stringify(result));
                 resolve(result);
             } catch (error) {
                 console.log(JSON.stringify(error.response.data, null, 2));
