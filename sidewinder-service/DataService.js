@@ -1,8 +1,9 @@
 const {Api} = require( "./Api");
+const {SecretService} = require('./SecretService');
 class DataService {
 
-    constructor( docClient ) {
-
+    constructor( docClient, secretManager ) {
+        this.secretService = new SecretService(secretManager);
         this.docClient = docClient;
     }
 
@@ -65,36 +66,7 @@ class DataService {
     }
 
     getPlatFormAccount(platform, id) {
-        const self = this;
-        if (typeof id === "number") {
-            id = id.toFixed(0);
-        }
-
-        return new Promise((resolve, reject) => {
-            const params = {
-                TableName: "sidewinder_social_account_mappings",
-                KeyConditionExpression: "socialplatform = :socialplatform and socialid = :socialid",
-                ExpressionAttributeValues: {
-                    ":socialid": id,
-                    ":socialplatform": platform
-                }
-            };
-
-            self.docClient.query(params, function (err, data) {
-                if (err) {
-                    console.error("Unable to query. Error:",
-                        JSON.stringify(err, null, 2));
-                    reject(err);
-                } else {
-
-                    if (data.Items.length === 0) {
-                        reject('Not found.')
-                    } else {
-                        resolve(data.Items[0]);
-                    }
-                }
-            });
-        })
+        return this.secretService.getPlatFormAccount(platform, id);
     }
 
     getApi(platform, id) {
@@ -118,24 +90,14 @@ class DataService {
                 api.isNew = true;
                 const seed = api.seed;
 
-                const dataBody = {
-                    socialplatform: platform,
-                    socialid: id,
-                    seed: seed,
-                    address: api.getAddress()
-                };
-                const params = {
-                    TableName: 'sidewinder_social_account_mappings',
-                    Item: dataBody
-                };
-                self.docClient.put(params, function (err, data) {
-                    if (err) {
-                        reject('Db error: ' + err);
-                    } else {
-                        resolve( api );
-                    }
-                });
+                self.secretService.putPlatformAccount(platform, id, api.getAddress(), seed)
 
+                .then((ok)=>{
+                    resolve(api);
+                }).catch((nok) => {
+                    console.log(nok);
+                    reject('Secret error: ' + nok);
+                })
             })
 
         });

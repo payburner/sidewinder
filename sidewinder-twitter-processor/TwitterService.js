@@ -90,7 +90,7 @@ class TwitterService {
         return new Promise((resolve, reject) => {
             comp.sidewinderService.getApi('twitter', senderScreenName).then((e) => {
                 if (e.isNew) {
-                    comp.sidewinderService.fund(senderScreenName).then(
+                    comp.sidewinderService.fund('twitter', senderScreenName).then(
                         (funding) => {
 
                             comp.sidewinderService.getTokenAccount(
@@ -235,6 +235,7 @@ class TwitterService {
                 const sourceScreenName = followEvent.source.screen_name;
                 console.log('SCREEN NAME:' + sourceScreenName);
                 const isFollowing = await comp.sidewinderService.isFollowing(
+                    'twitter',
                     sourceScreenName)
                 if (!isFollowing) {
                     const accountResponse = await comp.getAccount(

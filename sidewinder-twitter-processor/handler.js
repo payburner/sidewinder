@@ -1,7 +1,7 @@
 'use strict';
 
 const AWS = require('aws-sdk');
-const {SidewinderService} = require('./SidewinderService');
+const {SidewinderService} = require('@payburner/sidewinder-service');
 const {TwitterService} = require('./TwitterService');
 module.exports.process = async event => {
 
@@ -23,7 +23,7 @@ module.exports.process = async event => {
     });
 
     const docClient = new AWS.DynamoDB.DocumentClient();
-    const sidewinderService = new SidewinderService(result.xrpAddressSecret, docClient );
+    const sidewinderService = new SidewinderService(result.xrpAddressSecret, docClient, client );
     await sidewinderService.init();
     const twitterService = new TwitterService(result, sidewinderService);
     twitterService.init();

@@ -83,6 +83,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/dist/npm/index.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/dist/npm/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/dist/npm/model/TokenAccount.d.ts">
           <value>
             <set />
@@ -104,6 +114,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/CreateTokenTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/OffRampRequestTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/OffRampResultTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/OnRampResultTransaction.ts">
           <value>
             <set />
           </value>
@@ -238,6 +268,76 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/DataService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/SecretService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/SidewinderService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-bot/SlackService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-bot/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-bot/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-bot/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-slash-info/SidewinderService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-slash-info/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-social-core/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/.gitignore">
           <value>
             <set />
@@ -279,6 +379,86 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/src/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-api/ripplenet/target/generated-sources/swagger/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/api/client/XcurrentApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/models/GetPaymentsParams.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/schedulers/payments/CompletePaymentsScheduler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/services/XCurrentApiManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/services/payments/XCurrentApiManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/services/payments/processors/CompletePaymentsProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/services/payments/processors/LockPaymentsProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/reference/middleware/server/ripplenet/services/quotes/QuotesServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/services/XCurrentApiManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-core/src/main/java/com/ripple/ripplenet/services/quotes/QuotesServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-server/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-server/src/main/java/com/ripple/controllers/payments/AcceptQuoteController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-server/src/main/java/com/ripple/ripplenet/reference/middleware/server/controllers/payments/AcceptQuoteController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/middleware-server/src/main/java/com/ripple/ripplenet/reference/middleware/server/controllers/quotes/CreateQuoteCollectionController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/reference-middleware-java/pom.xml">
           <value>
             <set />
           </value>
@@ -329,6 +509,61 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-handlers/src/main/java/com/ripple/protocol/payments/features/payment/base/substrategy/ExecuteSettlementHandlerBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/engine-fiat-impl/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/ripplenet-protocol-core-handlers/src/main/java/com/ripple/ripplenet/protocol/facade/HealthCheckFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-node-consolidated-poc/.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-node-consolidated-poc/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-node-consolidated-poc/ripplenet-protocol/ripplenet-protocol-core-handlers/src/main/java/com/ripple/ripplenet/protocol/facade/HealthCheckFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-node-consolidated-poc/xrapid-ripplenet/.gitlab-ci.yml">
           <value>
             <set />
           </value>
@@ -509,6 +744,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-server/target/generated-sources/swagger/src/main/java/com/ripple/xrapid/server/api/v2/PaymentsApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
           <value>
             <set />
           </value>

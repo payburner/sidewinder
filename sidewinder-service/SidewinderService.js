@@ -4,7 +4,7 @@ const axios = require( 'axios' );
 const {DataService}  = require( "./DataService" );
 class SidewinderService {
 
-    constructor( secret, docClient ) {
+    constructor( secret, docClient, secretManager ) {
         this.environment = 'Payburner';
         this.token = 'JIMMYJAY';
         this.initialAmount = 10000000000000000000;
@@ -13,7 +13,8 @@ class SidewinderService {
         this.transactionFactory = new TransactionFactory();
         this.owner = new Api();
         this.owner.initializeAddress(secret);
-        this.dataService = new DataService(docClient);
+        this.dataService = new DataService(docClient, secretManager);
+        this.ownerId = 'PayburnerBot';
     }
 
     async init() {
@@ -25,7 +26,6 @@ class SidewinderService {
                 throw "Could not create token";
             }
         }
-
     }
 
     getToken() {
@@ -105,14 +105,14 @@ class SidewinderService {
 
     }
 
-    fund(toscreenname) {
+    fund(platform, toscreenname) {
         const self = this;
         const e = self.environment;
         const t = self.token;
 
         const a = this.grantAmount;
         return new Promise(async (resolve, reject) => {
-            const d = await self.getApi('twitter', toscreenname);
+            const d = await self.getApi(platform, toscreenname);
             const environmentAccount = await self.getEnvironmentAccount(self.owner);
 
             // -- this should succeed.
@@ -139,12 +139,12 @@ class SidewinderService {
         })
     }
 
-    isFollowing(senderId) {
+    isFollowing(platform, senderId) {
         const comp = this;
         return new Promise((resolve) => {
             console.log('Check new follow for ' + senderId );
             console.log('Type of follow ' + (typeof senderId));
-            comp.dataService.isFollowing('twitter', senderId).then(
+            comp.dataService.isFollowing(platform, senderId).then(
                 function (isFollowing) {
                     console.log(
                         'Is following: ' + senderId + ' ' + isFollowing);
@@ -202,7 +202,7 @@ class SidewinderService {
 
     getApi( platform, id ) {
         const self = this;
-        if (platform === 'twitter' && (id === '1296063505984966656' || id === 1296063505984966656 || id === 'PayburnerBot') ) {
+        if (id === this.ownerId) {
             return new Promise((resolve) => {
                 console.log('Returning owner api for id:' + id);
                 self.owner.isNew = false;
@@ -214,8 +214,6 @@ class SidewinderService {
         }
 
     }
-
-
 }
 
 module.exports.SidewinderService = SidewinderService;
