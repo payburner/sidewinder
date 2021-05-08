@@ -1,9 +1,11 @@
 'use strict';
-const {SlackService} = require( "./SlackService");
+const {SlackService} = require("./SlackService");
 const AWS = require('aws-sdk');
 const {SidewinderService} = require('@payburner/sidewinder-service');
+const qs = require('qs');
+const axios = require('axios');
 
-const ensureIdempotency = function( docClient, id ) {
+const ensureIdempotency = function (docClient, id) {
     return new Promise((resolve) => {
         const dynamodbParams = {
             TableName: 'sidewinder_message_idempotency',
@@ -12,7 +14,7 @@ const ensureIdempotency = function( docClient, id ) {
             },
             ConditionExpression: 'attribute_not_exists(id)'
         };
-        docClient.put(dynamodbParams, function(err, data) {
+        docClient.put(dynamodbParams, function (err, data) {
             if (err) {
                 console.log(err, err.stack);
                 resolve(false);
@@ -33,9 +35,8 @@ module.exports.process = async event => {
     let client = new AWS.SecretsManager({
         region: region
     });
-    const result = await new Promise((resolve, reject) => {
+    const config = await new Promise((resolve, reject) => {
         client.getSecretValue({SecretId: secretName}, function (err, data) {
-
             if (err) {
                 console.log(err);
                 reject()
@@ -46,11 +47,12 @@ module.exports.process = async event => {
     });
 
     const docClient = new AWS.DynamoDB.DocumentClient();
-    const sidewinderService = new SidewinderService(result.xrpAddressSecret, docClient, client );
+    const sidewinderService = new SidewinderService(config.xrpAddressSecret,
+        docClient, client, config);
     await sidewinderService.init();
-    const slackService = new SlackService(result, sidewinderService);
+    const slackService = new SlackService(config, sidewinderService);
 
-    if (result.slackVerificationToken !== data.token){
+    if (config.slackVerificationToken !== data.token) {
 
         return {
             statusCode: 401,
@@ -71,11 +73,29 @@ module.exports.process = async event => {
         };
     }
 
-    if (typeof data.event !== 'undefined' && typeof data.event.type !== 'undefined' && data.event.type == 'app_mention') {
-        const ensured = await ensureIdempotency(docClient, data.event.client_msg_id);
+    if (typeof data.event !== 'undefined' && typeof data.event.type
+        !== 'undefined' && data.event.type == 'app_mention') {
+        const ensured = await ensureIdempotency(docClient,
+            data.event.client_msg_id);
         if (ensured) {
-            const response = await slackService.handleMention(data.event.team, data.event.user, data.event.text);
+            const response = await slackService.handleMention(data.event.team,
+                data.event.user, data.event.text);
             console.log('Handle Response:' + JSON.stringify(response, null, 2));
+        }
+    } else if (typeof data.event !== 'undefined' && typeof data.event.type
+        !== 'undefined' && data.event.type == 'app_home_opened') {
+        const ensured = await ensureIdempotency(docClient, data.event_id);
+        if (ensured) {
+            const response = await slackService.handleVisitHome(data.team_id,
+                data.event.user, data.event.tab);
+            const args = {
+                token: config.oauthToken,
+                user_id: data.event.user,
+                view: JSON.stringify(response)
+            };
+
+            await axios.post(
+                'https://slack.com/api/views.publish', qs.stringify(args));
         }
     }
 

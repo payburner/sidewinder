@@ -1,0 +1,14 @@
+{
+  "twitter_apiKey": "LYCeNFUrUgpFcFPeyENHTONH8",
+  "twitter_apiSecretKey": "LbXMxTJmHuXGuAXBsXpKHdl0Z1XjVnMZ8hbJ5JScrsMZluGW5E",
+  "twitter_accessToken": "1296063505984966656-2yuUKBnaVN96uv4pHj5USK7kjxQ0jP",
+  "twitter_accessTokenSecret": "kq5LEvOMCkj6lOJHseqRnTvHba6MwDciYukDVcMVyw4uU",
+  "twitter_env": "PayburnerWallet",
+  "sidewinder_xrpAddressSecret": "sEdTqT4o2zszRYf5HsLRGFk3YLHth2S",
+  "botName": "PayburnerSocial",
+  "token": "mXRP",
+  "botBusinessLambda": "https://8ub77wj9b6.execute-api.us-west-1.amazonaws.com/dev/process",
+  "sidewinder_address": "rhY2avHExFhK7nKJe2FcoVXLTMmeKCBCZc",
+  "twitterId": "1296063505984966656"
+
+}

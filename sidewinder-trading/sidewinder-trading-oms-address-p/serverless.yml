@@ -1,0 +1,39 @@
+service: sidewinder-trading-oms-address-p
+app: sidewinder
+org: payburner
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  iam:
+    role:
+      managedPolicies:
+        - 'arn:aws:iam::096916637957:policy/Allow_Submit_Task_Status'
+        - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
+  runtime: nodejs12.x
+  timeout: 45
+  deploymentBucket:
+    name: payburner-serverless
+    serverSideEncryption: AES256
+  # you can overwrite defaults here
+  stage: dev
+  region: us-west-1
+
+functions:
+  process-txn:
+    handler: handler.process
+    events:
+      - http:
+          path: process
+          method: post
+
+plugins:
+  - serverless-layers
+  - serverless-deployment-bucket
+
+custom:
+  serverless-layers:
+    functions: # optional
+      - process-txn
+    dependenciesPath: ./package.json
+

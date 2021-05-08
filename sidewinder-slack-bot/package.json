@@ -1,15 +1,16 @@
 {
   "name": "sidewinder-slack-bot",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "@payburner/keyburner-core": "^1.1.17",
     "@payburner/keyburner-sidewinder-core": "^1.1.45",
     "@payburner/keyburner-sidewinder-model": "^1.1.35",
     "@payburner/payburner-core-model": "0.0.8",
-    "@payburner/sidewinder-service": "0.0.2",
+    "@payburner/sidewinder-service": "0.0.26",
     "aws-sdk": "^2.648.0",
     "axios": "^0.21.0",
+    "qs": "^6.9.4",
     "querystring": "^0.2.0",
     "twit": "^2.2.11",
     "uuid4": "^1.1.4",

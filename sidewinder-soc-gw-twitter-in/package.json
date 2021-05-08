@@ -1,0 +1,22 @@
+{
+  "name": "sidewinder-soc-gw-twitter-in",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.18",
+    "@payburner/keyburner-sidewinder-model": "^1.1.42",
+    "@payburner/sidewinder-service": "0.0.200",
+    "aws-sdk": "^2.648.0",
+    "axios": "^0.21.0",
+    "md5": "^2.3.0",
+    "twit": "^2.2.11",
+    "twitter-autohook": "^1.7.2",
+    "twitter-webhooks": "^0.3.3",
+    "uuid4": "^1.1.4",
+    "yargs": "^15.4.0"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

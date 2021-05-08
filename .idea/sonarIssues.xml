@@ -3,6 +3,101 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$USER_HOME$/Library/Caches/IntelliJIdea2018.3/temp-testng-customsuite.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../aqfr.js/dist/aqfr.esm.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../aqfr.js/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../aqfr.js/src/main.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/dist/npm/index.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/dist/npm/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/dist/npm/services/KeyBurner.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/dist/npm/services/KeyBurner.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/src/index.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/src/model/Block.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/src/model/DecodedTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-core/src/model/SignedBlock.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/model/Block.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/model/SignedBlock.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/model/TokenDefinition.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/OffRampResultTransaction.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/OnRampResultTransaction.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/TransactionTypes.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/package.json">
           <value>
             <set />
@@ -28,6 +123,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/model/TransactionResponse.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/model/UnderlyingTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing/CoreProcessor.ts">
           <value>
             <set />
@@ -43,7 +148,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/CoreProcessorIntake.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/CreateTokenTransactionProcessor.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/OffRampRequestTransactionProcessor.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/OffRampResultTransactionProcessor.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/OnRampTransactionProcessor.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/processing2/README.txt">
           <value>
             <set />
           </value>
@@ -54,6 +184,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/GlobalAddressService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/UnderlyingTransactionService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSDynamoEnvironmentBlockService.ts">
           <value>
             <set />
           </value>
@@ -69,6 +209,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSDynamoTokenQueryService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSDynamoTokenService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSDynamoTransactionService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSDynamoUnderlyingTransactionService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-core/src/services/impl/aws/AWSTransactionalWriteService.ts">
           <value>
             <set />
           </value>
@@ -118,6 +278,46 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/index.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/Block.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/SignedBlock.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/TokenAccount.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/TokenDefinition.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/UnderlyingTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/UnderlyingTransactionDirection.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/model/UnderlyingTransactionStatus.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/CreateTokenTransaction.ts">
           <value>
             <set />
@@ -129,6 +329,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/OffRampResultTransaction.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../keyburner-sidewinder-model/src/transactions/OnRampFromUnderlyingTransaction.ts">
           <value>
             <set />
           </value>
@@ -188,6 +393,91 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/ButtonAppBar/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/IdentityMatch/IdentityButton/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/Network/NetworkProfile/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/OnBoarding/ProfileCreator/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/PayForm/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/PayID/MyPayID/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/PayID/ThumbprintForm/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/PaymentRequests/PaymentRequestsManager/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/RequestForm/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/Components/TxnProfile/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-browser-extension/src/manifest.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-gateway/server/src/main.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-gateway/sites/gateway/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-gateway/sites/gateway/js/controller.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-gateway/sites/gateway/js/gateway.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/config/config.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/lib/services/Sidewinder/SidewinderService.js">
           <value>
             <set />
@@ -203,7 +493,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/sites/manager/src/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/sites/manager/src/js/metrics.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/src/main.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/src/services/Api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner-service-xch-accounts/server/src/services/MetricsDatabase.js">
           <value>
             <set />
           </value>
@@ -233,6 +543,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../payburner.com/public/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner.com/public/paystring.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../payburner.com/src/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../paybutton.js/src/components/pay-button/pay-button.tsx">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../sdwndr/generate.sh">
           <value>
             <set />
@@ -253,7 +583,247 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/config/PayburnerWallet.config.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/config/config.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/run.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/src/main.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/src/test.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sidewinder-twitter-ccxt-frontend/server/systemd">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-platform-customer-rewards-service/BotBusinessLogic.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-platform-customer-rewards-service/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-platform-customer-rewards-service/node_modules/@payburner/sidewinder-service/RewardsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-platform-customer-rewards-service/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-platform-customer-rewards-service/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-to-customer-rewards-service/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-to-customer-rewards-service/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/bot-to-customer-rewards-service/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-alerts-xrpl-alerts-processor/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-alerts-xrpl-event-processor/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-alerts-xrpl-event-processor/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-social-xrpl-event-processor/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-social-xrpl-event-processor/node_modules/@payburner/sidewinder-service/RewardsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-social-xrpl-event-processor/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pb-social-xrpl-event-processor/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/rn-bitgo-signing-app/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/rn-bitgo-signing-app/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/rn-bitgo-signing-app/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/setup/install-twitter.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-block-scheduler/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-block-scheduler/node_modules/@payburner/keyburner-sidewinder-core/dist/npm/processing2/CoreProcessor2.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-block-scheduler/node_modules/@payburner/keyburner-sidewinder-model/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-block-scheduler/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-block-scheduler/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/data.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/lib/call-bot-api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/Api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/call-bot-api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/services/utils/FileUtil.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-platform-api-client/test.config">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-setup/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-setup/socialwallet.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-setup/src/generate-address.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-setup/src/install-twitter.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-bot-setup/tipsandthanks.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-new-account/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-new-account/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-new-account/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-new-address/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/sidewinder-processor/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-processor/node_modules/@payburner/keyburner-sidewinder-core/dist/npm/processing2/CoreProcessorIntake.d.ts">
           <value>
             <set />
           </value>
@@ -268,7 +838,87 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/Api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/BotBusinessLogicInterface.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/BotCore.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/BotEventsDriver.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/BotUserEventsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/CoreTwitterService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/sidewinder-service/DataService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/DestinationTagService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/FollowService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/GatewayInHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/GlobalResponderClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/MailgunResponderClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/MetricsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/PlatformService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/RemoteWalletClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/RespondTwitterService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/RewardsService.js">
           <value>
             <set />
           </value>
@@ -279,6 +929,36 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/sidewinder-service/SidewinderService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/TwilioResponderClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/TwitterHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/TwitterResponderClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/node_modules/@aqfr/aqfr.js/dist/aqfr.esm.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/index.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-service/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/TransactionFactory.d.ts">
           <value>
             <set />
           </value>
@@ -333,7 +1013,367 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/BotBusinessLogic.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/BotBusinessLogicXRPLAlerts.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/BotCore.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-echo/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/BotBusinessLogic.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/TransactionFactory.d.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/sidewinder-service/BotEventsDriver.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/sidewinder-service/PlatformService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/sidewinder-service/RewardsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-wallet/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-xrpl-alerts-processor/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-xrpl-alerts-processor/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-biz-xrpl-alerts-processor/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-api-in/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-api-in/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-api-in/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-in/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-in/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/node_modules/@payburner/sidewinder-service/GatewayInHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/node_modules/@payburner/sidewinder-service/PlatformService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/MailgunResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/SESResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/TwitterResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/node_modules/@payburner/sidewinder-service/PlatformService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/MailgunResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/TwilioResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/Api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/BotBusinessLogic.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/TwitterHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/node_modules/@payburner/sidewinder-service/DestinationTagService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/node_modules/@payburner/sidewinder-service/GatewayInHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/node_modules/@payburner/sidewinder-service/PlatformService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/node_modules/@payburner/sidewinder-service/RewardsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/node_modules/@payburner/sidewinder-service/TwitterResponderClient.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out/BotCore.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out/TwitterResponder.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/sidewinder-social-core/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-social-gateway-twitter-incoming/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-social-gateway-twitter-incoming/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-social-gateway-twitter/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/BotBusinessLogic.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/TwitterService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/node_modules/@payburner/sidewinder-service/SidewinderService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/node_modules/@payburner/sidewinder-service/TwitterHandler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-ccxt/serverless.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-gateway-incoming/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-gateway-incoming/serverless.yml">
           <value>
             <set />
           </value>
@@ -344,6 +1384,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/Api.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/BotBusinessLogic.js">
           <value>
             <set />
           </value>
@@ -368,6 +1413,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/node_modules/@payburner/sidewinder-service/BotEventsDriver.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/node_modules/@payburner/sidewinder-service/MetricsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/node_modules/@payburner/sidewinder-service/RewardsService.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/package.json">
           <value>
             <set />
@@ -379,6 +1439,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/sidewinder-twitter-processor/src/handler.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/is-interview/src/main/java/com/interstellar/interview/copler/model/Codec.java">
           <value>
             <set />
           </value>
@@ -463,7 +1528,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/ripplenet-integration/ripplenet-integration-common/src/main/java/com/ripple/ripplenet/integration/TopologyITHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-integration/ripplenet-integration-core/src/test/java/com/ripple/integration/ripplenet/RippleNetAdvancedTopologyITBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-integration/ripplenet-integration-nomad/src/test/java/com/ripple/ripplenet/integration/nomad/RemoteCryptoAccountBalanceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/ripplenet-micro-node/ripplenet-micro-node-core/src/test/resources/logback.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/engine-digital-impl/src/main/java/com/ripple/ripplenet/engine/digital/config/CommonPaymentFailureInfoServiceConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/engine-digital-impl/src/main/java/com/ripple/ripplenet/engine/digital/config/DigitalPaymentPipelineConfig.java">
           <value>
             <set />
           </value>
@@ -498,7 +1588,67 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/engine-fiat-common/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/engine-fiat-impl/src/main/java/com/ripple/ripplenet/engine/fiat/config/CommonPaymentFailureInfoServiceConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/ripplenet-protocol/engine-fiat-impl/src/main/java/com/ripple/ripplenet/engine/fiat/services/XCurrentRippleNetPaymentOrchestrationImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-core-handlers/src/main/java/com/ripple/ripplenet/protocol/facade/HealthCheckFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-core-handlers/src/main/java/com/ripple/ripplenet/protocol/health/CompositeHealthCheckResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-core-impl/src/main/java/com/ripple/ripplenet/protocol/core/service/config/RippleNetProtocolCoreConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-core-impl/src/main/java/com/ripple/ripplenet/protocol/core/service/utils/RuntimeBuildProperties.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/api/QuoteElement.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/api/UserInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/ripplenet/api/PaymentFailureInfoProcessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/ripplenet/api/RippleNetPaymentFailureInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/ripplenet/api/RippleNetPaymentFailureMatcher.java">
           <value>
             <set />
           </value>
@@ -508,7 +1658,337 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/src/main/java/com/ripple/protocol/payments/ripplenet/api/RipplenetPaymentFailureInfoService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-api/target/generated-sources/annotations/com/ripple/protocol/payments/ripplenet/api/ImmutableRippleNetPaymentFailureInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-handlers/src/main/java/com/ripple/protocol/payments/features/payment/base/substrategy/ExecuteSettlementHandlerBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-handlers/src/main/java/com/ripple/protocol/payments/features/payment/base/substrategy/FailPaymentHandlerBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-handlers/src/main/java/com/ripple/protocol/payments/services/FailPaymentUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/config/PaymentFailureInfoStoreProxy.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/config/PaymentFailureInfoStoreService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/MetricLabelExtractor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/MetricLabelValueExtractor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/MonitorEventListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureInfoEntityConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureInfoEventListener.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureInfoMetricsHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureInfoPopulator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureInfoStore.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureMatcherUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureMetricsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureInfoConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureInfoServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureInfoToClaritinEventDataConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureInfoToEntityConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/BasePaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/FailedByReceiverWhileProcessingPayoutPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/LowLiquidityPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/ReceiverNotCallingLockPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SenderDidntCallTheSettleApiPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToLowLiquidityPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToReceiverNotCallingLock.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToSenderNotCallingTheSettleApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailuredDueToSenderNotCallingTheSettleApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/UnknownRippleNetPaymentFailureMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/matcher.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/java/com/ripple/ripplenet/protocol/payments/service/paymentfailureinfo/EntityToRNConverter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/main/resources/factlist.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/PaymentFailureMatcherUtilsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/RippleNetPaymentFailureInfoServiceTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/QuoteToRippleNetQuote.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedByReceiverWhileProcessingPayoutPaymentFailureMatcherTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToLowLiquidityPaymentFailureMatcherTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToReceiverDidntCallLockOrLockDeclinedPaymentFailureMatcherTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/SettlementFailedDueToSenderDidntCallSettlePaymentFailureMatcherTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/service/failureinfo/matchers/UserInfoToRippleNetUserInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/java/com/ripple/ripplenet/protocol/payments/util/FailureInfoTestUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/LOW_LIQUIDITY.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/PAYMENT_FAILED_BY_RECEIVER_WHILE_PROCESSING_PAYOUT.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/PAYMENT_FAILED_BY_RECEIVER_WHILE_PROCESSING_PAYOUT_RESULTS.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/PAYMENT_FILED_BY_RECEIVER_WHILE_PROCESSING_PAYOUT_QUOTE.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/RECEIVER_DIDNT_CALL_LOCK_DUE_TO.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/RECEIVER_DIDNT_LOCK.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/SENDER_DIDNT_CALL_SETTLE.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/USER_INFO.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-impl/src/test/resources/failures/failure.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/constants/PaymentFailureCategoryEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/constants/PaymentFailureOriginatorEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/constants/PaymentFailureRecoveryStrategyEnum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/entities/PaymentFailureInfoEntity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/repositories/PaymentExpiryConfigRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/repositories/PaymentFailureInfoRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/java/com/ripple/ripplenet/protocol/payments/persistence/repositories/PaymentFailureInfoStore.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/resources/db/ripplenetpayments/changelogs/4.10.0/changelog.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/main/resources/db/ripplenetpayments/changelogs/4.11.0/changelog.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-persistence/src/test/java/com/ripple/ripplenet/protocol/payments/persistence/repositories/PaymentFailureInfoRepositoryTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/ripplenet-protocol-payments-rest/src/main/java/com/ripple/protocol/payments/rest/converters/RippleNetPaymentToPayment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/ripplenet-protocol/xrapid-ripplenet-impl/pom.xml">
           <value>
             <set />
           </value>
@@ -519,6 +1999,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/rn-consolidated-poc/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-node/.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-node/pom.xml">
           <value>
             <set />
           </value>
@@ -549,6 +2039,31 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/ripplenet-protocol-core-handlers/src/main/java/com/ripple/ripplenet/protocol/facade/HealthCheckFacade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/ripplenet-protocol/xcurrent-server/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/xcurrent/.gitlab/ci/base.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/xcurrent/.gitlab/ci/main.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/xcurrent/.gitlab/ci/performance.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/rn-consolidated-poc/xcurrent/.gitlab/ci/release.gitlab-ci.yml">
           <value>
             <set />
           </value>
@@ -608,7 +2123,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-api-external/src/main/resources/xrapid-api-external-mgmt.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-api-external/target/generated-sources/swagger/src/main/java/com/ripple/xrapid/client/v1/model/XAcceptEstimateRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-api-management/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-api/src/main/resources/xrapid-api.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-api/target/generated-sources/swagger/src/main/java/com/ripple/xrapid/api/TransferResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-common/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-common/src/main/java/com/ripple/xrapid/common/errorlibrary/ErrorDescriptor.java">
           <value>
             <set />
           </value>
@@ -619,6 +2164,16 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-common/src/test/java/com/ripple/xrapid/common/properties/PropertyHelperTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/main/java/com/ripple/xrapid/core/incentive/impl/IncentiveApiServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/main/java/com/ripple/xrapid/core/outage/PaymentOutageServiceImpl.java">
           <value>
             <set />
           </value>
@@ -653,7 +2208,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/incentive/AccountIncentiveTestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/incentive/FXPricingDataProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/incentive/FXPricingTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/outage/OutageEstimateTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/services/PaymentServiceUtilTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-core/src/test/java/com/ripple/xrapid/core/uri/URIEstimateServiceTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitso/src/main/java/com/ripple/xrapid/exchanges/gateway/exchanges/bitso/config/BitsoFauxExchangeConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitso/src/main/java/com/ripple/xrapid/exchanges/gateway/exchanges/bitso/config/BitsoLiveExchangeConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitso/src/main/java/com/ripple/xrapid/exchanges/service/bitso/BitsoExchangeConstants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitso/src/test/java/com/ripple/xrapid/exchanges/bitso/BitsoExchangeServiceTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitso/src/test/java/com/ripple/xrapid/exchanges/gateway/exchanges/bitso/BitsoLiveXChangeServiceTests.java">
           <value>
             <set />
           </value>
@@ -664,6 +2269,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitstamp/src/main/java/com/ripple/xrapid/exchanges/gateway/exchanges/bitstamp/config/BitstampLiveExchangeConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitstamp/src/main/java/com/ripple/xrapid/exchanges/service/bitstamp/BitstampExchangeConstants.java">
           <value>
             <set />
           </value>
@@ -683,6 +2293,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-bitstampV2/src/main/java/com/ripple/xrapid/exchanges/service/bitstampV2/BitstampV2ExchangeConstants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchange-implementations/xrapid-exchanges-coinsphv2/target/generated-sources/src/gen/java/com/ripple/xrapid/exchanges/clients/coinsphv2/CoinsPhV2PublicApi.java">
           <value>
             <set />
@@ -698,6 +2313,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/faux/ledger/LedgerService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/fx/faux/FauxSpotRateCache.java">
           <value>
             <set />
@@ -708,7 +2328,72 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/SyntheticOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/ConfigurableOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/DelegateIfPresentElseOriginatOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/DelegateToAlternativeIfPresentElseOriginaLOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/DelegateToAlternativeIfPresentElseOriginalOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/DelegateToAlternativeIfPresentElseOriginatOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/Delegating2OrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/DelegatingOrderBookProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/OrderBookConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/OrderBookConfigurationType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/OrderBookProviderRecord.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/main/java/com/ripple/xrapid/exchanges/shared/obregistry/OrderBookProviderRegistry.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges-parent/xrapid-exchanges-shared/src/test/java/com/ripple/xrapid/exchanges/gateway/xchange/XChangeExecutionGatewayTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-exchanges/src/test/java/com/ripple/xrapid/exchanges/gateway/exchanges/xchange/FauxXChangeGatewayTests.java">
           <value>
             <set />
           </value>
@@ -728,6 +2413,116 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/DelistingPaymentsDelegateIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/DelistingPaymentsDelegateSadIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/DelistingPaymentsIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/DelistingPaymentsOriginalIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/DelistingPaymentsSyntheticIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/IncentivesIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/OutagesIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/OutagesSimplifiedIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/TwoLeggedPartialPaymentsIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/base/PaymentAssertionsIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsDelegateIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsDelegateSadIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsOriginalIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsSyntheticIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/delisting/DelistingPaymentsSyntheticSadIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/provider/DASOriginationAndTerminationDataProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/provider/EstimateRequestDataProviderWithoutPayout.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/provider/IncentivesDataProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/java/com/ripple/xrapid/smart/integration/tests/payments/provider/TwoLeggedPartialDataProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-integration-tests/src/test/resources/payment-assertion.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-performance/xrapid-performance-tools/src/main/xrapid-server/start.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/main/java/com/ripple/xrapid/server/rest/controllers/v1/PaymentsController.java">
           <value>
             <set />
@@ -738,12 +2533,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/main/resources/xrapid-server-defaults.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/test/java/com/ripple/xrapid/server/helper/Utils.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$USER_HOME$/work/xrapid/xrapid-server/src/test/java/com/ripple/xrapid/server/rest/controllers/v1/SupportedValuesControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/work/xrapid/xrapid-server/target/generated-sources/swagger/src/main/java/com/ripple/xrapid/server/api/v1/SupportedValuesApi.java">
           <value>
             <set />
           </value>

@@ -7,7 +7,7 @@
     "@payburner/keyburner-sidewinder-core": "^1.1.45",
     "@payburner/keyburner-sidewinder-model": "^1.1.35",
     "@payburner/payburner-core-model": "0.0.8",
-    "@payburner/sidewinder-service": "0.0.2",
+    "@payburner/sidewinder-service": "0.0.24",
     "aws-sdk": "^2.648.0",
     "axios": "^0.21.0",
     "querystring": "^0.2.0",

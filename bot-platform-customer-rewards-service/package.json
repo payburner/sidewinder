@@ -1,0 +1,19 @@
+{
+  "name": "bot-platform-customer-rewards-service",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.17",
+    "@payburner/keyburner-sidewinder-core": "^1.1.77",
+    "@payburner/keyburner-sidewinder-model": "^1.1.48",
+    "@payburner/payburner-core-model": "0.0.8",
+    "@payburner/sidewinder-service": "0.0.197",
+    "aws-sdk": "^2.648.0",
+    "axios": "^0.21.0",
+    "uuid4": "^2.0.2"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

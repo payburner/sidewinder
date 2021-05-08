@@ -1,0 +1,51 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: pb-social-xrpl-event-processor
+# app and org for use with dashboard.serverless.com
+app: sidewinder
+org: payburner
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  timeout: 45
+  deploymentBucket:
+    name: payburner-serverless
+    serverSideEncryption: AES256
+  # you can overwrite defaults here
+  stage: dev
+  region: us-west-1
+
+functions:
+  process-txn:
+    handler: handler.process
+    events:
+      - sns:
+          arn: 'arn:aws:sns:us-west-1:096916637957:payburner-xrpl-mainnet-payments'
+
+
+plugins:
+  - serverless-layers
+  - serverless-deployment-bucket
+
+custom:
+  serverless-layers:
+    functions: # optional
+      - process-txn
+    dependenciesPath: ./package.json
+

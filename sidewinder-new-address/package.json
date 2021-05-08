@@ -1,0 +1,14 @@
+{
+  "name": "sidewinder-new-address",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.17",
+    "@payburner/keyburner-sidewinder-core": "^1.1.70",
+    "@payburner/keyburner-sidewinder-model": "^1.1.35"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

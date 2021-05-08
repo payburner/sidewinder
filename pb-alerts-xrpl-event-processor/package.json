@@ -1,0 +1,20 @@
+{
+  "name": "pb-alerts-xrpl-event-processor",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.18",
+    "@payburner/keyburner-sidewinder-core": "^1.1.70",
+    "@payburner/keyburner-sidewinder-model": "^1.1.35",
+    "@payburner/payburner-core-model": "0.0.8",
+    "@payburner/sidewinder-service": "0.0.188",
+    "aws-sdk": "^2.648.0",
+    "axios": "^0.21.0",
+    "twit": "^2.2.11",
+    "uuid4": "^2.0.2"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

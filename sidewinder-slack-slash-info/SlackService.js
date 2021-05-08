@@ -7,8 +7,8 @@ class SlackService {
 
         this.config = config;
         this.sidewinderService = sidewinderService;
-        this.botName = 'U01EP9E2NN8';
-        this.webhookUrl = 'https://hooks.slack.com/services/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';
+        this.botName = config.botName;
+        this.webhookUrl = config.webhookUrl;
     }
 
     init() {
@@ -21,12 +21,14 @@ class SlackService {
             console.log('Getting Account:' + senderScreenName);
             comp.sidewinderService.getApi('slack', senderScreenName).then(
                 (e) => {
-                    console.log('Got Account Api:' + JSON.stringify(e, null, 2));
+                    console.log(
+                        'Got Account Api:' + JSON.stringify(e, null, 2));
                     if (e.isNew) {
-                        console.log('Funding Account:' + senderScreenName);
-                        comp.sidewinderService.fund('slack', senderScreenName).then(
+                        console.log('!Funding Account:' + senderScreenName);
+                        comp.sidewinderService.fund('slack',
+                            senderScreenName).then(
                             (funding) => {
-
+                                console.log('Got Funding: ' + senderScreenName + ' ' + JSON.stringify(funding, null, 2));
                                 comp.sidewinderService.getTokenAccount(
                                     e).then((account) => {
                                     console.log(
@@ -43,14 +45,37 @@ class SlackService {
                     } else {
                         comp.sidewinderService.getTokenAccount(
                             e).then((account) => {
-                            console.log('Got Token Account Is Not New:'
-                                + senderScreenName);
-                            resolve({
-                                senderId: senderScreenName,
-                                api: e,
-                                account: account,
-                                isNew: false
-                            })
+                            console.log('!!!Got Token Account Is Not New:'
+                                + senderScreenName + ' ' + JSON.stringify(account) + ' ' + typeof account.status + ' ' + (account.status === 404));
+                            if (typeof account.status !== 'undefined' && account.status === 404) {
+                                console.log('!Beginning to fund!:' + senderScreenName);
+                                comp.sidewinderService.fund('slack',
+                                    senderScreenName).then(
+                                    (funding) => {
+                                        console.log('Got Funding: ' + senderScreenName + ' ' + JSON.stringify(funding, null, 2));
+                                        comp.sidewinderService.getTokenAccount(
+                                            e).then((account) => {
+                                            console.log(
+                                                'Got Token Account IsNew:'
+                                                + senderScreenName);
+                                            resolve({
+                                                senderId: senderScreenName,
+                                                api: e,
+                                                account: account,
+                                                isNew: true
+                                            });
+                                        })
+                                    });
+                            }
+                            else {
+                                console.log('Returning already funded!')
+                                resolve({
+                                    senderId: senderScreenName,
+                                    api: e,
+                                    account: account,
+                                    isNew: false
+                                })
+                            }
                         });
                     }
                 });
@@ -89,17 +114,7 @@ class SlackService {
                     const accountResponse = await comp.getAccount(
                         senderScreenName);
                     if (accountResponse.isNew) {
-                        /* const tweetResponse = await comp.tweet(
-                             'Welcome @'
-                             + senderScreenName
-                             + '. Your initial tipping balance is '
-                             + AccountUtils.calculateUnit(
-                             accountResponse.account.data.available_balance.toFixed(),
-                             6)); */
-                        /*console.log(
-                            'Initial balance tweet response: '
-                            + JSON.stringify(tweetResponse, null,
-                            2));*/
+
                         await comp.postNotification('Welcome <@'
                             + senderScreenName
                             + '>. Your initial tipping balance is '
@@ -113,15 +128,8 @@ class SlackService {
 
                     if ( text
                         === 'balance') {
-                        returnVal.push('sending balance');
-                        /*const sendMessageResponse = await comp.sendMessage(
-                            senderId,
-                            'Your @PayburnerBot tipping balance is: '
-                            + AccountUtils.calculateUnit(
-                            accountResponse.account.data.available_balance.toFixed(),
-                            6))*/
-                        returnVal.push('sent balance');
-                        const msg = 'Your @PayburnerBot tipping balance is: '
+
+                        const msg = 'Your <@' + this.botName + '> tipping balance is: '
                             + AccountUtils.calculateUnit(
                                 accountResponse.account.data.available_balance.toFixed(),
                                 6);
@@ -131,35 +139,48 @@ class SlackService {
                         resolve(msg);
                         return;
 
-                    } else if (text
+                    }
+                    else if ( text
+                        === 'stats') {
+                        const metrics = await comp.sidewinderService.getUserMetrics( accountResponse.api);
+
+                        let metricsString = 'Stats:\n';
+                        metrics.forEach((metric) => {
+                            if (metric.metric.endsWith('_amount_counter')) {
+                                metricsString += ' ' + metric.display + ': ' + AccountUtils.calculateUnit(
+                                    metric.value.toFixed(),
+                                    6) + '\n';
+                            }
+                            else {
+                                metricsString += ' ' + metric.display + ': ' + metric.value+ '\n';
+                            }
+                        });
+
+                        resolve(metricsString);
+                        return;
+
+                    }
+                    else if ( text
+                        === 'site') {
+
+                        let metricsString = 'Visit https://www.tipsandthanks.com to learn more about this service.';
+
+                        resolve(metricsString);
+                        return;
+
+                    }
+                    else if (text
                         === 'help') {
                         returnVal.push('sending help');
-                        /*const sendHelpMessage = await comp.sendMessage(
-                            senderId,
-                            'Welcome to @PayburnerBot.  Commands include: help, balance, info')
-                        returnVal.push('sent help');
-                        console.log(
-                            'HELP DM Sent:' + JSON.stringify(
-                            sendHelpMessage));*/
-                        const msg = 'Welcome to @PayburnerBot.  Commands include: help, balance, info';
+
+                        const msg = 'Welcome to <@' + this.botName + '>.  Commands include: help, balance, info, stats, site';
                         resolve(msg);
                         return;
 
                     } else if (text
                         === 'info') {
                         returnVal.push('sending info');
-                        /*
-                        const sendMessageResult = await comp.sendMessage(
-                            senderId,
-                            'Information. The fee for tipping is '
-                            +
-                            AccountUtils.calculateUnit(
-                                comp.sidewinderService.tokenDefinition.data.transaction_fee.toFixed(
-                                    0), 6) + '.')
-                        returnVal.push('sent info');
-                        console.log(
-                            'INFO DM Sent:' + JSON.stringify(
-                            sendMessageResult));*/
+
                         const msg = 'Information. The fee for tipping is '
                             +
                             AccountUtils.calculateUnit(
@@ -169,14 +190,7 @@ class SlackService {
                         return;
                     } else {
                         returnVal.push('sending generic');
-                        /*const sendMessageResult = await comp.sendMessage(
-                            senderId,
-                            'Welcome to the Payburner Bot.  Commands include: help, balance, info')
-                        returnVal.push('sent generic');
-                        console.log(
-                            'GENERIC DM Sent:' + JSON.stringify(
-                            sendMessageResult));
-                        const msg = 'Welcome to @PayburnerBot.  Commands include: help, balance, info';*/
+                        const msg = 'Welcome to <@' + this.botName + '>.  Commands include: help, balance, info, stats, site';
                         resolve(msg);
                         return;
                     }

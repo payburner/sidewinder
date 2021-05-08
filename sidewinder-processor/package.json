@@ -3,7 +3,8 @@
   "description": "",
   "version": "0.0.1",
   "dependencies": {
-    "@payburner/keyburner-sidewinder-core": "^1.1.45"
+    "@payburner/keyburner-sidewinder-core": "^1.1.84",
+    "@payburner/keyburner-sidewinder-model": "^1.1.54"
   },
   "devDependencies": {
     "serverless-deployment-bucket": "^1.2.0",

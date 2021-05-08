@@ -1,15 +1,19 @@
 {
   "name": "@payburner/sidewinder-service",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.203",
   "main": "./SidewinderService",
   "dependencies": {
-    "@payburner/keyburner-core": "^1.1.17",
-    "@payburner/keyburner-sidewinder-core": "^1.1.45",
-    "@payburner/keyburner-sidewinder-model": "^1.1.35",
+    "@aqfr/aqfr.js": "0.0.81",
+    "@payburner/keyburner-core": "^1.1.18",
+    "@payburner/keyburner-sidewinder-core": "^1.1.77",
+    "@payburner/keyburner-sidewinder-model": "^1.1.55",
     "@payburner/payburner-core-model": "0.0.8",
     "aws-sdk": "^2.648.0",
-    "axios": "^0.21.0"
+    "axios": "^0.21.0",
+    "google-libphonenumber": "^3.2.15",
+    "md5": "^2.3.0",
+    "uuid4": "^2.0.2"
   },
   "engines": {
     "node": "*"

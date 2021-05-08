@@ -1,0 +1,12 @@
+{
+  "name": "sidewinder-trading-oms-ccxt-endpoint",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.17",
+    "@payburner/sidewinder-tasks-client": "0.0.3",
+    "aws-sdk": "^2.648.0",
+    "ccxt": "^1.47.40"
+  },
+  "devDependencies": {}
+}

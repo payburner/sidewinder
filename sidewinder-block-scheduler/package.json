@@ -1,0 +1,14 @@
+{
+  "name": "sidewinder-block-scheduler",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.17",
+    "@payburner/keyburner-sidewinder-core": "^1.1.90",
+    "@payburner/keyburner-sidewinder-model": "^1.1.54"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

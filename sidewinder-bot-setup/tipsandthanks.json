@@ -1,0 +1,14 @@
+{
+  "twitter_apiKey": "KSCyEytziTO2o99yvYs3ryo3S",
+  "twitter_apiSecretKey": "RctVGT93DBxCRfatCkv51ELSdYWpGVgJnu20B36EVvkLNmQCta",
+  "twitter_accessToken": "1335964563502755841-hhrljHB03PtkzpJWqzRvmXDYOlQIMp",
+  "twitter_accessTokenSecret": "SKx7yf6uZU5H3YDaKPZ7RiaqwIZrjQ7dPYU3gVMcEDgva",
+  "twitter_env": "TipsAndThanksBot",
+  "sidewinder_xrpAddressSecret": "shDV9jH8nwV6W3fvE5kDPHuhq23zr",
+  "botName": "tipsandthanks",
+  "token": "THNX",
+  "botBusinessLambda": "https://8m30qjtvmc.execute-api.us-west-1.amazonaws.com/dev/process",
+  "sidewinder_address": "rMhAm79JnErDwamfozkRvRFNjHQpsWGbkF",
+  "twitterId": "1335964563502755841"
+
+}

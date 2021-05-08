@@ -1,5 +1,5 @@
 'use strict';
-const {CoreProcessor2, CommonErrorCodes, AWSTransactionalWriteService, AWSDynamoTokenService, AWSDynamoGlobalAddressService}
+const {CoreProcessorIntake, CommonErrorCodes, AWSTransactionalWriteService, AWSDynamoTokenService, AWSDynamoUnderlyingTransactionService, AWSDynamoGlobalAddressService}
     = require("@payburner/keyburner-sidewinder-core/dist/npm");
 let AWS = require('aws-sdk');
 module.exports.process = async event => {
@@ -9,8 +9,9 @@ module.exports.process = async event => {
     const globalAddressService = new AWSDynamoGlobalAddressService(docClient);
     const transactionalWriteService = new AWSTransactionalWriteService(
         docClient);
-    const coreProcessor = new CoreProcessor2(globalAddressService,
-        tokenService);
+    const underlyingTransactionService = new AWSDynamoUnderlyingTransactionService(docClient);
+    const coreProcessor = new CoreProcessorIntake(globalAddressService,
+        tokenService, underlyingTransactionService);
     const t0 = new Date().getTime();
     try {
         const response = await
@@ -23,6 +24,13 @@ module.exports.process = async event => {
         if (wrote) {
             console.log('Time to Write:' + wrote + ' '
                 + (new Date().getTime() - t0) );
+
+            let id = 'NO_TXN_ID';
+            if (typeof response.decodedTransaction !== 'undefined') {
+                id = response.decodedTransaction.id;
+            }
+            response.serviceResponse.id = id;
+
             return ({
                 statusCode: response.serviceResponse.status,
                 body: JSON.stringify(response.serviceResponse)
@@ -31,6 +39,7 @@ module.exports.process = async event => {
         else {
             console.log('Failed to Write:' + wrote + ' '
                 + (new Date().getTime() - t0) );
+
             return {
                 statusCode: 400,
                 body: JSON.stringify(CommonErrorCodes.TRANSACTION_INVALID)

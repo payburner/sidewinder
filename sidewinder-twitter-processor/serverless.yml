@@ -23,7 +23,7 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs12.x
-
+  timeout: 45
   deploymentBucket:
     name: payburner-serverless
     serverSideEncryption: AES256

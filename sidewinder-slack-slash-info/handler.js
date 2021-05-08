@@ -13,7 +13,7 @@ module.exports.process = async event => {
     let client = new AWS.SecretsManager({
         region: region
     });
-    const result = await new Promise((resolve, reject) => {
+    const config = await new Promise((resolve, reject) => {
         client.getSecretValue({SecretId: secretName}, function (err, data) {
 
             if (err) {
@@ -26,12 +26,11 @@ module.exports.process = async event => {
     });
 
     const docClient = new AWS.DynamoDB.DocumentClient();
-    const sidewinderService = new SidewinderService(result.xrpAddressSecret, docClient , client);
+    const sidewinderService = new SidewinderService(config.xrpAddressSecret, docClient , client, config);
     await sidewinderService.init();
-    const slackService = new SlackService(result, sidewinderService);
+    const slackService = new SlackService(config, sidewinderService);
 
-
-    if (result.slackVerificationToken !== data.token){
+    if (config.slackVerificationToken !== data.token){
 
         return {
             statusCode: 401,
@@ -52,13 +51,7 @@ module.exports.process = async event => {
         };
     }
 
-
-    console.log('Mention text:' + data.text);
-    console.log('Mention user:' + data.user_id);
-    console.log('Mention team:' + data.team_id);
     const response = await slackService.handleSlash(data.team_id, data.user_id, data.text);
-    console.log('Handle Response:' + JSON.stringify(response, null, 2));
-
 
     return {
         statusCode: 200,

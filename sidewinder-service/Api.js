@@ -1,12 +1,15 @@
 const {KeyBurner} = require( "@payburner/keyburner-core/dist/npm");
 
 class Api {
+
     constructor() {
         this.keyburner = new KeyBurner();
         this.keyPair = null;
         this.address = null;
         this.isNew = false;
         this.seed = null;
+        this.platform = null;
+        this.screenName = null;
     }
 
     newAddress() {

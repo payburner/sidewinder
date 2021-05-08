@@ -1,0 +1,43 @@
+# The bot to customer rewards service provides bots
+# with the means to send XRP rewards to their customers
+#
+
+service: bot-platform-customer-rewards-service
+# app and org for use with dashboard.serverless.com
+app: sidewinder
+org: payburner
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  timeout: 45
+  deploymentBucket:
+    name: payburner-serverless
+    serverSideEncryption: AES256
+  # you can overwrite defaults here
+  stage: dev
+  region: us-west-1
+
+functions:
+  process-txn:
+    handler: handler.process
+    events:
+      - http:
+          path: process
+          method: post
+
+
+plugins:
+  - serverless-layers
+  - serverless-deployment-bucket
+
+custom:
+  serverless-layers:
+    functions: # optional
+      - process-txn
+    dependenciesPath: ./package.json
+

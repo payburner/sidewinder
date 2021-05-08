@@ -1,0 +1,17 @@
+{
+  "name": "sidewinder-soc-gw-twitter-out",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.17",
+    "@payburner/sidewinder-service": "0.0.148",
+    "aws-sdk": "^2.648.0",
+    "axios": "^0.21.0",
+    "twit": "^2.2.11",
+    "uuid4": "^2.0.2"
+  },
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.2.0",
+    "serverless-layers": "^2.3.0"
+  }
+}

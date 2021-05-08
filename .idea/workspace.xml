@@ -2,124 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-task-submitter/handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-task-submitter/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-task-submitter/serverless.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-tasks-status-checker/handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-tasks-status-checker/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-tasks/sidewinder-tasks-status-checker/serverless.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sidewinder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sidewinder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-processor/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-processor/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-processor/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-processor/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-processor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-processor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-processor/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-processor/serverless.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-service/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-service/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-service/DataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-service/DataService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-service/SecretService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-service/SecretService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-service/SidewinderService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-service/SidewinderService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-service/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-bot/SlackService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-bot/SlackService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-bot/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-bot/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-bot/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-bot/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-bot/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-bot/serverless.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-slash-info/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-slash-info/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-twitter-processor/TwitterService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-twitter-processor/TwitterService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-twitter-processor/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-twitter-processor/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-twitter-processor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-twitter-processor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-twitter-processor/serverless.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-twitter-processor/serverless.yml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/TwitterService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="189" column="96" selection-start-line="189" selection-start-column="96" selection-end-line="189" selection-end-column="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-processor/handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="19" column="19" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-service/DataService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="92" column="90" selection-start-line="92" selection-start-column="90" selection-end-line="92" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-service/SidewinderService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="830">
-              <caret line="172" column="56" selection-start-line="172" selection-start-column="56" selection-end-line="172" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hello</find>
-      <find>typeo</find>
-      <find>isNewFo</find>
-      <find>payload</find>
-      <find>paylo</find>
-      <find>sendMessage</find>
-      <find>getApi</find>
-      <find>socialid</find>
-      <find>getTokenA</find>
+      <find>-index</find>
+      <find>doc</find>
+      <find>fee</find>
+      <find>withdraw</find>
+      <find>sendRew</find>
+      <find>idempotency</find>
+      <find>ensureIdempoten</find>
+      <find>gatewa</find>
+      <find>bot.</find>
+      <find>TwitterRes</find>
+      <find>platformService</find>
+      <find>request</find>
+      <find>TwilioRes</find>
+      <find>mailgun</find>
+      <find>/balance</find>
+      <find>slash</find>
+      <find>BUSINESS LOGIC RESPONSE</find>
+      <find>config</find>
+      <find>filter</find>
+      <find>transferUserToUser</find>
+      <find>transferuser</find>
+      <find>/transfer</find>
+      <find>target</find>
+      <find>'none'</find>
+      <find>idResponse</find>
+      <find>new Plat</find>
+      <find>platformSer</find>
+      <find>emitter</find>
+      <find>idFieldName</find>
+      <find>email</find>
     </findStrings>
+    <replaceStrings>
+      <replace>token</replace>
+      <replace>, /balance, /address</replace>
+      <replace>/withdraw</replace>
+      <replace>Under</replace>
+      <replace>UnderlyingTransactionStatus.FAILED</replace>
+      <replace>UnderlyingTransactionStatus.COMPLETED</replace>
+      <replace>underlying_address</replace>
+      <replace>platform</replace>
+      <replace>senderId</replace>
+      <replace>await this.emitter</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/sidewinder-processor</dir>
+      <dir>$PROJECT_DIR$/sidewinder-soc-gw-twitter-in</dir>
+      <dir>$PROJECT_DIR$/sidewinder-service</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -128,46 +100,73 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sidewinder-processor/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/serverless.yml" />
-        <option value="$PROJECT_DIR$/sidewinder-processor/serverless.yml" />
-        <option value="$PROJECT_DIR$/sidewinder-processor/handler.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/src/handler.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/Api.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/DataService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/.gitignore" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/SidewinderService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-slash-info/SidewinderService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-social-core/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-bot/serverless.yml" />
-        <option value="$PROJECT_DIR$/sidewinder-service/SecretService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-service/DataService.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-in/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-in/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/TwitterResponder.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/MailgunResponderClient.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/SESResponder.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-biz-wallet/handler.js" />
+        <option value="$PROJECT_DIR$/pb-social-xrpl-event-processor/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-optout/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-out/MailgunResponder.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/MailgunResponder.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-out/TwilioResponder.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-setup/socialwallet.json" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-sms-in/package.json" />
+        <option value="$PROJECT_DIR$/pb-social-xrpl-event-processor/package.json" />
+        <option value="$PROJECT_DIR$/pb-alerts-xrpl-event-processor/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-service/RewardsService.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/TwilioResponderClient.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-biz-wallet/BotBusinessLogic.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/TwitterResponderClient.js" />
+        <option value="$PROJECT_DIR$/bot-platform-customer-rewards-service/package.json" />
+        <option value="$PROJECT_DIR$/bot-platform-customer-rewards-service/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/PlatformService.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/GatewayInHandler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-api-in/serverless.yml" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-api-in/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-service/GlobalResponderClient.js" />
         <option value="$PROJECT_DIR$/sidewinder-service/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-bot/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-bot/handler.js" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-slash-info/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-slack-bot/SlackService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/package.json" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/handler.js" />
-        <option value="$PROJECT_DIR$/sidewinder-service/SidewinderService.js" />
-        <option value="$PROJECT_DIR$/sidewinder-twitter-processor/TwitterService.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-biz-echo/BotBusinessLogicXRPLAlerts.js" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/package.json" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/services/utils/FileUtil.js" />
+        <option value="$PROJECT_DIR$/sidewinder-service/Api.js" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/Api.js" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/test.config" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/call-bot-api.js" />
+        <option value="$PROJECT_DIR$/sidewinder-soc-gw-api-in/handler.js" />
+        <option value="$PROJECT_DIR$/sidewinder-bot-platform-api-client/data.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="24" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
+  <component name="ProjectId" id="1qMX1JCw5Z0cZw0qM4eokkcixYj" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,67 +177,79 @@
             <path>
               <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
-              <item name="sidewinder-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-bot-platform-api-client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
-              <item name="sidewinder-service" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-bot-platform-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
-              <item name="sidewinder-slack-slash-info" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-bot-platform-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
-              <item name="sidewinder-twitter-processor" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-bot-platform-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-bot-platform-api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sidewinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sidewinder" type="462c0819:PsiDirectoryNode" />
+              <item name="sidewinder-soc-gw-api-in" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605797270933" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611945919661" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-process-server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sidewinder-slack-bot" />
-      <recent name="$PROJECT_DIR$/sidewinder-social-core/src" />
-      <recent name="$PROJECT_DIR$/sidewinder-processor/sidewinder-social-core" />
-      <recent name="$PROJECT_DIR$/sidewinder-slack-slash-info" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-ccxt-fetch-balance" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-ccxt-market-order" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sidewinder-service" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/test/java/com/github/huksley/camunda" />
+      <recent name="$PROJECT_DIR$/sidewinder-tasks/sidewinder-tasks-push-request/test" />
+      <recent name="$PROJECT_DIR$/sidewinder-bot-setup/src" />
+      <recent name="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out" />
+      <recent name="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -274,17 +285,75 @@
       <workItem from="1605362213723" duration="6281000" />
       <workItem from="1605449619377" duration="2894000" />
       <workItem from="1605647212953" duration="6117000" />
-      <workItem from="1605780274013" duration="2481000" />
+      <workItem from="1605780274013" duration="3302000" />
+      <workItem from="1605881314874" duration="2416000" />
+      <workItem from="1605961958204" duration="9712000" />
+      <workItem from="1606210899889" duration="8621000" />
+      <workItem from="1606411035333" duration="15591000" />
+      <workItem from="1606916828117" duration="621000" />
+      <workItem from="1606929875273" duration="40000" />
+      <workItem from="1607001225473" duration="4700000" />
+      <workItem from="1607080580232" duration="11663000" />
+      <workItem from="1607376731702" duration="200000" />
+      <workItem from="1607432752000" duration="6346000" />
+      <workItem from="1607591584469" duration="6322000" />
+      <workItem from="1607790641122" duration="4748000" />
+      <workItem from="1607947319733" duration="16442000" />
+      <workItem from="1608281605876" duration="4875000" />
+      <workItem from="1608341554602" duration="5772000" />
+      <workItem from="1608455309636" duration="10040000" />
+      <workItem from="1608639085898" duration="4988000" />
+      <workItem from="1608663091830" duration="14584000" />
+      <workItem from="1608806974009" duration="536000" />
+      <workItem from="1608808083111" duration="45600000" />
+      <workItem from="1609113738344" duration="19202000" />
+      <workItem from="1609339535791" duration="41416000" />
+      <workItem from="1609837118589" duration="1927000" />
+      <workItem from="1609839244094" duration="4280000" />
+      <workItem from="1609867704595" duration="815000" />
+      <workItem from="1609876764572" duration="6177000" />
+      <workItem from="1609934346959" duration="42809000" />
+      <workItem from="1610226055014" duration="9955000" />
+      <workItem from="1610525539843" duration="3995000" />
+      <workItem from="1610627111247" duration="4449000" />
+      <workItem from="1610713489838" duration="34175000" />
+      <workItem from="1611318288331" duration="5810000" />
+      <workItem from="1611364293153" duration="9356000" />
+      <workItem from="1611594377736" duration="7599000" />
+      <workItem from="1611824911893" duration="3639000" />
+      <workItem from="1612202008937" duration="1282000" />
+      <workItem from="1616890218022" duration="978000" />
+      <workItem from="1617283224299" duration="280000" />
+      <workItem from="1617621703732" duration="3331000" />
+      <workItem from="1617745761003" duration="920000" />
+      <workItem from="1617893282594" duration="3000" />
+      <workItem from="1618062210125" duration="26478000" />
+      <workItem from="1618157306602" duration="9198000" />
+      <workItem from="1618231236278" duration="3874000" />
+      <workItem from="1618361556434" duration="3554000" />
+      <workItem from="1618434148047" duration="37000" />
+      <workItem from="1618668172650" duration="787000" />
+      <workItem from="1618669666383" duration="1180000" />
+      <workItem from="1618835950583" duration="17000" />
+      <workItem from="1619084540237" duration="1562000" />
+      <workItem from="1619086664861" duration="3725000" />
+      <workItem from="1619189443075" duration="14343000" />
+      <workItem from="1619524369630" duration="617000" />
+      <workItem from="1619598166784" duration="744000" />
+      <workItem from="1620126509313" duration="526000" />
+      <workItem from="1620388044386" duration="1689000" />
+      <workItem from="1620472682204" duration="517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59961000" />
+    <option name="totallyTimeSpent" value="431485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29542202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25107297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -292,7 +361,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.22178477" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.20570013" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -306,7 +375,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" />
@@ -318,201 +387,347 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/test/java/com/github/huksley/camunda/SampleProcessTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../node_modules/@payburner/keyburner-sidewinder-core/dist/npm/model/CommonErrorCodes.d.ts">
+    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/handler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="390">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-processor/serverless.yml">
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/sidewinder-service/RewardsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="176" column="4" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/src/handler.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/node_modules/@payburner/keyburner-sidewinder-model/dist/npm/transactions/TransactionFactory.d.ts">
+    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/BotBusinessLogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="1104">
+          <caret line="230" column="4" selection-start-line="230" selection-start-column="4" selection-end-line="244" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/.env">
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-wallet/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/DataService.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/serverless.yml">
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-wallet/node_modules/@payburner/sidewinder-service/PlatformService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" selection-start-line="75" selection-end-line="78" selection-end-column="36" />
+        <state relative-caret-position="198">
+          <caret line="321" column="4" selection-start-line="321" selection-start-column="4" selection-end-line="321" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../node_modules/@payburner/keyburner-core/dist/npm/services/KeyBurner.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-processor/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/Api.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/SidewinderService.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-service/src/index.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/node_modules/sidewinder-service/src/SidewinderService.js" />
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/node_modules/@payburner/sidewinder-service/SidewinderService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/Api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-service/Api.js">
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/BotCore.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-bot/serverless.yml">
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/TwilioResponderClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="115">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-service/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-bot/package.json">
+    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-service/SecretService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="50" />
+        <state relative-caret-position="2520">
+          <caret line="168" column="31" selection-start-line="168" selection-start-column="31" selection-end-line="168" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sidewinder-slack-bot/SlackService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sidewinder-slack-bot/handler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
+          <caret line="13" column="14" selection-start-line="7" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-service/DataService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="92" column="90" selection-start-line="92" selection-start-column="90" selection-end-line="92" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/serverless.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/SidewinderService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/package.json">
+    <entry file="file://$PROJECT_DIR$/bot-platform-customer-rewards-service/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/DataService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="76" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-slack-slash-info/SlackService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="104" column="32" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/DataService.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sidewinder-service/SidewinderService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="172" column="56" selection-start-line="172" selection-start-column="56" selection-end-line="172" selection-end-column="56" />
+        <state relative-caret-position="165">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-processor/handler.js">
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/RemoteWalletClient.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/GatewayInHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="19" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="464">
+          <caret line="148" column="173" selection-start-line="148" selection-start-column="173" selection-end-line="148" selection-end-column="173" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidewinder-twitter-processor/TwitterService.js">
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/PlatformService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="189" column="96" selection-start-line="189" selection-start-column="96" selection-end-line="189" selection-end-column="96" />
+        <state relative-caret-position="907">
+          <caret line="219" column="41" selection-start-line="219" selection-start-column="41" selection-end-line="219" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-sms-in/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-api-in/serverless.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-wallet/BotBusinessLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-wallet/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/RewardsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/GlobalResponderClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-email-mg-in/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="91" selection-start-line="100" selection-start-column="70" selection-end-line="100" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-twitter-in/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="165" column="97" selection-start-line="165" selection-start-column="88" selection-end-line="165" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/TwitterResponderClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-api-in/node_modules/@payburner/sidewinder-service/GatewayInHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot-platform-customer-rewards-service/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="96" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot-platform-customer-rewards-service/BotBusinessLogic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot-platform-customer-rewards-service/node_modules/@payburner/sidewinder-service/RewardsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-api-in/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-echo/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-biz-echo/BotBusinessLogicXRPLAlerts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="132" column="98" selection-start-line="131" selection-start-column="16" selection-end-line="132" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-setup/socialwallet.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-setup/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-setup/src/generate-address.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-setup/src/install-twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../node_modules/@payburner/keyburner-core/dist/npm/services/KeyBurner.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/call-bot-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/lib/call-bot-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-api-in/handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-soc-gw-api-in/node_modules/@payburner/sidewinder-service/BotCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/test.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/services/utils/FileUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/generate-address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-service/Api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="5" selection-start-line="39" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/src/Api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidewinder-bot-platform-api-client/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="52" selection-start-column="52" selection-end-column="52" />
         </state>
       </provider>
     </entry>

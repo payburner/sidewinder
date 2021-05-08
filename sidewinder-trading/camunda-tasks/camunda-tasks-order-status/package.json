@@ -1,0 +1,18 @@
+{
+  "name": "camunda-tasks-order-status",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@payburner/sidewinder-tasks-client": "0.0.3",
+    "@payburner/sidewinder-trading-oms-p": "0.0.12",
+    "aws-sdk": "^2.892.0",
+    "camunda-external-task-client-js": "^2.1.0",
+    "uuid4": "^2.0.2"
+  }
+}
