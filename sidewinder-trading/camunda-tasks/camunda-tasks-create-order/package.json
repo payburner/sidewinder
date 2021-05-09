@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@payburner/keyburner-core": "^1.1.18",
     "@payburner/sidewinder-tasks-client": "0.0.3",
     "@payburner/sidewinder-trading-oms-p": "0.0.7",
     "aws-sdk": "^2.892.0",
