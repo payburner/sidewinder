@@ -23,11 +23,10 @@ AWS.config.update({
     region: pConfig.AWS_REGION
 });
 const sidewinder = new SidewinderTaskService();
-sidewinder.newAddress();
+sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 const docClient = new AWS.DynamoDB.DocumentClient();
 const p = new SidewinderOmsPersistenceService(docClient);
 
-// susbscribe to the topic: 'creditScoreChecker'
 client.subscribe("CheckOrderStatus", async function ({task, taskService}) {
     console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();

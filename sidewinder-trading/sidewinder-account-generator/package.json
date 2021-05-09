@@ -1,0 +1,15 @@
+{
+  "name": "sidewinder-account-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@payburner/keyburner-core": "^1.1.18",
+    "@payburner/sidewinder-tasks-client": "0.0.3"
+  }
+}

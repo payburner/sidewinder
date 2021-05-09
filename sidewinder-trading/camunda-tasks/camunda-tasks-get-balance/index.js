@@ -29,7 +29,7 @@ AWS.config.update({
     region: pConfig.AWS_REGION
 });
 const sidewinder = new SidewinderTaskService();
-sidewinder.newAddress();
+sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 const docClient = new AWS.DynamoDB.DocumentClient();
 const p = new SidewinderOmsPersistenceService( docClient );
 

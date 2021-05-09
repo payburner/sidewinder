@@ -1,4 +1,9 @@
-const { Client, logger, Variables , BasicAuthInterceptor } = require("camunda-external-task-client-js");
+const {
+    Client,
+    logger,
+    Variables,
+    BasicAuthInterceptor
+} = require("camunda-external-task-client-js");
 const AWS = require('aws-sdk');
 const {SidewinderOmsPersistenceService} = require("@payburner/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService");
 const {SidewinderTaskService} = require("@payburner/sidewinder-tasks-client/src/SidewinderTaskService");
@@ -16,7 +21,11 @@ const basicAuthentication = new BasicAuthInterceptor({
 // configuration for the Client:
 //  - 'baseUrl': url to the Process Engine
 //  - 'logger': utility to automatically log important events
-const config = { interceptors: basicAuthentication, baseUrl: "https://oms.payburner.com/engine-rest", use: logger };
+const config = {
+    interceptors: basicAuthentication,
+    baseUrl: "https://oms.payburner.com/engine-rest",
+    use: logger
+};
 
 // create a Client instance with custom configuration
 const client = new Client(config);
@@ -27,16 +36,19 @@ AWS.config.update({
     region: pConfig.AWS_REGION
 });
 const docClient = new AWS.DynamoDB.DocumentClient();
-const p = new SidewinderOmsPersistenceService( docClient );
+const p = new SidewinderOmsPersistenceService(docClient);
+
+const sidewinder = new SidewinderTaskService();
+sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 
 // susbscribe to the topic: 'creditScoreChecker'
-client.subscribe("CreateOrder", async function({ task, taskService }) {
-    console.log('TASK:' + JSON.stringify(task.variables.getAll(), null,2));
+client.subscribe("CreateOrder", async function ({task, taskService}) {
+    console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();
     const exchange = input.exchange;
     const side = input.side;
     const amount = input.amount;
-    const address =input.target_address;
+    const address = input.target_address;
     const orderId = uuid4();
     const symbol = input.symbol;
     const status = 'pending';
@@ -45,26 +57,24 @@ client.subscribe("CreateOrder", async function({ task, taskService }) {
     const amountCurrency = symbolTokens[0];
 
     const order = {
-        orderId : orderId,
+        orderId: orderId,
         account_owner_address: address,
         exchange: exchange,
         side: side,
         amount: amount,
         order_type: 'market',
-        update_timestamp : new Date().getTime(),
+        update_timestamp: new Date().getTime(),
         symbol: symbol,
         filled_amount: 0,
         remaining_amount: 0,
         status: status,
-        cost_currency : costCurrency,
-        amount_currency : amountCurrency,
+        cost_currency: costCurrency,
+        amount_currency: amountCurrency,
     }
     console.log('Order:' + JSON.stringify(order, null, 2));
-    const saveOrderResponse = await p.saveOrder( order );
+    const saveOrderResponse = await p.saveOrder(order);
     console.log('OrderResponse:' + JSON.stringify(saveOrderResponse, null, 2));
 
-    const sidewinder = new SidewinderTaskService();
-    sidewinder.newAddress();
     const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTMarketOrder', {
         exchange: exchange,
         omsOrderId: order.orderId,
@@ -72,7 +82,7 @@ client.subscribe("CreateOrder", async function({ task, taskService }) {
         amount: amount,
         symbol: symbol
     });
-    console.log('CCXTMarketOrder response:' + JSON.stringify(taskPushResponse,null, 2));
+    console.log('CCXTMarketOrder response:' + JSON.stringify(taskPushResponse, null, 2));
 
     const orderResponse = taskPushResponse.data.task;
     if (orderResponse.task_status === 'FAILED') {
@@ -80,7 +90,7 @@ client.subscribe("CreateOrder", async function({ task, taskService }) {
         const variables = new Variables().set('date', new Date());
         const reason = orderResponse.response_payload.error.name;
         // Handle a BPMN Failure
-         const saveOrderResponse = await p.updateOrderStatus( input.orderId, "submit_failed", reason );
+        const saveOrderResponse = await p.updateOrderStatus(input.orderId, "submit_failed", reason);
         console.log('Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
         await taskService.handleBpmnError(task, "submit_failed", reason, variables);
         console.log('ERROR');
@@ -111,11 +121,10 @@ client.subscribe("CreateOrder", async function({ task, taskService }) {
         // set a local variable 'winningDate'
         const localVariables = new Variables();
         await taskService.complete(task, processVariables, localVariables);
-    }
-    catch(error) {
+    } catch (error) {
         console.log('ERROR');
         console.log('error:' + error);
-        console.log( error);
+        console.log(error);
 
         await taskService.handleBpmnError(task, "save_failed", error, new Variables());
 
