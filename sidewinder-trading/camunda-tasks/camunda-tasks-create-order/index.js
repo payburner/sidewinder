@@ -1,26 +1,31 @@
-const { Client, logger, Variables } = require("camunda-external-task-client-js");
+const { Client, logger, Variables , BasicAuthInterceptor } = require("camunda-external-task-client-js");
 const AWS = require('aws-sdk');
 const {SidewinderOmsPersistenceService} = require("@payburner/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService");
 const {SidewinderTaskService} = require("@payburner/sidewinder-tasks-client/src/SidewinderTaskService");
 
 const fs = require('fs');
 const uuid4 = require('uuid4');
+
+const pConfig = JSON.parse(fs.readFileSync(process.argv[2]).toString());
+
+const basicAuthentication = new BasicAuthInterceptor({
+    username: pConfig.CAMUNDA_USER,
+    password: pConfig.CAMUNDA_PASSWORD
+});
+
 // configuration for the Client:
 //  - 'baseUrl': url to the Process Engine
 //  - 'logger': utility to automatically log important events
-const config = { baseUrl: "http://localhost:8080/engine-rest", use: logger };
+const config = { interceptors: basicAuthentication, baseUrl: "https://oms.payburner.com/engine-rest", use: logger };
 
 // create a Client instance with custom configuration
 const client = new Client(config);
 
-const awsConfig = JSON.parse(fs.readFileSync('./config.json').toString());
-
 AWS.config.update({
-    accessKeyId: awsConfig.AWS_ACCESS_ID,
-    secretAccessKey: awsConfig.AWS_ACCESS_KEY,
-    region: awsConfig.AWS_REGION
+    accessKeyId: pConfig.AWS_ACCESS_ID,
+    secretAccessKey: pConfig.AWS_ACCESS_KEY,
+    region: pConfig.AWS_REGION
 });
-
 const docClient = new AWS.DynamoDB.DocumentClient();
 const p = new SidewinderOmsPersistenceService( docClient );
 

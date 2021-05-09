@@ -1,0 +1,11 @@
+{
+  "uid": "camunda-tasks-create-order",
+  "append": true,
+  "watch": true,
+  "script": "index.js",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/camunda-tasks-create-order",
+  "logFile": "/etc/sidewinder-trading/camunda-tasks-create-order/logs/forever.log",
+  "outFile": "/etc/sidewinder-trading/camunda-tasks-create-order/logs/out.log",
+  "errFile": "/etc/sidewinder-trading/camunda-tasks-create-order/logs/error.log",
+  "args": ["/etc/sidewinder-trading/config.json"]
+}

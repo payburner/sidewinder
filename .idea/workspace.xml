@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-order-status/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sidewinder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sidewinder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/java/com/github/huksley/camunda/CamundaConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/java/com/github/huksley/camunda/CamundaConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/application.properties__" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +200,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611945919661" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -224,11 +209,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-order-status" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-balance" />
-      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/test/java/com/github/huksley/camunda" />
