@@ -1,4 +1,4 @@
-const { Client, logger, Variables } = require("camunda-external-task-client-js");
+const { Client, logger, Variables,BasicAuthInterceptor } = require("camunda-external-task-client-js");
 const AWS = require('aws-sdk');
 const {SidewinderTaskService} = require("@payburner/sidewinder-tasks-client/src/SidewinderTaskService");
 
