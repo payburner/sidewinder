@@ -1,0 +1,11 @@
+{
+  "uid": "camunda-tasks-order-status",
+  "append": true,
+  "watch": true,
+  "script": "index.js",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/camunda-tasks-order-status",
+  "logFile": "/etc/sidewinder-trading/camunda-tasks-order-status/logs/forever.log",
+  "outFile": "/etc/sidewinder-trading/camunda-tasks-order-status/logs/out.log",
+  "errFile": "/etc/sidewinder-trading/camunda-tasks-order-status/logs/error.log",
+  "args": ["/etc/sidewinder-trading/config.json"]
+}

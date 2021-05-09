@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-order-status/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-order-status/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
