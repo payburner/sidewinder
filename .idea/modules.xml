@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/sidewinder-trading/camunda-process-server/camunda-spring-boot-example.iml" filepath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/camunda-spring-boot-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sidewinder.iml" filepath="$PROJECT_DIR$/.idea/sidewinder.iml" />
     </modules>
   </component>

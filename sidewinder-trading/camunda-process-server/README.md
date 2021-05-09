@@ -8,7 +8,7 @@ This example packages Camunda BPM platform as Spring Boot Web application with f
 - Embedded Camunda engine
 - Camunda web applications (cockpit, admin, tasklist)
 - Sample process application and one BPMN process deployed
-- Test user configured with login and password in [`application.properties`](src/main/resources/application.properties)
+- Test user configured with login and password in [`application.properties`](src/main/resources/application.properties__)
 - BPMN Process sample
 - DMN Decision table sample
 - Service task sample

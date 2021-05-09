@@ -13,8 +13,8 @@ management.endpoints.web.base-path=/management
 # Camunda configuration
 # https://docs.camunda.org/manual/latest/user-guide/spring-boot-integration/configuration/#camunda-engine-properties
 camunda.bpm.webapp.index-redirect-enabled = false
-camunda.bpm.admin-user.id = admin
-camunda.bpm.admin-user.password = Y3ll0w41
+camunda.bpm.admin-user.id = demo
+camunda.bpm.admin-user.password = demo
 camunda.bpm.history-level = full
 camunda.bpm.process-engine-name = default
 camunda.bpm.database.schema-update = true
