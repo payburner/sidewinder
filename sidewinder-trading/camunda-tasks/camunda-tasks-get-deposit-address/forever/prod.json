@@ -1,0 +1,11 @@
+{
+  "uid": "camunda-tasks-get-deposit-address",
+  "append": true,
+  "watch": true,
+  "script": "index.js",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address",
+  "logFile": "/etc/sidewinder-trading/camunda-tasks-get-deposit-address/logs/forever.log",
+  "outFile": "/etc/sidewinder-trading/camunda-tasks-get-deposit-address/logs/out.log",
+  "errFile": "/etc/sidewinder-trading/camunda-tasks-get-deposit-address/logs/error.log",
+  "args": ["/etc/sidewinder-trading/config.json"]
+}
