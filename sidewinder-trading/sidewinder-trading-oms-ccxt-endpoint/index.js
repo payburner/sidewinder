@@ -17,7 +17,7 @@ let client = new AWS.SecretsManager({
 
 const sidewinderTaskService = new SidewinderTaskService();
 sidewinderTaskService.initializeAddress(config.SIDEWINDER_SEED);
-
+const address = sidewinderTaskService.address();
 const exchanges = new Exchanges(client, address);
 console.log('Target Address: ' + address);
 
