@@ -3,7 +3,7 @@ const fs = require('fs')
 const {SidewinderTaskService} = require("@payburner/sidewinder-tasks-client/src/SidewinderTaskService");
 const AWS = require('aws-sdk');
 const {Exchanges} = require('./Exchanges')
-const config = JSON.parse(fs.readFileSync('./config.json').toString());
+const config = JSON.parse(fs.readFileSync(process.argv[2]).toString());
 
 AWS.config.update({
     accessKeyId: config.AWS_ACCESS_ID,
