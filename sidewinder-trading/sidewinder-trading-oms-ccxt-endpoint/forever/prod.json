@@ -1,11 +1,11 @@
 {
-  "uid": "camunda-trading-oms-ccxt-endpoint",
+  "uid": "sidewinder-trading-oms-ccxt-endpoint",
   "append": true,
   "watch": true,
   "script": "index.js",
-  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/camunda-trading-oms-ccxt-endpoint",
-  "logFile": "/etc/sidewinder-trading/camunda-trading-oms-ccxt-endpoint/logs/forever.log",
-  "outFile": "/etc/sidewinder-trading/camunda-trading-oms-ccxt-endpoint/logs/out.log",
-  "errFile": "/etc/sidewinder-trading/camunda-trading-oms-ccxt-endpoint/logs/error.log",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint",
+  "logFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/forever.log",
+  "outFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/out.log",
+  "errFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/error.log",
   "args": ["/etc/sidewinder-trading/config.json"]
 }
