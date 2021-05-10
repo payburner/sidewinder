@@ -1,7 +1,6 @@
 'use strict';
 const fs = require('fs')
 const {SidewinderTaskService} = require("@payburner/sidewinder-tasks-client/src/SidewinderTaskService");
-const ccxt = require ('ccxt')
 const AWS = require('aws-sdk');
 const {Exchanges} = require('./Exchanges')
 const config = JSON.parse(fs.readFileSync('./config.json').toString());
@@ -16,17 +15,12 @@ let client = new AWS.SecretsManager({
     region: "us-west-1"
 });
 
-
-
-
 const sidewinderTaskService = new SidewinderTaskService();
-const address = sidewinderTaskService.initializeAddress(process.argv[2]);
+sidewinderTaskService.initializeAddress(config.SIDEWINDER_SEED);
+
 const exchanges = new Exchanges(client, address);
 console.log('Target Address: ' + address);
 
-let apiUrl = 'https://www.bitstamp.net/api';
-
-// instantiate the exchange
 
 setInterval(async () => {
 
