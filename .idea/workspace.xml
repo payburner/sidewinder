@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/application.properties__" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/bpmn/balance.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/bpmn/balance.bpmn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/bpmn/marketorder.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/bpmn/marketorder.bpmn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -196,11 +206,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611945919661" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -209,18 +223,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-account-generator" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order" />
-      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/forms" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/test/java/com/github/huksley/camunda" />
       <recent name="$PROJECT_DIR$/sidewinder-tasks/sidewinder-tasks-push-request/test" />
       <recent name="$PROJECT_DIR$/sidewinder-bot-setup/src" />
-      <recent name="$PROJECT_DIR$/sidewinder-soc-gw-twitter-out" />
-      <recent name="$PROJECT_DIR$/sidewinder-soc-gw-twitter-in" />
     </key>
   </component>
   <component name="RunManager">
@@ -339,6 +353,8 @@
       <workItem from="1620126509313" duration="526000" />
       <workItem from="1620388044386" duration="1689000" />
       <workItem from="1620472682204" duration="3793000" />
+      <workItem from="1620686954665" duration="935000" />
+      <workItem from="1620729113655" duration="2600000" />
     </task>
     <servers />
   </component>

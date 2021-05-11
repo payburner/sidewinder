@@ -23,7 +23,7 @@
       <bpmn:incoming>Flow_0tnd398</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_09w2n8a" sourceRef="StartEvent_1" targetRef="Activity_0fuu640" />
-    <bpmn:startEvent id="StartEvent_1">
+    <bpmn:startEvent id="StartEvent_1" camunda:formKey="embedded:app:forms/balance.html">
       <bpmn:outgoing>Flow_09w2n8a</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:serviceTask id="Activity_0fuu640" name="Get Balance" camunda:type="external" camunda:topic="GetBalance">
@@ -32,7 +32,6 @@
       <bpmn:outgoing>Flow_0f9vn7f</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_0f9vn7f" sourceRef="Activity_0fuu640" targetRef="Gateway_111s4bj" />
-    <bpmn:endEvent id="Event_1iyf0dw" />
     <bpmn:sequenceFlow id="Flow_1jbdlnf" sourceRef="Event_1snj4ya" targetRef="Activity_0fuu640" />
   </bpmn:process>
   <bpmn:signal id="Signal_1l8hxm3" name="Signal_3e6r3pb" />
@@ -40,6 +39,15 @@
   <bpmn:error id="Error_1rclwku" name="Error_1sjommk" errorCode="submit_failed" camunda:errorMessage="Insufficient Funds" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="balance">
+      <bpmndi:BPMNEdge id="Flow_1jbdlnf_di" bpmnElement="Flow_1jbdlnf">
+        <di:waypoint x="672" y="230" />
+        <di:waypoint x="540" y="230" />
+        <di:waypoint x="540" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f9vn7f_di" bpmnElement="Flow_0f9vn7f">
+        <di:waypoint x="560" y="120" />
+        <di:waypoint x="725" y="120" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_09w2n8a_di" bpmnElement="Flow_09w2n8a">
         <di:waypoint x="188" y="120" />
         <di:waypoint x="460" y="120" />
@@ -59,15 +67,6 @@
           <dc:Bounds x="796" y="102" width="32" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0f9vn7f_di" bpmnElement="Flow_0f9vn7f">
-        <di:waypoint x="560" y="120" />
-        <di:waypoint x="725" y="120" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1jbdlnf_di" bpmnElement="Flow_1jbdlnf">
-        <di:waypoint x="672" y="230" />
-        <di:waypoint x="540" y="230" />
-        <di:waypoint x="540" y="160" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Gateway_111s4bj_di" bpmnElement="Gateway_111s4bj" isMarkerVisible="true">
         <dc:Bounds x="725" y="95" width="50" height="50" />
       </bpmndi:BPMNShape>
@@ -82,9 +81,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_042jk4c_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="152" y="102" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1iyf0dw_di" bpmnElement="Event_1iyf0dw">
-        <dc:Bounds x="972" y="332" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1pxw25b_di" bpmnElement="Activity_0fuu640">
         <dc:Bounds x="460" y="80" width="100" height="80" />
