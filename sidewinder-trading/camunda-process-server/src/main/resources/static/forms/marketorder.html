@@ -13,7 +13,7 @@
       return uuid
     }
     camForm.on('submit', function() {
-      var targetAddress = document.getElementById('targetAddress').value;
+      var targetAddress = document.getElementById('target_address').value;
       var exchange = document.getElementById('exchange').value;
       var symbol = document.getElementById('symbol').value;
       camForm.businessKey = 'market-order-' + targetAddress + '-' + exchange + '-' + symbol + '-' + uuid();

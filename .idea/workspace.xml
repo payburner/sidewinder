@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/balance.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/balance.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/depositaddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/depositaddress.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/marketorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/marketorder.html" afterDir="false" />
@@ -354,7 +353,7 @@
       <workItem from="1620388044386" duration="1689000" />
       <workItem from="1620472682204" duration="3793000" />
       <workItem from="1620686954665" duration="935000" />
-      <workItem from="1620729113655" duration="4153000" />
+      <workItem from="1620729113655" duration="4337000" />
     </task>
     <servers />
   </component>
