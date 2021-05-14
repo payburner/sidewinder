@@ -16,11 +16,11 @@
       var targetAddress = document.getElementById('target_address').value;
       var exchange = document.getElementById('exchange').value;
       var symbol = document.getElementById('symbol').value;
-      camForm.businessKey = 'market-order-' + targetAddress + '-' + exchange + '-' + symbol + '-' + uuid();
+      camForm.businessKey = 'instant-order-' + targetAddress + '-' + exchange + '-' + symbol + '-' + uuid();
     });
 
   </script>
-  <h2>Create Market Order</h2>
+  <h2>Create Instant Order</h2>
   <div class="form-group">
     <label for="target_address">Target Address</label>
     <input class="form-control" id="target_address"
@@ -54,7 +54,7 @@
       <option value="sell">Sell</option>
     </select>
     <div class="form-group">
-      <label for="amount">Amount (usually Crypto)</label>
+      <label for="amount">Amount (usually Fiat)</label>
       <input class="form-control" id="amount"
              cam-variable-type="Double"
              cam-variable-name="amount"
