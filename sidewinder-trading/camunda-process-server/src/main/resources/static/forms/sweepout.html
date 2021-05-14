@@ -4,8 +4,8 @@
     camForm.on('submit', function() {
       var targetAddress = document.getElementById('target_address').value;
       var exchange = document.getElementById('exchange').value;
-      var currency = document.getElementById('currency').value;
-      camForm.businessKey = 'get-depositaddress-' + targetAddress + '-' + exchange + '-' + currency;
+      var source_currency = document.getElementById('source_currency').value;
+      camForm.businessKey = 'get-sweepout-' + targetAddress + '-' + exchange + '-' + source_currency;
     });
 
   </script>
