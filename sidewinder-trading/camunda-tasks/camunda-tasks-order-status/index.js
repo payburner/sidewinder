@@ -55,20 +55,40 @@ client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
             order.fee_currency = orderResponse.response_payload.fee.currency;
         }
 
-        order.cost = orderResponse.response_payload.cost;
-        order.filled_amount = orderResponse.response_payload.filled;
-        order.remaining_amount = orderResponse.response_payload.remaining;
-        if (order.filled_amount > 0) {
-            order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
-            order.net_cost_currency = order.side === 'buy' ? order.cost * -1 : order.cost;
-            order.net_amount_currency = order.side === 'buy' ? order.amount : order.amount * -1;
-            order.average_price = orderResponse.response_payload.average;
+        if (order.order_type === 'instant') {
+            order.cost = orderResponse.response_payload.filled;
+            order.filled_amount = orderResponse.response_payload.cost;
+            order.remaining_amount = order.amount - order.filled_amount;
+            if (typeof order.fee !== 'undefined') {
+                order.remaining_amount = order.remaining_amount - order.fee;
+                if (order.remaining_amount < 0) {
+                    order.remaining_amount = 0;
+                }
+            }
+            if (order.filled_amount > 0) {
+                order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
+                order.net_amount_currency = order.side === 'buy' ? order.cost * -1 : order.cost;
+                order.net_cost_currency = order.side === 'buy' ? order.amount : order.amount * -1;
+                // @TODO FIX ME -- should be the opposite of the average.
+                order.average_price = orderResponse.response_payload.average;
+            }
+        }
+        else {
+            order.cost = orderResponse.response_payload.cost;
+            order.filled_amount = orderResponse.response_payload.filled;
+            order.remaining_amount = orderResponse.response_payload.remaining;
+            if (order.filled_amount > 0) {
+                order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
+                order.net_cost_currency = order.side === 'buy' ? order.cost * -1 : order.cost;
+                order.net_amount_currency = order.side === 'buy' ? order.amount : order.amount * -1;
+                order.average_price = orderResponse.response_payload.average;
+            }
         }
         order.status = orderResponse.response_payload.status;
 
         console.log('Order to Update:' + JSON.stringify(order, null, 2));
         const updateOrderResponse = await p.saveOrder(order);
-        if (order.remaining_amount === 0) {
+        if (order.remaining_amount === 0 || order.status === 'closed' || order.status === 'cancelled') {
             const processVariables = new Variables().set("status", 'DONE');
             // set a local variable 'winningDate'
             const localVariables = new Variables();

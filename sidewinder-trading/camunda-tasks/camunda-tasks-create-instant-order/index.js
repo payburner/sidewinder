@@ -53,8 +53,8 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
     const symbol = input.symbol;
     const status = 'pending';
     const symbolTokens = symbol.split('/');
-    const costCurrency = symbolTokens[1];
-    const amountCurrency = symbolTokens[0];
+    const costCurrency = symbolTokens[0];
+    const amountCurrency = symbolTokens[1];
 
     const order = {
         orderId: orderId,
@@ -103,13 +103,15 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
             order.fee_currency = orderResponse.response_payload.fee.currency;
         }
 
-        order.cost = orderResponse.response_payload.cost;
-        order.filled_amount = orderResponse.response_payload.filled;
+        order.cost = orderResponse.response_payload.filled;
+        order.filled_amount = orderResponse.response_payload.cost;
+        // TODO FIX ME
         order.remaining_amount = orderResponse.response_payload.remaining;
         if (order.filled_amount > 0) {
             order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
-            order.net_cost_currency = side === 'buy' ? order.cost * -1 : order.cost;
-            order.net_amount_currency = side === 'buy' ? amount : amount * -1;
+            order.net_amount_currency = side === 'buy' ? order.cost * -1 : order.cost;
+            order.net_cost_currency = side === 'buy' ? amount : amount * -1;
+            // TODO FIX ME
             order.average_price = orderResponse.response_payload.average;
         }
         order.status = 'submitted';
