@@ -64,6 +64,9 @@ client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
                 if (order.remaining_amount < 0) {
                     order.remaining_amount = 0;
                 }
+                console.log('pre-round:' + order.remaining_amount);
+                order.remaining_amount = Math.round((order.remaining_amount + Number.EPSILON) * 100) / 100
+                console.log('post-round:' + order.remaining_amount);
             }
             if (order.filled_amount > 0) {
                 order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
