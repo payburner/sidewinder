@@ -42,7 +42,7 @@ const sidewinder = new SidewinderTaskService();
 sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 
 // susbscribe to the topic: 'creditScoreChecker'
-client.subscribe("CreateOrder", async function ({task, taskService}) {
+client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
     console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();
     const exchange = input.exchange;
@@ -62,7 +62,7 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
         exchange: exchange,
         side: side,
         amount: amount,
-        order_type: 'market',
+        order_type: 'instant',
         update_timestamp: new Date().getTime(),
         symbol: symbol,
         filled_amount: 0,
@@ -75,14 +75,14 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
     const saveOrderResponse = await p.saveOrder(order);
     console.log('OrderResponse:' + JSON.stringify(saveOrderResponse, null, 2));
 
-    const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTMarketOrder', {
+    const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTInstantOrder', {
         exchange: exchange,
         omsOrderId: order.orderId,
         side: side,
         amount: amount,
         symbol: symbol
     });
-    console.log('CCXTMarketOrder response:' + JSON.stringify(taskPushResponse, null, 2));
+    console.log('CCXTInstantOrder response:' + JSON.stringify(taskPushResponse, null, 2));
 
     const orderResponse = taskPushResponse.data.task;
     if (orderResponse.task_status === 'FAILED') {
