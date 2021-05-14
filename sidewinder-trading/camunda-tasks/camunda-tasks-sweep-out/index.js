@@ -58,8 +58,8 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
     });
 
     const minimumSourceCurrencyTrade = 30.00;
-    const balanceSource = balances[input.root_currency].free;
-    const targetCurrencies = input[target_currencies];
+    const balanceSource = balances[input.source_currency].free;
+    const targetCurrencies = input[target_currencies].split(',');
 
     const sourceAmountEachTarget = balanceSource / targetCurrencies.length;
     if (sourceAmountEachTarget < minimumSourceCurrencyTrade) {
@@ -70,6 +70,7 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
         return
     }
     else {
+
         const processVariables = new Variables().set("status", 'DONE').set("source_amount_each_target", sourceAmountEachTarget);
         // set a local variable 'winningDate'
         const localVariables = new Variables();
