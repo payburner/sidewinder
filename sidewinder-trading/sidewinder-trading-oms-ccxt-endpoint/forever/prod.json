@@ -7,5 +7,5 @@
   "logFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/forever.log",
   "outFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/out.log",
   "errFile": "/etc/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint/logs/error.log",
-  "args": ["/etc/sidewinder-trading/config.json"]
+  "args": ["/etc/sidewinder-trading/ccxt-config.json"]
 }

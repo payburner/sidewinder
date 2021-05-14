@@ -46,36 +46,46 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
     console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();
 
-    const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTFetchBalance', {
-        exchange: input.exchange,
-        target_address: input.target_address
-    });
-    const totals = taskPushResponse.data.task.response_payload.total;
-    const balances = {
-    };
-    Object.keys(totals).forEach((currency) => {
-        balances[currency] = taskPushResponse.data.task.response_payload[currency];
-    });
-
-    const minimumSourceCurrencyTrade = 30.00;
-    const balanceSource = balances[input.source_currency].free;
-    const targetCurrencies = input[target_currencies].split(',');
-
-    const sourceAmountEachTarget = balanceSource / targetCurrencies.length;
-    if (sourceAmountEachTarget < minimumSourceCurrencyTrade) {
-        const processVariables = new Variables().set("status", 'FAILED').set("status_reason", "INSUFFICIENT SOURCE CURRENCY AVAILABLE BALANCE:" + balanceSource);
-        // set a local variable 'winningDate'
-        const localVariables = new Variables();
-        await taskService.complete(task, processVariables, localVariables);
-        return
+    try {
+        console.log('Retrieving balances for:' + input.exchange );
+        const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTFetchBalance', {
+            exchange: input.exchange,
+            target_address: input.target_address
+        });
+        const totals = taskPushResponse.data.task.response_payload.total;
+        const balances = {};
+        Object.keys(totals).forEach((currency) => {
+            balances[currency] = taskPushResponse.data.task.response_payload[currency];
+        });
+        console.log('Retrieved balance:' + JSON.stringify(balances, null, 2));
+        const minimumSourceCurrencyTrade = 30.00;
+        const balanceSource = balances[input.source_currency].free;
+        const targetCurrencies = input['target_currencies'].split(',');
+        const sourceAmountEachTarget = balanceSource / targetCurrencies.length;
+        console.log('Source Amount Each Target:' +  sourceAmountEachTarget );
+        if (sourceAmountEachTarget < minimumSourceCurrencyTrade) {
+            console.log('Return Failed');
+            const processVariables = new Variables().set("status", 'FAILED').set("status_reason", "INSUFFICIENT SOURCE CURRENCY AVAILABLE BALANCE:" + balanceSource);
+            // set a local variable 'winningDate'
+            const localVariables = new Variables();
+            await taskService.complete(task, processVariables, localVariables);
+            return
+        } else {
+            console.log('Return Success');
+            const processVariables = new Variables().set("status", 'DONE').set("source_amount_each_target", sourceAmountEachTarget);
+            // set a local variable 'winningDate'
+            const localVariables = new Variables();
+            await taskService.complete(task, processVariables, localVariables);
+            return
+        }
     }
-    else {
+    catch(error) {
+        console.log('ERROR');
+        console.log('error:' + error);
+        console.log(error);
 
-        const processVariables = new Variables().set("status", 'DONE').set("source_amount_each_target", sourceAmountEachTarget);
-        // set a local variable 'winningDate'
-        const localVariables = new Variables();
-        await taskService.complete(task, processVariables, localVariables);
-        return
+        await taskService.handleBpmnError(task, "save_failed", JSON.stringify(error), new Variables().set("status", 'FAILED'));
+
     }
 
 });

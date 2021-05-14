@@ -27,7 +27,7 @@ sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 const docClient = new AWS.DynamoDB.DocumentClient();
 const p = new SidewinderOmsPersistenceService(docClient);
 
-client.subscribe("CheckOrderStatus", async function ({task, taskService}) {
+client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
     console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();
     const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTGetOrderStatus', {
@@ -84,6 +84,6 @@ client.subscribe("CheckOrderStatus", async function ({task, taskService}) {
     } catch (error) {
         console.log('ERRRROR:' + error);
         console.log( error);
-        await taskService.handleBpmnError(task, "save_failed", error, new Variables());
+        await taskService.handleBpmnError(task, "save_failed", JSON.stringify(error), new Variables());
     }
 });
