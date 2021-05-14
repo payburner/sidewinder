@@ -51,13 +51,13 @@ client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
         console.log('ORDER:' + JSON.stringify(getOrderResponse, null, 2));
         const order = getOrderResponse.data.order;
         if (typeof orderResponse.response_payload.fee !== 'undefined') {
-            order.fee = orderResponse.response_payload.fee.cost;
+            order.fee = Math.round((orderResponse.response_payload.fee.cost + Number.EPSILON) * 100) / 100 ;
             order.fee_currency = orderResponse.response_payload.fee.currency;
         }
 
         if (order.order_type === 'instant') {
             order.cost = orderResponse.response_payload.filled;
-            order.filled_amount = orderResponse.response_payload.cost;
+            order.filled_amount = Math.round(( orderResponse.response_payload.cost  + Number.EPSILON) * 100) / 100;
             order.remaining_amount = order.amount - order.filled_amount;
             if (typeof order.fee !== 'undefined') {
                 order.remaining_amount = order.remaining_amount - order.fee;
@@ -67,8 +67,8 @@ client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
             }
             if (order.filled_amount > 0) {
                 order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
-                order.net_amount_currency = order.side === 'buy' ? order.cost * -1 : order.cost;
-                order.net_cost_currency = order.side === 'buy' ? order.amount : order.amount * -1;
+                order.net_amount_currency = order.side === 'buy' ? order.amount * -1 : order.amount;
+                order.net_cost_currency = order.side === 'buy' ? order.cost : order.cost * -1;
                 // @TODO FIX ME -- should be the opposite of the average.
                 order.average_price = orderResponse.response_payload.average;
             }
@@ -88,7 +88,7 @@ client.subscribe("CCXTCheckOrderStatus", async function ({task, taskService}) {
 
         console.log('Order to Update:' + JSON.stringify(order, null, 2));
         const updateOrderResponse = await p.saveOrder(order);
-        if (order.remaining_amount === 0 || order.status === 'closed' || order.status === 'cancelled') {
+        if (order.remaining_amount === 0 || order.status === 'closed' || order.status === 'canceled') {
             const processVariables = new Variables().set("status", 'DONE');
             // set a local variable 'winningDate'
             const localVariables = new Variables();

@@ -99,18 +99,23 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
     try {
         order.exchangeOrderId = orderResponse.response_payload.id;
         if (typeof orderResponse.response_payload.fee !== 'undefined') {
-            order.fee = orderResponse.response_payload.fee.cost;
+            order.fee = Math.round((orderResponse.response_payload.fee.cost + Number.EPSILON) * 100) / 100 ;
             order.fee_currency = orderResponse.response_payload.fee.currency;
         }
 
         order.cost = orderResponse.response_payload.filled;
-        order.filled_amount = orderResponse.response_payload.cost;
-        // TODO FIX ME
-        order.remaining_amount = orderResponse.response_payload.remaining;
+        order.filled_amount = Math.round((orderResponse.response_payload.cost + Number.EPSILON) * 100) / 100 ;
+        order.remaining_amount = order.amount - order.filled_amount;
+        if (typeof order.fee !== 'undefined') {
+            order.remaining_amount = order.remaining_amount - order.fee;
+            if (order.remaining_amount < 0) {
+                order.remaining_amount = 0;
+            }
+        }
         if (order.filled_amount > 0) {
             order.last_trade_timestamp = orderResponse.response_payload.lastTradeTimestamp;
-            order.net_amount_currency = side === 'buy' ? order.cost * -1 : order.cost;
-            order.net_cost_currency = side === 'buy' ? amount : amount * -1;
+            order.net_amount_currency = side === 'buy' ?  amount * -1 : amount;
+            order.net_cost_currency = side === 'buy' ? order.cost : order.cost * -1;
             // TODO FIX ME
             order.average_price = orderResponse.response_payload.average;
         }
