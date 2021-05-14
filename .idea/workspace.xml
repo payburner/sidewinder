@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/balance.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/balance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/depositaddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/depositaddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/marketorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/marketorder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/.foreverignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/forever/prod.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/install.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +217,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611945919661" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -222,11 +226,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-ccxt-endpoint" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-account-generator" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-get-deposit-address" />
-      <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static" />
@@ -237,15 +241,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -353,7 +355,8 @@
       <workItem from="1620388044386" duration="1689000" />
       <workItem from="1620472682204" duration="3793000" />
       <workItem from="1620686954665" duration="935000" />
-      <workItem from="1620729113655" duration="4337000" />
+      <workItem from="1620729113655" duration="4545000" />
+      <workItem from="1620985542137" duration="1230000" />
     </task>
     <servers />
   </component>
