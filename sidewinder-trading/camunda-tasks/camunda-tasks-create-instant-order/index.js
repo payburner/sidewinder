@@ -75,20 +75,20 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
     const saveOrderResponse = await p.saveOrder(order);
     console.log('OrderResponse:' + JSON.stringify(saveOrderResponse, null, 2));
 
-    const taskPushResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTInstantOrder', {
+    const pushInstantOrderResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTInstantOrder', {
         exchange: exchange,
         omsOrderId: order.orderId,
         side: side,
         amount: amount,
         symbol: symbol
     });
-    console.log('CCXTInstantOrder response:' + JSON.stringify(taskPushResponse, null, 2));
+    console.log('CCXTInstantOrder response:' + JSON.stringify(pushInstantOrderResponse, null, 2));
 
-    const orderResponse = taskPushResponse.data.task;
+    const orderResponse = pushInstantOrderResponse.data.task;
     if (orderResponse.task_status === 'FAILED') {
         // Create some variables
         const variables = new Variables().set('date', new Date());
-        const reason = orderResponse.response_payload.error.name;
+        const reason = JSON.stringify( orderResponse.response_payload.error );
         // Handle a BPMN Failure
         const saveOrderResponse = await p.updateOrderStatus(input.orderId, "submit_failed", reason);
         console.log('Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
