@@ -28,7 +28,7 @@
     <bpmn:serviceTask id="Activity_1x59ajd" name="Calculate Orders" camunda:type="external" camunda:topic="SweepOutCalculateOrder">
       <bpmn:incoming>Flow_0tnd398</bpmn:incoming>
       <bpmn:outgoing>Flow_0d5q29a</bpmn:outgoing>
-      <bpmn:multiInstanceLoopCharacteristics camunda:collection="${target_currencies_list.elements()}" camunda:elementVariable="target_currency" />
+      <bpmn:multiInstanceLoopCharacteristics camunda:collection="target_currencies_list" camunda:elementVariable="target_currency" />
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_0d5q29a" sourceRef="Activity_1x59ajd" targetRef="Event_0uhfvfj" />
     <bpmn:sequenceFlow id="Flow_1clgd87" sourceRef="Event_0uhfvfj" targetRef="Event_1bbw66i" />
