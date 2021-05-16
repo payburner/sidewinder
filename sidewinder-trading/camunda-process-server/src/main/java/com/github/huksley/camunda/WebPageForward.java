@@ -39,10 +39,10 @@ public class WebPageForward implements WebMvcConfigurer {
             addResourceLocations("classpath:/static/index.html").
             resourceChain(false);
     }
-
+    /*
     @ApiOperation("Redirects / elsewhere")
     @GetMapping("/")
     public void root(HttpServletResponse response) throws IOException {
         response.sendRedirect(env.getProperty("forward.root", "/launchpad.html"));
-    }
+    }*/
 }
