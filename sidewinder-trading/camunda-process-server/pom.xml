@@ -46,20 +46,19 @@
             <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
             <version>${camunda.spring.boot.starter.version}</version>
         </dependency>
+<dependency>
+    <groupId>org.camunda.bpm</groupId>
+    <artifactId>camunda-engine-plugin-spin</artifactId>
+    <version>7.15.0</version>
+</dependency>
+
         <dependency>
             <groupId>org.camunda.spin</groupId>
-            <artifactId>camunda-engine-plugin-spin</artifactId>
-            <version>1.10.1</version>
-
+            <artifactId>camunda-spin-dataformat-json-jackson</artifactId>
+		    <!--<scope>provided</scope>-->
+			    <version>1.10.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.camunda.spin</groupId>
-            <artifactId>camunda-spin-dataformat-all</artifactId>
-            <version>1.10.1</version>
-
-        </dependency>
-camunda-spin-dataformat-all
-        <!-- https://github.com/camunda/camunda-bpm-swagger -->
+	<!-- https://github.com/camunda/camunda-bpm-swagger -->
         <dependency>
             <groupId>org.camunda.bpm.extension.swagger</groupId>
             <artifactId>camunda-bpm-swagger-json</artifactId>
