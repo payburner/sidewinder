@@ -86,15 +86,23 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
 
     const orderResponse = pushMarketOrderResponse.data.task;
     if (orderResponse.task_status === 'FAILED') {
-        // Create some variables
-        const variables = new Variables().set('date', new Date());
-        const reason = JSON.stringify( orderResponse.response_payload.error );
-        // Handle a BPMN Failure
-        const saveOrderResponse = await p.updateOrderStatus(input.orderId, "submit_failed", reason);
-        console.log('Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
-        await taskService.handleBpmnError(task, "submit_failed", reason, variables);
-        console.log('ERROR');
-        return;
+        try {
+            // Create some variables
+            const variables = new Variables().set('date', new Date());
+            const reason = JSON.stringify(orderResponse.response_payload.error);
+            // Handle a BPMN Failure
+            const saveOrderResponse = await p.updateOrderStatus( orderId, "submit_failed", reason);
+            console.log('Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
+            await taskService.handleBpmnError(task, "submit_failed", reason, variables);
+            console.log('ERROR');
+            return;
+        }
+        catch(error) {
+            console.log('ERROR');
+            console.log('error:' + error);
+            console.log(error);
+            await taskService.handleBpmnError(task, "submit_failed", JSON.stringify(error), new Variables());
+        }
     }
     try {
         order.exchangeOrderId = orderResponse.response_payload.id;
