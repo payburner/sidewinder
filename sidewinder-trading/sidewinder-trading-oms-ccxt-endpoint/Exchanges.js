@@ -47,6 +47,11 @@ class Exchanges {
                         }
                     }
                 });
+
+                ccxtExchange.supportsInstantOrderSide = function( side ) {
+                    return side === 'buy';
+                }
+
                 self.exchanges[exchange] = ccxtExchange;
                 resolve(ccxtExchange);
             }

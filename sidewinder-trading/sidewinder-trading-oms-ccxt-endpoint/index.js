@@ -74,9 +74,13 @@ setInterval(async () => {
                     JSON.stringify(await sidewinderTaskService.pushTaskResponse(taskRequest.data.task.task_id, marketOrder), null, 2));
             }
             else if (taskRequest.data.task.task_type === 'CCXTInstantOrder') {
-                let marketOrder = await exchange.createOrder(taskRequest.data.task.request_payload.symbol, 'instant', taskRequest.data.task.request_payload.side, taskRequest.data.task.request_payload.amount)
+                if (!exchange.supportsInstantOrderSide(taskRequest.data.task.request_payload.side)) {
+                    await sidewinderTaskService.pushFailedTaskResponse(taskRequest.data.task.task_id, {error: 'The exchange doesnt support instant orders of that side'});
+                    return;
+                }
+                let instantOrder = await exchange.createOrder(taskRequest.data.task.request_payload.symbol, 'instant', taskRequest.data.task.request_payload.side, taskRequest.data.task.request_payload.amount)
                 console.log('Send cctx instant order: ' +
-                    JSON.stringify(await sidewinderTaskService.pushTaskResponse(taskRequest.data.task.task_id, marketOrder), null, 2));
+                    JSON.stringify(await sidewinderTaskService.pushTaskResponse(taskRequest.data.task.task_id, instantOrder), null, 2));
             }
             else if (taskRequest.data.task.task_type === 'CCXTBuyMarketOrder') {
                 let marketOrder = await exchange.createOrder(taskRequest.data.task.request_payload.symbol, 'market', 'buy', taskRequest.data.task.request_payload.amount)
