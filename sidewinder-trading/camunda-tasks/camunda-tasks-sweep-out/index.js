@@ -72,7 +72,7 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
             return
         } else {
             console.log('Return Success');
-            const processVariables = new Variables().set("status", 'DONE').set("source_amount_each_target", sourceAmountEachTarget);
+            const processVariables = new Variables().set("status", 'DONE').set("amount", sourceAmountEachTarget).set("target_currencies", targetCurrencies);
             // set a local variable 'winningDate'
             const localVariables = new Variables();
             await taskService.complete(task, processVariables, localVariables);
