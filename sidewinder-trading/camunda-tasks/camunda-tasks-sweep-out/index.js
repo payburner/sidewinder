@@ -74,7 +74,7 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
             console.log('Return Success#');
             const processVariables = new Variables().set("status", 'DONE')
                 .set("amount", sourceAmountEachTarget)
-                .setTyped("target_currencies", {
+                .setTyped("target_currencies_list", {
                     value: JSON.stringify(targetCurrencies),
                     type: 'Object',
                     valueInfo: { "serializationDataFormat": "application/json",
