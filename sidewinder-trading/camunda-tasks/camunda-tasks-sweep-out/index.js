@@ -74,8 +74,13 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
             console.log('Return Success');
             const processVariables = new Variables().set("status", 'DONE')
                 .set("amount", sourceAmountEachTarget)
-                .set("target_currencies", targetCurrencies);
-            console.log('Vars:' + JSON.stringify(processVariables.getAll(), null, 2));
+                .set("target_currencies", {
+                    value: JSON.stringify(targetCurrencies),
+                    type: 'Object',
+                    valueInfo: { "serializationDataFormat": "application/json",
+                        "objectTypeName": "java.util.ArrayList" }
+                });
+            console.log('Vars:' + JSON.stringify(processVariables, null, 2));
             // set a local variable 'winningDate'
             const localVariables = new Variables();
             await taskService.complete(task, processVariables, localVariables);

@@ -28,7 +28,7 @@
     <bpmn:serviceTask id="Activity_1x59ajd" name="Calculate Orders" camunda:type="external" camunda:topic="SweepOutCalculateOrder">
       <bpmn:incoming>Flow_0tnd398</bpmn:incoming>
       <bpmn:outgoing>Flow_0d5q29a</bpmn:outgoing>
-      <bpmn:multiInstanceLoopCharacteristics camunda:collection="targetCurrencies" camunda:elementVariable="targetCurrency" />
+      <bpmn:multiInstanceLoopCharacteristics camunda:collection="${target_currencies.elements()}" camunda:elementVariable="target_currency" />
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_0d5q29a" sourceRef="Activity_1x59ajd" targetRef="Event_0uhfvfj" />
     <bpmn:sequenceFlow id="Flow_1clgd87" sourceRef="Event_0uhfvfj" targetRef="Event_1bbw66i" />
@@ -45,6 +45,21 @@
   <bpmn:error id="Error_1rclwku" name="Error_1sjommk" errorCode="submit_failed" camunda:errorMessage="Insufficient Funds" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="sweepout">
+      <bpmndi:BPMNEdge id="Flow_1clgd87_di" bpmnElement="Flow_1clgd87">
+        <di:waypoint x="830" y="138" />
+        <di:waypoint x="830" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0d5q29a_di" bpmnElement="Flow_0d5q29a">
+        <di:waypoint x="730" y="120" />
+        <di:waypoint x="812" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tnd398_di" bpmnElement="Flow_0tnd398">
+        <di:waypoint x="555" y="120" />
+        <di:waypoint x="630" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="554" y="102" width="32" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0f9vn7f_di" bpmnElement="Flow_0f9vn7f">
         <di:waypoint x="410" y="120" />
         <di:waypoint x="505" y="120" />
@@ -61,21 +76,6 @@
           <dc:Bounds x="495" y="206" width="38" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0tnd398_di" bpmnElement="Flow_0tnd398">
-        <di:waypoint x="555" y="120" />
-        <di:waypoint x="630" y="120" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="554" y="102" width="32" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0d5q29a_di" bpmnElement="Flow_0d5q29a">
-        <di:waypoint x="730" y="120" />
-        <di:waypoint x="812" y="120" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1clgd87_di" bpmnElement="Flow_1clgd87">
-        <di:waypoint x="830" y="138" />
-        <di:waypoint x="830" y="282" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Gateway_111s4bj_di" bpmnElement="Gateway_111s4bj" isMarkerVisible="true">
         <dc:Bounds x="505" y="95" width="50" height="50" />
       </bpmndi:BPMNShape>
@@ -85,14 +85,14 @@
       <bpmndi:BPMNShape id="Activity_1pxw25b_di" bpmnElement="Activity_0fuu640">
         <dc:Bounds x="310" y="80" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0obp6hq_di" bpmnElement="Event_0uhfvfj">
-        <dc:Bounds x="812" y="102" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_1bbw66i_di" bpmnElement="Event_1bbw66i">
+        <dc:Bounds x="812" y="282" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_12azvd6_di" bpmnElement="Activity_1x59ajd">
         <dc:Bounds x="630" y="80" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1bbw66i_di" bpmnElement="Event_1bbw66i">
-        <dc:Bounds x="812" y="282" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_0obp6hq_di" bpmnElement="Event_0uhfvfj">
+        <dc:Bounds x="812" y="102" width="36" height="36" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
