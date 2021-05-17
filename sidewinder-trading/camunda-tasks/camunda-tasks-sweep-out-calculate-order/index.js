@@ -35,13 +35,15 @@ client.subscribe("SweepOutCalculateOrder", async function ({task, taskService}) 
     try {
 
         console.log('Return Success');
-        const processVariables = new Variables().set("status", 'DONE')
-
         const symbol = input.target_currency + '/' + input.source_currency;
-        const localVariables = new Variables()
+        const processVariables = new Variables().set("status", 'DONE')
             .set("symbol", input.target_currency + '/' + input.source_currency)
             .set("business_key", 'instant-order-' + input.target_address + '-'
-                + input.exchange + '-' + symbol + '-' + uuid4());
+                + input.exchange + '-' + symbol + '-' + uuid4())
+
+
+        const localVariables = new Variables()
+            ;
         await taskService.complete(task, processVariables, localVariables);
         return;
     }
