@@ -61,7 +61,7 @@ client.subscribe("SweepOut", async function ({task, taskService}) {
         const minimumSourceCurrencyTrade = 30.00;
         const balanceSource = balances[input.source_currency].free;
         const targetCurrencies = input['target_currencies'].split(',');
-        const sourceAmountEachTarget = balanceSource / targetCurrencies.length;
+        const sourceAmountEachTarget =Math.floor(balanceSource / targetCurrencies.length* 100) / 100 ;
         console.log('Source Amount Each Target:' +  sourceAmountEachTarget );
         if (sourceAmountEachTarget < minimumSourceCurrencyTrade) {
             console.log('Return Failed');
