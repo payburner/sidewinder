@@ -40,7 +40,6 @@
       <bpmn:sequenceFlow id="Flow_1e0f9zc" sourceRef="Activity_0ktax5p" targetRef="Activity_0qy41is" />
       <bpmn:callActivity id="Activity_0qy41is" name="Call Instant Order" calledElement="instantorder">
         <bpmn:extensionElements>
-          <camunda:in businessKey="#{business_key}" variables="all" />
           <camunda:out variables="all" />
           <camunda:in variables="all" />
         </bpmn:extensionElements>
