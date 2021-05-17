@@ -1,7 +1,7 @@
 {
   "name": "@payburner/sidewinder-trading-oms-p",
   "description": "Persistence for sidewinder trading",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "@payburner",
   "keywords": [],
   "bin": "./src/SidewinderOmsPersistenceService.js",
