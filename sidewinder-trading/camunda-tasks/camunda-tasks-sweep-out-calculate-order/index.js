@@ -4,7 +4,7 @@ const {
     Variables,
     BasicAuthInterceptor
 } = require("camunda-external-task-client-js");
-
+const uuid4 = require('uuid4');
 const fs = require('fs');
 
 const pConfig = JSON.parse(fs.readFileSync(process.argv[2]).toString());
@@ -36,9 +36,12 @@ client.subscribe("SweepOutCalculateOrder", async function ({task, taskService}) 
 
         console.log('Return Success');
         const processVariables = new Variables().set("status", 'DONE')
+
+        const symbol = input.target_currency + '/' + input.source_currency;
+        const localVariables = new Variables()
             .set("symbol", input.target_currency + '/' + input.source_currency)
-        // set a local variable 'winningDate'
-        const localVariables = new Variables();
+            .set("business_key", 'instant-order-' + input.target_address + '-'
+                + input.exchange + '-' + symbol + '-' + uuid4());
         await taskService.complete(task, processVariables, localVariables);
         return;
     }
