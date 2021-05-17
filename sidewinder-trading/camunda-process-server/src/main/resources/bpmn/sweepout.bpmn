@@ -38,9 +38,10 @@
         <bpmn:outgoing>Flow_1e0f9zc</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:sequenceFlow id="Flow_1e0f9zc" sourceRef="Activity_0ktax5p" targetRef="Activity_0qy41is" />
-      <bpmn:callActivity id="Activity_0qy41is" name="Call Instant Order" calledElement="instantorder" camunda:variableMappingDelegateExpression="all">
+      <bpmn:callActivity id="Activity_0qy41is" name="Call Instant Order" calledElement="instantorder">
         <bpmn:extensionElements>
-          <camunda:in businessKey="#{business_key}" />
+          <camunda:in businessKey="#{business_key}" variables="all"/>  
+    			<camunda:out variables="all" />
         </bpmn:extensionElements>
         <bpmn:incoming>Flow_1e0f9zc</bpmn:incoming>
         <bpmn:outgoing>Flow_0fq0213</bpmn:outgoing>
