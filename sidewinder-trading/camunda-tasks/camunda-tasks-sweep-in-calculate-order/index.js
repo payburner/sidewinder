@@ -25,6 +25,12 @@ const config = {
     baseUrl: "https://oms.payburner.com/engine-rest",
     use: logger
 };
+AWS.config.update({
+    accessKeyId: pConfig.AWS_ACCESS_ID,
+    secretAccessKey: pConfig.AWS_ACCESS_KEY,
+    region: pConfig.AWS_REGION
+});
+
 
 // create a Client instance with custom configuration
 const client = new Client(config);
