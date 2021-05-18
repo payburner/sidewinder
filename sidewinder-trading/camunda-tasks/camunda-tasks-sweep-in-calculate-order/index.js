@@ -39,7 +39,7 @@ client.subscribe("SweepInCalculateOrder", async function ({task, taskService}) {
 
     try {
 
-        const account = p.getAccount( input.target_address, input.exchange, input.source_currency );
+        const account = await p.getAccount( input.target_address, input.exchange, input.source_currency );
         if (account.status !== 200) {
             console.log('Failing, could not get account balance:' + JSON.stringify(account, null, 2));
             await taskService.handleBpmnError(task, "get_account_failed",
