@@ -10,7 +10,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ status != 'DONE'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_09w2n8a" sourceRef="StartEvent_1" targetRef="Activity_0fuu640" />
-    <bpmn:startEvent id="StartEvent_1" camunda:formKey="embedded:app:forms/sweepout.html">
+    <bpmn:startEvent id="StartEvent_1" camunda:formKey="embedded:app:forms/sweepin.html">
       <bpmn:outgoing>Flow_09w2n8a</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:serviceTask id="Activity_0fuu640" name="SweepIn" camunda:type="external" camunda:topic="SweepIn">
@@ -28,7 +28,7 @@
     <bpmn:subProcess id="Activity_1lfq8x1" name="Handle Orders">
       <bpmn:incoming>Flow_0tnd398</bpmn:incoming>
       <bpmn:outgoing>Flow_14awovu</bpmn:outgoing>
-      <bpmn:multiInstanceLoopCharacteristics camunda:collection="target_currencies_list" camunda:elementVariable="target_currency" />
+      <bpmn:multiInstanceLoopCharacteristics camunda:collection="source_currencies_list" camunda:elementVariable="source_currency" />
       <bpmn:startEvent id="Event_1clvpbr">
         <bpmn:outgoing>Flow_1lwxsz5</bpmn:outgoing>
       </bpmn:startEvent>
@@ -38,7 +38,7 @@
         <bpmn:outgoing>Flow_1e0f9zc</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:sequenceFlow id="Flow_1e0f9zc" sourceRef="Activity_0ktax5p" targetRef="Activity_0qy41is" />
-      <bpmn:callActivity id="Activity_0qy41is" name="Call Instant Order" calledElement="instantorder">
+      <bpmn:callActivity id="Activity_0qy41is" name="Call Market Order" calledElement="marketorder">
         <bpmn:extensionElements>
           <camunda:out variables="all" />
           <camunda:in variables="all" />

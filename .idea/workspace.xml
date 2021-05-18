@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepout.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService.js" afterDir="false" />
-    </list>
+    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -364,7 +359,7 @@
       <workItem from="1620686954665" duration="935000" />
       <workItem from="1620729113655" duration="4545000" />
       <workItem from="1620985542137" duration="13551000" />
-      <workItem from="1621253798933" duration="2371000" />
+      <workItem from="1621253798933" duration="2726000" />
     </task>
     <servers />
   </component>
