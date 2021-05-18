@@ -11,7 +11,7 @@
   "dependencies": {
     "@payburner/keyburner-core": "^1.1.18",
     "@payburner/sidewinder-tasks-client": "0.0.3",
-    "@payburner/sidewinder-trading-oms-p": "0.0.15",
+    "@payburner/sidewinder-trading-oms-p": "0.0.16",
     "aws-sdk": "^2.892.0",
     "camunda-external-task-client-js": "^2.1.0",
     "uuid4": "^2.0.2"

@@ -32,7 +32,7 @@ class SidewinderOmsPersistenceService {
                         resolve({
                             status: 200,
                             data: {
-                                order: data.Items[0]
+                                account: data.Items[0]
                             }
                         })
                     }
