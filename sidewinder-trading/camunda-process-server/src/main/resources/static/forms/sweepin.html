@@ -15,8 +15,8 @@
     camForm.on('submit', function() {
       var targetAddress = document.getElementById('target_address').value;
       var exchange = document.getElementById('exchange').value;
-      var source_currency = document.getElementById('source_currency').value;
-      camForm.businessKey = 'get-sweepout-' + targetAddress + '-' + exchange + '-' + source_currency + '-' + uuid();
+      var target_currency = document.getElementById('target_currency').value;
+      camForm.businessKey = 'get-sweepin-' + targetAddress + '-' + exchange + '-' + target_currency + '-' + uuid();
     });
 
   </script>
@@ -36,19 +36,19 @@
   </div>
 
   <div class="form-group">
-    <label for="source_currency">Source Currency</label>
-    <input class="form-control" id="source_currency"
+    <label for="source_currencies">Source Currencies</label>
+    <input class="form-control" id="source_currencies"
            cam-variable-type="String"
-           cam-variable-name="source_currency"
-           name="source_currency" />
+           cam-variable-name="source_currencies"
+           name="source_currencies" />
   </div>
 
   <div class="form-group">
-    <label for="target_currencies">Target Currencies</label>
-    <input class="form-control" id="target_currencies"
+    <label for="target_currency">Target Currency</label>
+    <input class="form-control" id="target_currency"
            cam-variable-type="String"
-           cam-variable-name="target_currencies"
-           name="target_currencies" />
+           cam-variable-name="target_currency"
+           name="target_currency" />
   </div>
 
 </form>

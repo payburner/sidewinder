@@ -1,0 +1,11 @@
+{
+  "uid": "camunda-tasks-sweep-in-calculate-order",
+  "append": true,
+  "watch": true,
+  "script": "index.js",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-in-calculate-order",
+  "logFile": "/etc/sidewinder-trading/camunda-tasks-sweep-in-calculate-order/logs/forever.log",
+  "outFile": "/etc/sidewinder-trading/camunda-tasks-sweep-in-calculate-order/logs/out.log",
+  "errFile": "/etc/sidewinder-trading/camunda-tasks-sweep-in-calculate-order/logs/error.log",
+  "args": ["/etc/sidewinder-trading/config.json"]
+}
