@@ -21,11 +21,14 @@ class SidewinderOmsPersistenceService {
             comp.docClient.query(params, function (err, data) {
                 console.log('Query Time Get Order: ' + (new Date().getTime()-t0))
                 if (err) {
-                    return {
-                        status: 404, error: 'The order was not found'
-                    }
+                    console.log('The account was not found:' + accountId );
+                    console.log('The account was not found:' + err );
+                    resolve( {
+                        status: 404, error: 'The account was not found:' + accountId
+                    } )
                 } else {
                     if (data.Items.length >= 0) {
+                        console.log('The account was found:' + accountId );
                         resolve({
                             status: 200,
                             data: {
@@ -34,8 +37,9 @@ class SidewinderOmsPersistenceService {
                         })
                     }
                     else {
+                        console.log('The account was found:' + accountId );
                         resolve({
-                            status: 404, error: 'The account was not found'
+                            status: 404, error: 'The account was not found:' + accountId
                         });
                     }
                 }

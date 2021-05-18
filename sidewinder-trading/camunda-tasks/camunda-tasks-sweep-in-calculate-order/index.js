@@ -40,13 +40,14 @@ client.subscribe("SweepInCalculateOrder", async function ({task, taskService}) {
     try {
 
         const account = await p.getAccount( input.target_address, input.exchange, input.source_currency );
+        console.log('Obtained account balance: ' + JSON.stringify(account, null, 2));
+
         if (account.status !== 200) {
             console.log('Failing, could not get account balance:' + JSON.stringify(account, null, 2));
             await taskService.handleBpmnError(task, "get_account_failed",
                 JSON.stringify(account.error), new Variables().set("status", 'FAILED'));
             return;
         }
-        console.log('Obtained account balance: ' + JSON.stringify(account, null, 2));
         const symbol = input.source_currency + '/' + input.target_currency;
         const processVariables = new Variables().set("status", 'DONE')
             .set("side", "sell")
