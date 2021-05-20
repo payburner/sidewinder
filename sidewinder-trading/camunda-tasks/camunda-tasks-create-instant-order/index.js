@@ -47,7 +47,7 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
     const input = task.variables.getAll();
 
     let sideVar = 'side';
-    let symbolVar = 'symbol;'
+    let symbolVar = 'symbol'
     if (typeof input.loopCounter !== 'undefined') {
         sideVar = 'side-' + input.loopCounter;
         symbolVar = 'symbol-' + input.loopCounter;

@@ -48,7 +48,7 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
 
     let sideVar = 'side';
     let amountVar = 'amount';
-    let symbolVar = 'symbol;'
+    let symbolVar = 'symbol'
     if (typeof input.loopCounter !== 'undefined') {
          sideVar = 'side-' + input.loopCounter;
          amountVar = 'amount-' + input.loopCounter;
