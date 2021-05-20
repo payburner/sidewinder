@@ -33,18 +33,14 @@ client.subscribe("SweepOutCalculateOrder", async function ({task, taskService}) 
     const input = task.variables.getAll();
 
     try {
-
         console.log('Return Success');
         const symbol = input.target_currency + '/' + input.source_currency;
         const processVariables = new Variables().set("status", 'DONE')
-            .set("side", "buy")
-            .set("symbol", input.target_currency + '/' + input.source_currency)
-            .set("business_key", 'instant-order-' + input.target_address + '-'
-                + input.exchange + '-' + symbol + '-' + uuid4())
-
-
-        const localVariables = new Variables()
-            ;
+            .set("side-" + input.loopCounter, "buy")
+            .set("symbol-" + input.loopCounter, input.target_currency + '/' + input.source_currency)
+            .set("business_key-" + input.loopCounter, 'instant-order-' + input.target_address + '-'
+                + input.exchange + '-' + symbol + '-' + uuid4());
+        const localVariables = new Variables();
         await taskService.complete(task, processVariables, localVariables);
         return;
     }
@@ -52,9 +48,7 @@ client.subscribe("SweepOutCalculateOrder", async function ({task, taskService}) 
         console.log('ERROR');
         console.log('error:' + error);
         console.log(error);
-
         await taskService.handleBpmnError(task, "save_failed", JSON.stringify(error), new Variables().set("status", 'FAILED'));
-
     }
 
 });

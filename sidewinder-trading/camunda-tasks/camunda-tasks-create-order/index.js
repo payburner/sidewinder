@@ -45,12 +45,22 @@ sidewinder.initializeAddress(pConfig.SIDEWINDER_SEED);
 client.subscribe("CreateOrder", async function ({task, taskService}) {
     console.log('TASK:' + JSON.stringify(task.variables.getAll(), null, 2));
     const input = task.variables.getAll();
+
+    let sideVar = 'side';
+    let amountVar = 'amount';
+    let symbolVar = 'symbol;'
+    if (typeof input.loopCounter !== 'undefined') {
+         sideVar = 'side-' + input.loopCounter;
+         amountVar = 'amount-' + input.loopCounter;
+         symbolVar = 'symbol-' + input.loopCounter;
+    }
+
     const exchange = input.exchange;
-    const side = input.side;
-    const amount = input.amount;
+    const side = input[sideVar]
+    const amount = input[amountVar]
     const address = input.target_address;
     const orderId = uuid4();
-    const symbol = input.symbol;
+    const symbol = input[symbolVar];
     const status = 'pending';
     const symbolTokens = symbol.split('/');
     const costCurrency = symbolTokens[1];

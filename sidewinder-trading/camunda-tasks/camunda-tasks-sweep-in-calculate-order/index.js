@@ -56,10 +56,10 @@ client.subscribe("SweepInCalculateOrder", async function ({task, taskService}) {
         }
         const symbol = input.source_currency + '/' + input.target_currency;
         const processVariables = new Variables().set("status", 'DONE')
-            .set("side", "sell")
-            .set("amount", account.data.order.available )
-            .set("symbol", input.source_currency + '/' + input.target_currency)
-            .set("business_key", 'market-order-' + input.target_address + '-'
+            .set("side-" + input.loopCounter, "sell")
+            .set("amount-" + input.loopCounter, account.data.order.available )
+            .set("symbol-" + input.loopCounter, input.source_currency + '/' + input.target_currency)
+            .set("business_key-" + input.loopCounter, 'market-order-' + input.target_address + '-'
                 + input.exchange + '-' + symbol + '-' + uuid4());
         const localVariables = new Variables()
         await taskService.complete(task, processVariables, localVariables);
