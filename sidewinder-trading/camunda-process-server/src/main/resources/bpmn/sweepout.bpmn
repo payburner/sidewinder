@@ -33,7 +33,7 @@
         <bpmn:outgoing>Flow_1lwxsz5</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:sequenceFlow id="Flow_1lwxsz5" sourceRef="Event_1clvpbr" targetRef="Activity_0ktax5p" />
-      <bpmn:serviceTask id="Activity_0ktax5p" name="Calculate Order" camunda:type="external" camunda:topic="SweepOutCalculateOrder">
+      <bpmn:serviceTask id="Activity_0ktax5p" name="Calculate Order" camunda:asyncBefore="true" camunda:type="external" camunda:topic="SweepOutCalculateOrder">
         <bpmn:incoming>Flow_1lwxsz5</bpmn:incoming>
         <bpmn:outgoing>Flow_1e0f9zc</bpmn:outgoing>
       </bpmn:serviceTask>

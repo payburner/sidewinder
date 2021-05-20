@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="" />
+    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepin.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepout.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-process-server/src/main/resources/static/forms/sweepout.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,19 +245,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CamundaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="camunda-spring-boot-example" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.huksley.camunda.CamundaApplication" />
@@ -359,7 +350,8 @@
       <workItem from="1620686954665" duration="935000" />
       <workItem from="1620729113655" duration="4545000" />
       <workItem from="1620985542137" duration="13551000" />
-      <workItem from="1621253798933" duration="3593000" />
+      <workItem from="1621253798933" duration="5935000" />
+      <workItem from="1621506869720" duration="332000" />
     </task>
     <servers />
   </component>
