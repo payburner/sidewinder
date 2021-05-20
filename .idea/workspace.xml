@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-instant-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-instant-order/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-create-order/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-in-calculate-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-in-calculate-order/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out-calculate-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/camunda-tasks/camunda-tasks-sweep-out-calculate-order/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -364,7 +358,7 @@
       <workItem from="1620729113655" duration="4545000" />
       <workItem from="1620985542137" duration="13551000" />
       <workItem from="1621253798933" duration="5935000" />
-      <workItem from="1621506869720" duration="3847000" />
+      <workItem from="1621506869720" duration="3986000" />
     </task>
     <servers />
   </component>

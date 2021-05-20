@@ -35,7 +35,7 @@ client.subscribe("SweepOutCalculateOrder", async function ({task, taskService}) 
     try {
         console.log('Return Success');
         const symbol = input.target_currency + '/' + input.source_currency;
-        const processVariables = new Variables().set("status", 'DONE')
+        const processVariables = new Variables().set("status-" + input.loopCounter, 'DONE')
             .set("side-" + input.loopCounter, "buy")
             .set("symbol-" + input.loopCounter, input.target_currency + '/' + input.source_currency)
             .set("business_key-" + input.loopCounter, 'instant-order-' + input.target_address + '-'
