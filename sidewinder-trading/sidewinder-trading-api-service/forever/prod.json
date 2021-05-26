@@ -3,7 +3,7 @@
   "append": true,
   "watch": true,
   "script": "index.js",
-  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/camunda-tasks/sidewinder-trading-api-service",
+  "sourceDir": "/home/ubuntu/sidewinder/sidewinder-trading/sidewinder-trading-api-service",
   "logFile": "/etc/sidewinder-trading/sidewinder-trading-api-service/logs/forever.log",
   "outFile": "/etc/sidewinder-trading/sidewinder-trading-api-service/logs/out.log",
   "errFile": "/etc/sidewinder-trading/sidewinder-trading-api-service/logs/error.log",
