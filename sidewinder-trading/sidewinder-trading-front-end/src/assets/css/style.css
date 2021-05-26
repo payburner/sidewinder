@@ -8164,6 +8164,19 @@ h6 {
 .trading-modal {
   background-color: transparent;
 }
+.grabbable:hover {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
 
 .currency-icon-large {
   font-size: 50px;
@@ -8171,6 +8184,56 @@ h6 {
 
 .execute-button:hover {
   opacity: 1;
+  cursor: pointer;
+}
+
+.fa-usd {
+  background-color: #0db463;
+  font-size: 22px;
+}
+
+.fa-gbp {
+  background-color: #8c87c2;
+  font-size: 22px;
+}
+
+.fa-eur {
+  background-color: #005cbf;
+  font-size: 22px;
+}
+
+.fiat-icon-large {
+  line-height: 50px !important;
+  align-items: center !important;
+  font-size: 30px !important;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fiat-icon-medium {
+  line-height: 30px !important;
+  align-items: center !important;
+  font-size: 22px !important;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .execute-button {

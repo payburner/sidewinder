@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 import 'typeface-roboto';
 import './assets/css/style.css';
 import Login from './pages/Login'
+import CoreTradingService from "./services/CoreTradingService";
 
+const coreTradingService = new CoreTradingService();
 
 ReactDOM.render(
-    <Login/> , document.getElementById('root'));
+    <Login coreTradingService={coreTradingService}/> , document.getElementById('root'));

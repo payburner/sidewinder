@@ -17,6 +17,7 @@ export default class Login extends React.Component {
     }
 
     render() {
+        const comp = this;
          return <div id="main-wrapper" className="show">
             <Header/>
             <Sidebar/>
@@ -46,7 +47,7 @@ export default class Login extends React.Component {
                      </div>
                      <div className="row">
                          <div className="col-xl-3 col-lg-4 col-xxl-4">
-                             <VenueBalances/>
+                             <VenueBalances coreTradingService={comp.props.coreTradingService}/>
                          </div>
                          <div className="col-xl-9 col-lg-8 col-xxl-8">
                              <AllTrades/>

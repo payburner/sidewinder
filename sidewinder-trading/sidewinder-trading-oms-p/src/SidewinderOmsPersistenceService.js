@@ -6,6 +6,41 @@ class SidewinderOmsPersistenceService {
         this.DEPOSIT_ADDRESS_TABLE = 'sidewinder_oms_deposit_address'
     }
 
+    getAllOrders( account_owner_address, exchange ) {
+        const comp = this;
+
+        const params = {
+            TableName: comp.ORDERS_TABLE,
+            IndexName: 'index_account_owner_address_exchange',
+            ScanIndexForward: true,
+            KeyConditionExpression: "account_owner_address = :account_owner_address and exchange = :exchange",
+            ExpressionAttributeValues: {
+                ":account_owner_address": account_owner_address,
+                ":exchange" : exchange
+            }
+        };
+        return new Promise((resolve) => {
+            const t0 = new Date().getTime();
+            comp.docClient.query(params, function (err, data) {
+                console.log('Query Time Get Orders: ' + (new Date().getTime()-t0))
+                if (err) {
+
+                    console.log('The orders were not found:' + err );
+                    resolve( {
+                        status: 500, error: 'there was an error retrieving the orders'
+                    } )
+                } else {
+                    resolve({
+                        status: 200,
+                        data: {
+                            orders: data.Items
+                        }
+                    })
+                }
+            });
+        });
+    }
+
     getAccount( account_owner_address, exchange, symbol ) {
         const comp = this;
         const accountId = account_owner_address + '/' + exchange + '/' + symbol;

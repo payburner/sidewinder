@@ -51,6 +51,11 @@ modal: !this.state.modal
     onDragEnter = (event) => {
     }
 
+    assetIconClass = (asset, size) => {
+        return this.props.coreTradingService.tradingMetaDataUIService().assetIconClass(
+            asset, size);
+    }
+
     render() {
         const comp = this;
         return <li className="media" draggable={true}
@@ -60,7 +65,11 @@ modal: !this.state.modal
                    onDragLeave={(e) => comp.onDragLeave(e)}
                    onDragStart={(e) => comp.dragStart(e)}
         >
-            <i className={'cc ' + comp.props.currency + ' mr-3'}></i>
+            <span style={{display: 'flex'}}>
+                <i className={'grabbable ' + comp.assetIconClass(
+                    comp.props.currency, 'medium') + ' mr-3'}></i>
+            </span>
+
             <div className="media-body">
                 <h5 className="m-0">{comp.props.currencyName}</h5>
             </div>
@@ -74,10 +83,10 @@ modal: !this.state.modal
                 <ModalBody style={{backgroundColor:'rgb(58, 51, 97)',   filter: 'alpha(opacity=85)',
                     opacity: '0.90', height: '325px'}} >
                     <Row style={{paddingLeft: '36px'}}>
-                        <VenueCurrencyNetValue currency={this.state.sourceCurrency}
+                        <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
                                            currencyName={this.state.sourceCurrency}/>
                         <i style={{float: 'left', padding: '80px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
-                        <VenueCurrencyNetValue currency={comp.props.currency} currencyName={comp.props.currency}/>
+                        <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={comp.props.currency} currencyName={comp.props.currency}/>
                     </Row>
                     <Row style={{paddingLeft: '175px', paddingRight: '175px'}}>
 
