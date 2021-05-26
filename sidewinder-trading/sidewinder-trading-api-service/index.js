@@ -1,4 +1,6 @@
 const AWS = require('aws-sdk');
+const { Client, logger, Variables, BasicAuthInterceptor } = require("camunda-external-task-client-js");
+
 const {SidewinderOmsPersistenceService} = require("@payburner/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService");
 const fs = require('fs');
 const uuid4 = require('uuid4');
