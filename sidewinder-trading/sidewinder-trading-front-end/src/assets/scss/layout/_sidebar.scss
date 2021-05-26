@@ -1,0 +1,45 @@
+.sidebar {
+    background: darken($color: $primary, $amount: 5%);
+    position  : fixed;
+    left      : 0;
+    height    : 100%;
+    width     : 75px;
+    top       : 0;
+}
+
+.menu {
+    margin-top: 100px;
+
+    ul {
+        li {
+            text-align: center;
+
+            a {
+                padding      : 12px 15px;
+                display      : inline-block;
+                margin-bottom: 5px;
+                border-radius: 5px;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: rgba(0, 0, 0, 0.1);
+                    color     : $white;
+                }
+
+                &.active {
+                    background: rgba(0, 0, 0, 0.15);
+
+                    i {
+                        color: #fff;
+                    }
+                }
+
+                i {
+                    color    : #fff;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
