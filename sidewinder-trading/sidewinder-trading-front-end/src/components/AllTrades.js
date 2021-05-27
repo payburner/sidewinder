@@ -1,4 +1,6 @@
 import React from 'react';
+import VenueCurrencyNetValue from "./VenueCurrencyNetValue";
+import {Row} from "react-bootstrap";
 
 export default class AllTrades extends React.Component {
     constructor(props) {
@@ -32,25 +34,22 @@ export default class AllTrades extends React.Component {
         const orders = comp.state.orders.map((order) =>
             // Correct! Key should be specified inside the array.
             <tr key={order.orderId}>
-                <td><span className={order.side === 'sell' ? 'sell-thumb' : 'bought-thumb'}><i
-                    className={order.side === 'sell' ? 'fa fa-down-arrow' : 'fa fa-up-arrow'}></i></span>
-                </td>
                 <td>
-                    <span className={order.side === 'sell' ? 'badge-danger' : 'badge-success'}>{order.side}</span>
+                    <span >{order.status}</span>
                 </td>
                 <td>
                     <span >{order.order_type}</span>
                 </td>
-                <td style={{width:'80px'}}>
-                    <i style={{float: 'left'}} className={comp.assetIconClass( order.amount_currency, 'small' ) + ' currency-icon-small ' }></i>
+                <td style={{width:'120px'}}>
+                    <i style={{float: 'left', marginRight: '12px'}} className={comp.assetIconClass( order.amount_currency, 'small' ) + ' currency-icon-small ' }></i>
+                    <i style={{float: 'left'}} className={'fa fa-arrow-right currency-icon-small'}/>
                     <i style={{float: 'left'}} className={comp.assetIconClass( order.cost_currency, 'small' ) + ' currency-icon-small ' }></i>
 
                 </td>
-                <td>
-                    {order.orderId}
-                </td>
+
                 <td className="text-danger">{order.amount} {order.amount_currency}</td>
                 <td>{order.cost} {order.cost_currency}</td>
+                <td>Fee {order.fee} {order.fee_currency}</td>
             </tr>
         );
 
