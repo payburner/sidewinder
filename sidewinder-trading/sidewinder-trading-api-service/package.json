@@ -6,7 +6,7 @@
     "@payburner/keyburner-core": "^1.1.17",
     "@payburner/sidewinder-service": "0.0.203",
     "@payburner/sidewinder-tasks-client": "0.0.3",
-    "@payburner/sidewinder-trading-oms-p": "0.0.18",
+    "@payburner/sidewinder-trading-oms-p": "0.0.20",
     "aws-sdk": "^2.914.0",
     "axios": "^0.21.1",
     "camunda-external-task-client-js": "^2.1.0",

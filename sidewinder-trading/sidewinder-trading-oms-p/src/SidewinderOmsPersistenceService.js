@@ -12,7 +12,7 @@ class SidewinderOmsPersistenceService {
         const params = {
             TableName: comp.ORDERS_TABLE,
             IndexName: 'index_account_owner_address_exchange_timestamp',
-            ScanIndexForward: true,
+            ScanIndexForward: false,
             Limit: 50,
 
             KeyConditionExpression: "account_owner_address_exchange = :account_owner_address_exchange",

@@ -35,7 +35,7 @@ export default class AllTrades extends React.Component {
             // Correct! Key should be specified inside the array.
             <tr key={order.orderId}>
                 <td>
-                    <span >{order.status}</span>
+                    <span >{order.status === 'canceled' && order.filled_amount > 0 ? 'closed': order.status}</span>
                 </td>
                 <td>
                     <span >{order.order_type}</span>
