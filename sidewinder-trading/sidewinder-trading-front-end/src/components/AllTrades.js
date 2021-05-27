@@ -22,26 +22,35 @@ export default class AllTrades extends React.Component {
         }
     }
 
+    assetIconClass = (asset, size) => {
+        return this.props.coreTradingService.tradingMetaDataUIService().assetIconClass(
+            asset, size );
+    }
+
     render() {
         const comp = this;
-        const orders = comp.state.orders.map((order) =>
+        const listItems = comp.state.orders.map((order) =>
             // Correct! Key should be specified inside the array.
             <tr key={order.orderId}>
-                <td><span className="sold-thumb"><i
-                    className="fa fa-arrow-down"></i></span>
+                <td><span className={order.side === 'sell' ? 'sell-thumb' : 'bought-thumb'}><i
+                    className={order.side === 'sell' ? 'fa fa-down-arrow' : 'fa fa-up-arrow'}></i></span>
                 </td>
+                <td>
+                    <span className={order.side === 'sell' ? 'badge-danger' : 'badge-success'}>{order.side}</span>
+                </td>
+                <td>
+                    <span >{order.order_type}</span>
+                </td>
+                <td>
+                    <i className={comp.assetIconClass( order.amount_currency, 'large' ) + ' currency-icon-large ' }></i>
+                    <i className={comp.assetIconClass( order.cost_currency, 'large' ) + ' currency-icon-large ' }></i>
 
-                <td>
-                    <span className="badge badge-danger">Sold</span>
-                </td>
-                <td>
-                    <i className="cc BTC"></i> BTC
                 </td>
                 <td>
                     {order.orderId}
                 </td>
-                <td className="text-danger">-0.000242 BTC</td>
-                <td>-0.125 USD</td>
+                <td className="text-danger">{order.amount} {order.amount_currency}</td>
+                <td>{order.cost} {order.cost_currency}</td>
             </tr>
         );
 
@@ -56,7 +65,7 @@ export default class AllTrades extends React.Component {
                         <table className="table mb-0 table-responsive-sm">
                             <tbody>
 
-                            {orders}
+
 
                             </tbody>
                         </table>
