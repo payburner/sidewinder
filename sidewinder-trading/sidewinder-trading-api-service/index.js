@@ -40,8 +40,8 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
     });
 });
 
-app.get('/venues/:venueId/symbol/:symbol/orders', function(req, res, next) {
-    p.getOrdersForSymbol('rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH', req.params.venueId, req.params.symbol).then((response)=> {
+app.get('/venues/:venueId/symbols/:base/:counter/orders', function(req, res, next) {
+    p.getOrdersForSymbol('rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH', req.params.venueId, req.params.base + '/' + req.params.counter).then((response)=> {
         res.status(response.status).send(response);
     });
 });
