@@ -3,12 +3,31 @@ import VenueBalance from "./VenueBalance";
 export default class VenueBalances extends React.Component {
     constructor(props) {
         super(props);
-
+        this.pollingInterval = null;
+        this.state = { balances: [] }
     }
 
+    componentDidMount() {
+        const comp = this;
+        this.pollingInterval = setInterval(async () => {
+            const balancesResponse = await comp.props.coreTradingService.tradingBalancesService().getVenueBalances('bitstamp');
+            console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
+            comp.setState({balances: balancesResponse.data.accounts })
+        }, 5000);
+    }
+
+    componentWillUnmount() {
+        if (this.pollingInterval !== null) {
+            clearInterval(this.pollingInterval);
+        }
+    }
 
     render() {
         const comp = this;
+        const balances = comp.state.balances.map((balance) => {
+            return <VenueBalance key={'bitstamp/' + balance.currency} coreTradingService={comp.props.coreTradingService} currency={balance.currency} currencyName={balance.currency} valueCurrency={'USD'} currencyType={comp.props.coreTradingService.tradingMetaDataService().assetType( balance.currency )}/>
+
+        });
         return <div className="card ">
             <div className="card-header border-0">
                 <h4 className="card-title">Positions</h4>
@@ -16,12 +35,7 @@ export default class VenueBalances extends React.Component {
             <div className="card-body pt-0">
                 <div className="balance-widget">
                     <ul className="list-unstyled" style={{marginTop: '12px'}}>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'BTC'} currencyName={'Bitcoin'} valueCurrency={'USD'} currencyType={'CRYPTO'}/>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'LTC'} currencyName={'Litecoin'} valueCurrency={'USD'}  currencyType={'CRYPTO'}/>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'XRP'} currencyName={'XRP'} valueCurrency={'USD'}  currencyType={'CRYPTO'}/>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'DASH'} currencyName={'Dash'} valueCurrency={'USD'}  currencyType={'CRYPTO'}/>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'USD'} currencyName={'US Dollar'} valueCurrency={'USD'}  currencyType={'FIAT'}/>
-                        <VenueBalance coreTradingService={comp.props.coreTradingService} currency={'EUR'} currencyName={'Euro'} valueCurrency={'USD'}  currencyType={'FIAT'}/>
+                        {balances}
                     </ul>
                 </div>
             </div>
