@@ -36,7 +36,7 @@ export default class Login extends React.Component {
                      </div>
                      <div className="row">
                          <div className="col-xl-12">
-                             <AllTrades/>
+                             <AllTrades coreTradingService={comp.props.coreTradingService}/>
                          </div>
                      </div>
                      <div className="row">
