@@ -122,7 +122,7 @@ class SidewinderOmsPersistenceService {
         const comp = this;
         const params = {
             TableName: comp.ACCOUNTS_TABLE,
-            IndexName: 'index_account_owner_address-exchange-index',
+            IndexName: 'account_owner_address-exchange-index',
             ScanIndexForward: true,
             KeyConditionExpression: "account_owner_address = :account_owner_address and exchange = :exchange",
             ExpressionAttributeValues: {
@@ -139,7 +139,7 @@ class SidewinderOmsPersistenceService {
                     console.log('The account was not found:' + err);
                     resolve({
                         status: 404,
-                        error: 'The accounts was not found:' + account_owner_address + ' ' + exchange
+                        error: 'The accounts were not found:' + account_owner_address + ' ' + exchange
                     })
                 } else {
                     console.log('The accounts were found:' + account_owner_address + ' ' + exchange);
