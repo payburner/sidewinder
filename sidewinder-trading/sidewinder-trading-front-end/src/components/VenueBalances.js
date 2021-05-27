@@ -25,7 +25,14 @@ export default class VenueBalances extends React.Component {
     render() {
         const comp = this;
         const balances = comp.state.balances.map((balance) => {
-            return <VenueBalance key={'bitstamp/' + balance.currency} coreTradingService={comp.props.coreTradingService} currency={balance.currency} currencyName={balance.currency} valueCurrency={'USD'} currencyType={comp.props.coreTradingService.tradingMetaDataService().assetType( balance.currency )}/>
+            return <VenueBalance key={'bitstamp/' + balance.currency}
+                                 coreTradingService={comp.props.coreTradingService}
+                                 currency={balance.currency} currencyName={balance.currency}
+                                 valueCurrency={'USD'}
+                                 availableBalance={balance.available}
+                                 totalBalance={balance.total}
+                                 lockedBalance={balance.locked}
+                                 currencyType={comp.props.coreTradingService.tradingMetaDataService().assetType( balance.currency )}/>
 
         });
         return <div className="card ">

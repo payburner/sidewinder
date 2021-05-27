@@ -74,7 +74,7 @@ modal: !this.state.modal
                 <h5 className="m-0">{comp.props.currencyName}</h5>
             </div>
             <div className="text-right">
-                <h5>0.000242 {comp.props.currency} {comp.props.currencyType}</h5>
+                <h5>{comp.props.availableBalance} {comp.props.currency}</h5>
                 <span>0.125 {comp.props.valueCurrency}</span>
             </div>
             <Modal contentClassName={'trading-modal'} isOpen={this.state.modal} toggle={(e)=>this.toggle(e)} className={'className'}>
@@ -84,7 +84,7 @@ modal: !this.state.modal
                     opacity: '0.90', height: '325px'}} >
                     <Row style={{paddingLeft: '36px'}}>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
-                                           currencyName={this.state.sourceCurrency}/>
+                                           currencyName={this.state.sourceCurrency} availableBalance={this.props.availableBalance}/>
                         <i style={{float: 'left', padding: '80px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={comp.props.currency} currencyName={comp.props.currency}/>
                     </Row>

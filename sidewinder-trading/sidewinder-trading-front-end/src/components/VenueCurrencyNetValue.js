@@ -6,7 +6,7 @@ import bitsoImage from '../assets/images/exchanges/bitso.svg'
 export default class VenueCurrencyNetValue extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { balance: 1000.00 }
+
     }
 
     componentDidMount() {
@@ -25,7 +25,7 @@ export default class VenueCurrencyNetValue extends React.Component {
                     <div className="venue-currency-net-value">
                         <i className={comp.assetIconClass( comp.props.currency, 'large' ) + ' currency-icon-large ' }></i>
                         <h5 style={{marginTop: '12px'}}>{comp.props.currencyName}</h5>
-                        <h3>$ {comp.state.balance}</h3>
+                        <h3>{comp.props.availableBalance}</h3>
                     </div>
                 </div>
 
