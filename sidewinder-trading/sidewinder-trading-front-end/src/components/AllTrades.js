@@ -42,7 +42,7 @@ export default class AllTrades extends React.Component {
                 </td>
                 <td style={{width:'120px'}}>
                     <i style={{float: 'left', marginRight: '12px'}} className={comp.assetIconClass( order.amount_currency, 'small' ) + ' currency-icon-small ' }></i>
-                    <i style={{float: 'left'}} className={'fa fa-arrow-right currency-icon-small'}/>
+                    <i style={{float: 'left', marginRight: '10px', marginTop: '3px', fontSize: '16px!important'}} className={'fa fa-arrow-right currency-icon-small'}/>
                     <i style={{float: 'left'}} className={comp.assetIconClass( order.cost_currency, 'small' ) + ' currency-icon-small ' }></i>
 
                 </td>
