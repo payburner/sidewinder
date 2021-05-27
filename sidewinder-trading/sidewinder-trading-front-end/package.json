@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aphrodite": "^1.2.5",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "history": "^4.7.2",
     "node-sass-chokidar": "0.0.3",

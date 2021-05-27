@@ -85,7 +85,7 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
         order.status = 'failed';
         order.status_reason = 'Zero amount';
     }
-    
+
     console.log('Order:' + JSON.stringify(order, null, 2));
     const saveOrderResponse = await p.saveOrder(order);
     console.log('OrderResponse:' + JSON.stringify(saveOrderResponse, null, 2));

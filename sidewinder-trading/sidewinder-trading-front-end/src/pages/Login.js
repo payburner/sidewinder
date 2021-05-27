@@ -50,7 +50,7 @@ export default class Login extends React.Component {
                              <VenueBalances coreTradingService={comp.props.coreTradingService}/>
                          </div>
                          <div className="col-xl-9 col-lg-8 col-xxl-8">
-                             <AllTrades/>
+                             <AllTrades coreTradingService={comp.props.coreTradingService}/>
                          </div>
                      </div>
                  </div>

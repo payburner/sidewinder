@@ -3,7 +3,21 @@ import React from 'react';
 export default class AllTrades extends React.Component {
     constructor(props) {
         super(props);
+        this.pollingInterval = null;
+    }
 
+    componentDidMount() {
+        const comp = this;
+        this.pollingInterval = setInterval(async () => {
+           const orders = comp.props.coreTradingService.tradingOrdersService().getVenueOrders('bitstamp');
+           console.log('Orders:' + JSON.stringify(orders, null, 2));
+        }, 5000);
+    }
+
+    componentWillUnmount() {
+        if (this.pollingInterval !== null) {
+            clearInterval(this.pollingInterval);
+        }
     }
 
     render() {
