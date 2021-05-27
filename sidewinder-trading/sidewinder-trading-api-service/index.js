@@ -34,8 +34,14 @@ AWS.config.update({
 const docClient = new AWS.DynamoDB.DocumentClient();
 const p = new SidewinderOmsPersistenceService( docClient );
 
-app.get('/venues/:venueId/allOrders', function(req, res, next) {
-    p.getAllOrders('rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH', req.params.venueId).then((response)=> {
+app.get('/venues/:venueId/orders', function(req, res, next) {
+    p.getOrdersAtExchange('rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH', req.params.venueId).then((response)=> {
+        res.status(response.status).send(response);
+    });
+});
+
+app.get('/venues/:venueId/symbol/:symbol/orders', function(req, res, next) {
+    p.getOrdersForSymbol('rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH', req.params.venueId, req.params.symbol).then((response)=> {
         res.status(response.status).send(response);
     });
 });

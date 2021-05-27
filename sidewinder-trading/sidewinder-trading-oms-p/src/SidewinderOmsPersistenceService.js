@@ -6,17 +6,54 @@ class SidewinderOmsPersistenceService {
         this.DEPOSIT_ADDRESS_TABLE = 'sidewinder_oms_deposit_address'
     }
 
-    getAllOrders( account_owner_address, exchange ) {
+    getOrdersAtExchange( account_owner_address, exchange ) {
         const comp = this;
 
         const params = {
             TableName: comp.ORDERS_TABLE,
-            IndexName: 'index_account_owner_address_exchange',
+            IndexName: 'index_account_owner_address_exchange_timestamp',
             ScanIndexForward: true,
-            KeyConditionExpression: "account_owner_address = :account_owner_address and exchange = :exchange",
+            Limit: 50,
+
+            KeyConditionExpression: "account_owner_address_exchange = :account_owner_address_exchange",
             ExpressionAttributeValues: {
-                ":account_owner_address": account_owner_address,
-                ":exchange" : exchange
+                ":account_owner_address_exchange": account_owner_address + '/' + exchange
+            }
+        };
+        return new Promise((resolve) => {
+            const t0 = new Date().getTime();
+            comp.docClient.query(params, function (err, data) {
+                console.log('Query Time Get Orders: ' + (new Date().getTime()-t0))
+                if (err) {
+
+                    console.log('The orders were not found:' + err );
+                    resolve( {
+                        status: 500, error: 'there was an error retrieving the orders'
+                    } )
+                } else {
+                    resolve({
+                        status: 200,
+                        data: {
+                            orders: data.Items
+                        }
+                    })
+                }
+            });
+        });
+    }
+
+    getOrdersForSymbol( account_owner_address, exchange, symbol ) {
+        const comp = this;
+
+        const params = {
+            TableName: comp.ORDERS_TABLE,
+            IndexName: 'index_account_owner_address_exchange_symbol_timestamp',
+            ScanIndexForward: true,
+            Limit: 50,
+
+            KeyConditionExpression: "account_owner_address_exchange_symbol = :account_owner_address_exchange_symbol",
+            ExpressionAttributeValues: {
+                ":account_owner_address_exchange_symbol": account_owner_address + '/' + exchange + '/' + symbol
             }
         };
         return new Promise((resolve) => {
@@ -122,6 +159,12 @@ class SidewinderOmsPersistenceService {
         const comp = this;
         return new Promise(async (resolve) => {
             // Call DynamoDB to add the item to the table
+
+            order.account_owner_address_exchange = order.account_owner_address + '/' + order.exchange;
+            order.account_owner_address_exchange_status = order.account_owner_address + '/' + order.exchange + '/' + order.status;
+            order.account_owner_address_exchange_symbol = order.account_owner_address + '/' + order.exchange + '/' + order.symbol;
+            order.account_owner_address_exchange_symbol_status = order.account_owner_address + '/' + order.exchange + '/' + order.symbol + '/' + order.status;
+
             const update = {
                 Put: {
                     TableName: comp.ORDERS_TABLE,
@@ -143,16 +186,23 @@ class SidewinderOmsPersistenceService {
         const comp = this;
         return new Promise(async (resolve) => {
             // Call DynamoDB to add the item to the table
+
+            const order = await comp.getOrder(orderId);
+            const account_owner_address_exchange_status = order.account_owner_address + '/' + order.exchange + '/' + order.status;
+            const account_owner_address_exchange_symbol_status = order.account_owner_address + '/' + order.exchange + '/' + order.symbol + '/' + order.status;
+
             const update = {
                 Update: {
                     TableName: comp.ORDERS_TABLE,
                     Key: {
                         orderId: orderId
                     },
-                    UpdateExpression: 'SET #status = :status, status_reason = :status_reason',
+                    UpdateExpression: 'SET #status = :status, status_reason = :status_reason, account_owner_address_exchange_status = :account_owner_address_exchange_status, account_owner_address_exchange_symbol_status = :account_owner_address_exchange_symbol_status',
                     'ExpressionAttributeValues': {
                         ':status' : status,
-                        ':status_reason' : status_reason
+                        ':status_reason' : status_reason,
+                        ':account_owner_address_exchange_status': account_owner_address_exchange_status,
+                        ':account_owner_address_exchange_symbol_status': account_owner_address_exchange_symbol_status
                     },
                     'ExpressionAttributeNames' : {
                         '#status' : 'status'

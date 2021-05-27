@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalances.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalances.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueCurrencyNetValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueCurrencyNetValue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/pages/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-oms-p/src/SidewinderOmsPersistenceService.js" afterDir="false" />
     </list>
@@ -253,17 +246,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CamundaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="camunda-spring-boot-example" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.huksley.camunda.CamundaApplication" />
@@ -375,7 +357,8 @@
       <workItem from="1621644389601" duration="5844000" />
       <workItem from="1621681180303" duration="27465000" />
       <workItem from="1621954297316" duration="542000" />
-      <workItem from="1621986335315" duration="9056000" />
+      <workItem from="1621986335315" duration="10125000" />
+      <workItem from="1622095413206" duration="712000" />
     </task>
     <servers />
   </component>
