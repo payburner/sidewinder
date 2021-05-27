@@ -41,9 +41,9 @@ export default class AllTrades extends React.Component {
                 <td>
                     <span >{order.order_type}</span>
                 </td>
-                <td>
-                    <i className={comp.assetIconClass( order.amount_currency, 'large' ) + ' currency-icon-large ' }></i>
-                    <i className={comp.assetIconClass( order.cost_currency, 'large' ) + ' currency-icon-large ' }></i>
+                <td style={{width:'80px'}}>
+                    <i style={{float: 'left'}} className={comp.assetIconClass( order.amount_currency, 'small' ) + ' currency-icon-small ' }></i>
+                    <i style={{float: 'left'}} className={comp.assetIconClass( order.cost_currency, 'small' ) + ' currency-icon-small ' }></i>
 
                 </td>
                 <td>

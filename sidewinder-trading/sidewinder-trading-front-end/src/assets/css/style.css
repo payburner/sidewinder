@@ -8182,6 +8182,10 @@ h6 {
   font-size: 50px;
 }
 
+.currency-icon-small {
+  font-size: 16px;
+}
+
 .execute-button:hover {
   opacity: 1;
   cursor: pointer;
@@ -8227,6 +8231,23 @@ h6 {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fiat-icon-small {
+  line-height: 22px!important;
+  font-size: 16px!important;
+  width: 22px;
+  height: 22px;
+  align-items: center !important;
+  color: #fff;
+  border-radius: 50%;
   text-align: center;
   display: -ms-flexbox;
   display: flex;
