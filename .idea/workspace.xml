@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.0177f1c6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.0177f1c6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.49069713.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.49069713.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.49078930.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.49078930.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.cf76c5de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.cf76c5de.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.ea21cb9f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public/static/js/main.ea21cb9f.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/AllTrades.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/AllTrades.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +382,7 @@
       <workItem from="1621681180303" duration="27465000" />
       <workItem from="1621954297316" duration="542000" />
       <workItem from="1621986335315" duration="10125000" />
-      <workItem from="1622095413206" duration="4698000" />
+      <workItem from="1622095413206" duration="5020000" />
     </task>
     <servers />
   </component>

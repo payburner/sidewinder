@@ -29,7 +29,7 @@ export default class AllTrades extends React.Component {
 
     render() {
         const comp = this;
-        const listItems = comp.state.orders.map((order) =>
+        const orders = comp.state.orders.map((order) =>
             // Correct! Key should be specified inside the array.
             <tr key={order.orderId}>
                 <td><span className={order.side === 'sell' ? 'sell-thumb' : 'bought-thumb'}><i
@@ -65,6 +65,7 @@ export default class AllTrades extends React.Component {
                         <table className="table mb-0 table-responsive-sm">
                             <tbody>
 
+                            {orders}
 
 
                             </tbody>
