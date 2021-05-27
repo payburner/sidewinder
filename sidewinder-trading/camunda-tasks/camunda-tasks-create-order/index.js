@@ -81,9 +81,21 @@ client.subscribe("CreateOrder", async function ({task, taskService}) {
         cost_currency: costCurrency,
         amount_currency: amountCurrency,
     }
+    if (amount === 0) {
+        order.status = 'failed';
+        order.status_reason = 'Zero amount';
+    }
+    
     console.log('Order:' + JSON.stringify(order, null, 2));
     const saveOrderResponse = await p.saveOrder(order);
     console.log('OrderResponse:' + JSON.stringify(saveOrderResponse, null, 2));
+
+    if (order.status === 'failed') {
+        const processVariables = new Variables().set("omsOrderId", orderId);
+        const localVariables = new Variables();
+        await taskService.complete(task, processVariables, localVariables);
+        return;
+    }
 
     const pushMarketOrderResponse = await sidewinder.pushAndAwait(input.target_address, 'CCXTMarketOrder', {
         exchange: exchange,

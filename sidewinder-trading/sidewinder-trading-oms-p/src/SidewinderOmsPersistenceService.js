@@ -187,9 +187,9 @@ class SidewinderOmsPersistenceService {
         return new Promise(async (resolve) => {
             // Call DynamoDB to add the item to the table
 
-            const order = await comp.getOrder(orderId);
-            const account_owner_address_exchange_status = order.account_owner_address + '/' + order.exchange + '/' + order.status;
-            const account_owner_address_exchange_symbol_status = order.account_owner_address + '/' + order.exchange + '/' + order.symbol + '/' + order.status;
+            const order = await comp.getOrder(orderId).data.order;
+            const account_owner_address_exchange_status = order.account_owner_address + '/' + order.exchange + '/' + status;
+            const account_owner_address_exchange_symbol_status = order.account_owner_address + '/' + order.exchange + '/' + order.symbol + '/' + status;
 
             const update = {
                 Update: {
