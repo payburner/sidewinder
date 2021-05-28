@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
 import VenueCurrencyNetValue from "./VenueCurrencyNetValue";
-import {Row} from "react-bootstrap";
+import {Row, Toast} from "react-bootstrap";
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import AssetIcon from "./AssetIcon";
@@ -12,7 +12,8 @@ export default class VenueBalance extends React.Component {
             modal: false,
             sourceCurrency: null,
             sourceCurrencyType: null,
-            amount: 100
+            amount: 100,
+            tradeable: null
         }
     }
 
@@ -30,10 +31,24 @@ modal: !this.state.modal
     drop = (event) => {
         const data = event.dataTransfer.getData("text/plain");
         if (data) {
-            const pData = JSON.parse(data);
-            this.setState(pData);
-            event.dataTransfer.clearData();
-            this.toggle();
+
+            if (this.props.coreTradingService.tradingMetaDataService.isTradeable(this.exchange, data.sourceCurrency, this.props.currency)) {
+                const pData = JSON.parse(data);
+                this.setState(pData);
+                event.dataTransfer.clearData();
+                this.toggle();
+            }
+            else {
+                const pData = JSON.parse(data);
+                this.setState({
+                    sourceCurrency: null,
+                    sourceCurrencyType: null
+                });
+                event.dataTransfer.clearData();
+                this.setState({tradeable: 'FALSE'});
+            }
+
+
         }
 
     }
@@ -51,9 +66,14 @@ modal: !this.state.modal
 
     onDragEnter = (event) => {
     }
- 
+
     render() {
         const comp = this;
+        if (comp.state.tradeable !== null && comp.state.tradeable === 'FALSE') {
+            setTimeout(()=> {
+                comp.setState({tradeable: null});
+            }, 2000);
+        }
         return <li className="media" draggable={true}
                    onDrop={(e) => comp.drop(e)}
                    onDragOver={(e) => comp.onDragOver(e)}
@@ -61,6 +81,14 @@ modal: !this.state.modal
                    onDragLeave={(e) => comp.onDragLeave(e)}
                    onDragStart={(e) => comp.dragStart(e)}
         >
+
+            {comp.state.tradeable !== null && comp.state.tradeable === 'FALSE' ? (
+                <Toast show={true} onClose={()=>comp.setState({tradeable: null})}>
+                <Toast.Header>
+                    <strong className="mr-auto">Oops!</strong>
+                </Toast.Header>
+                <Toast.Body>This pair is not tradeable</Toast.Body>
+            </Toast>) : ('')}
             <span style={{display: 'flex'}}>
                 <AssetIcon asset={comp.props.currency} size={'medium'} classes={'grabbable mr-3'}/>
             </span>
