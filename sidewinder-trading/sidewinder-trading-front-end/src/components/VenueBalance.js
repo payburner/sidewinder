@@ -81,7 +81,7 @@ modal: !this.state.modal
 
     async placeInstantOrder() {
         const comp = this;
-        if (this.props.coreTradingService.tradingMetaDataService().assetType(this.props.currency) === 'FIAT') {
+        if (this.props.coreTradingService.tradingMetaDataService().assetType(this.props.currency) === 'CRYPTO') {
             await this.props.coreTradingService.tradingOrdersService().placeVenueInstantOrder('bitstamp',
                 this.props.currency + '/' + this.state.sourceCurrency, 'buy', this.props.coreTradingService.tradingMetaDataService()
                     .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(this.state.percentAmount/100)));
