@@ -51,12 +51,7 @@ modal: !this.state.modal
 
     onDragEnter = (event) => {
     }
-
-    assetIconClass = (asset, size) => {
-        return this.props.coreTradingService.tradingMetaDataUIService().assetIconClass(
-            asset, size);
-    }
-
+ 
     render() {
         const comp = this;
         return <li className="media" draggable={true}

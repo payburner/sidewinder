@@ -1,6 +1,7 @@
 import React from 'react';
 import VenueCurrencyNetValue from "./VenueCurrencyNetValue";
 import {Row} from "react-bootstrap";
+import AssetIcon from "./AssetIcon";
 
 export default class AllTrades extends React.Component {
     constructor(props) {
@@ -24,10 +25,6 @@ export default class AllTrades extends React.Component {
         }
     }
 
-    assetIconClass = (asset, size) => {
-        return this.props.coreTradingService.tradingMetaDataUIService().assetIconClass(
-            asset, size );
-    }
 
     render() {
         const comp = this;
@@ -41,9 +38,9 @@ export default class AllTrades extends React.Component {
                     <span >{order.order_type}</span>
                 </td>
                 <td style={{width:'120px'}}>
-                    <i style={{float: 'left', marginRight: '12px'}} className={comp.assetIconClass( order.amount_currency, 'small' ) + ' currency-icon-small ' }></i>
+                    <AssetIcon style={{float: 'left', marginRight: '12px'}} asset={order.amount_currency} size={'small'} classes={'currency-icon-small'}/>
                     <i style={{float: 'left', marginRight: '10px', marginTop: '3px', fontSize: '16px!important'}} className={'fa fa-arrow-right currency-icon-small'}/>
-                    <i style={{float: 'left'}} className={comp.assetIconClass( order.cost_currency, 'small' ) + ' currency-icon-small ' }></i>
+                    <AssetIcon style={{float: 'left'}} asset={order.cost_currency} size={'small'} classes={'currency-icon-small'}/>
 
                 </td>
 
