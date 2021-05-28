@@ -50,22 +50,22 @@ export default class Header extends React.Component {
                                             <span className="name" style={{marginLeft: '12px',marginRight: '12px'}}>Demo User</span>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item><a href="accounts.html"
+                                            <Dropdown.Item><a href="#"
                                                               className="dropdown-item">
                                                 <i className="fa fa-user"></i> Account
                                             </a>
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="history.html"
+                                            <Dropdown.Item><a href="#"
                                                               className="dropdown-item">
                                                 <i className="fa fa-book"></i> History
                                             </a>
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="settings-account.html"
+                                            <Dropdown.Item><a href="#"
                                                               className="dropdown-item">
                                                 <i className="fa fa-cog"></i> Settings
                                             </a>
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="lock.html"
+                                            <Dropdown.Item><a href="#"
                                                               className="dropdown-item">
                                                 <i className="fa fa-lock"></i> Disconnect
                                             </a>
