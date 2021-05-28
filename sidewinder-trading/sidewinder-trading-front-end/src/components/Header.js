@@ -1,10 +1,19 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
+import {Toast} from "react-bootstrap";
 
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            notification: null
+        }
+    }
 
+    componentDidMount() {
+        this.props.notifierService.subscribe((notification) => {
+           this.setState({notification: notification})
+        });
     }
 
     render() {
@@ -64,6 +73,26 @@ export default class Header extends React.Component {
 
                                         </Dropdown.Menu>
                                     </Dropdown>
+                                    <div style={{
+                                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                        zIndex: '999',
+                                        position: 'absolute',
+                                        left: '0',
+                                        top: '0',
+                                        width: '100%',
+                                        height: '100%'
+                                    }} id="overlay" show={this.state.notification !== null}>
+                                        {this.state.notification !== null ? (
+                                            <Toast style={{
+
+                                                zIndex: 1000
+                                            }} show={true} onClose={()=>this.setState({notification: null})} delay={3000} autohide>
+                                                <Toast.Header>
+                                                    <strong className="mr-auto">Oops!</strong>
+                                                </Toast.Header>
+                                                <Toast.Body>{this.state.notification}</Toast.Body>
+                                            </Toast>) : ('')}
+                                    </div>
                             </div>
                     </div>
                 </nav>

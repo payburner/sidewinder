@@ -10,16 +10,17 @@ import ProfileCard from "../components/ProfileCard";
 import AllTrades from "../components/AllTrades";
 import VenueNetValue from '../components/VenueNetValue';
 import VenueBalances from "../components/VenueBalances";
+import NotifierService from "../services/NotifierService";
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
-
+        this.notifierService = new NotifierService();
     }
 
     render() {
         const comp = this;
          return <div id="main-wrapper" className="show">
-            <Header/>
+            <Header notifierService={this.notifierService}/>
             <Sidebar/>
             <PageTitle/>
              <Authentication/>
@@ -47,7 +48,7 @@ export default class Login extends React.Component {
                      </div>
                      <div className="row">
                          <div className="col-xl-3 col-lg-4 col-xxl-4">
-                             <VenueBalances coreTradingService={comp.props.coreTradingService}/>
+                             <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
                          </div>
                          <div className="col-xl-9 col-lg-8 col-xxl-8">
                              <AllTrades coreTradingService={comp.props.coreTradingService}/>

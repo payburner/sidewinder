@@ -45,6 +45,7 @@ modal: !this.state.modal
                     tradeable: 'FALSE'
                 });
                 event.dataTransfer.clearData();
+                this.props.notifierService.notify('The pair is not tradeable on this venue');
             }
         }
 
@@ -75,17 +76,6 @@ modal: !this.state.modal
                    onDragLeave={(e) => comp.onDragLeave(e)}
                    onDragStart={(e) => comp.dragStart(e)}
         >
-
-            {comp.state.tradeable !== null && comp.state.tradeable === 'FALSE' ? (
-                <Toast style={{
-                     
-                    zIndex: 1000
-                }} show={true} onClose={()=>comp.setState({tradeable: null})} delay={3000} autohide>
-                <Toast.Header>
-                    <strong className="mr-auto">Oops!</strong>
-                </Toast.Header>
-                <Toast.Body>This pair is not tradeable</Toast.Body>
-            </Toast>) : ('')}
             <span style={{display: 'flex'}}>
                 <AssetIcon asset={comp.props.currency} size={'medium'} classes={'grabbable mr-3'}/>
             </span>
