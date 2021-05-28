@@ -42,7 +42,7 @@ modal: !this.state.modal
                 this.setState({
                     sourceCurrency: null,
                     sourceCurrencyType: null,
-                    tradeable: null
+                    tradeable: 'FALSE'
                 });
                 event.dataTransfer.clearData();
             }
