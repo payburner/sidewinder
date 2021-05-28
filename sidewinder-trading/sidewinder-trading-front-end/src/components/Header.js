@@ -76,15 +76,14 @@ export default class Header extends React.Component {
 
                                         {this.state.notification !== null ? (
                                             <div style={{ zIndex: '999', minHeight: '200px',
-                                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                                                position: 'absolute',
-                                                left: '0',
-                                                top: '0',
-                                                width: '100%'}}>
-                                            <Toast style={{
 
-                                            }} show={true} onClose={()=>this.setState({notification: null})}  >
-                                                <Toast.Header>Oops!</Toast.Header>
+                                                position: 'absolute',
+                                                right: '20px',
+                                                top: '20px' }}>
+                                            <Toast style={{
+                                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                            }} show={true} onClose={()=>this.setState({notification: null})} delay={2000} autohide>
+
                                                 <Toast.Body>{this.state.notification}</Toast.Body>
                                             </Toast></div>) : ('')}
 
