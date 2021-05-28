@@ -81,13 +81,8 @@ export default class Header extends React.Component {
                                                 position: 'absolute',
                                                 left: '0',
                                                 top: '0',
-                                                width: '100%',
-                                                height: '100%'
-
-                                            }} show={true} onClose={()=>this.setState({notification: null})}  >
-                                                <Toast.Header>
-                                                    <strong className="mr-auto">Oops!</strong>
-                                                </Toast.Header>
+                                                width: '100%'
+                                            }} show={true} onClose={()=>this.setState({notification: null})} delay={2000} autohide>
                                                 <Toast.Body>{this.state.notification}</Toast.Body>
                                             </Toast>) : ('')}
 
