@@ -20,7 +20,7 @@ export default class TradingMetadataService {
             return parseFloat(amount.toFixed(2));
         }
         else {
-            return parseFloat(amount.toFixed(6));
+            return parseFloat(amount.toFixed(8));
         }
     }
 
