@@ -75,6 +75,7 @@ export default class Header extends React.Component {
                                     </Dropdown>
 
                                         {this.state.notification !== null ? (
+                                            <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
                                             <Toast style={{
                                                 backgroundColor: 'rgba(0, 0, 0, 0.8)',
                                                 zIndex: '999',
@@ -84,7 +85,7 @@ export default class Header extends React.Component {
                                                 width: '100%'
                                             }} show={true} onClose={()=>this.setState({notification: null})} delay={2000} autohide>
                                                 <Toast.Body>{this.state.notification}</Toast.Body>
-                                            </Toast>) : ('')}
+                                            </Toast></div>) : ('')}
 
                             </div>
                     </div>
