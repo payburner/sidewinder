@@ -32,8 +32,9 @@ modal: !this.state.modal
         const data = event.dataTransfer.getData("text/plain");
         if (data) {
 
-            if (this.props.coreTradingService.tradingMetaDataService.isTradeable(this.exchange, data.sourceCurrency, this.props.currency)) {
+            if (this.props.coreTradingService.tradingMetaDataService().isTradeable(this.exchange, data.sourceCurrency, this.props.currency)) {
                 const pData = JSON.parse(data);
+                pData.tradeable = 'TRUE';
                 this.setState(pData);
                 event.dataTransfer.clearData();
                 this.toggle();
@@ -42,10 +43,11 @@ modal: !this.state.modal
                 const pData = JSON.parse(data);
                 this.setState({
                     sourceCurrency: null,
-                    sourceCurrencyType: null
+                    sourceCurrencyType: null,
+                    tradeable: null
                 });
                 event.dataTransfer.clearData();
-                this.setState({tradeable: 'FALSE'});
+
             }
 
 
@@ -60,7 +62,8 @@ modal: !this.state.modal
     onDragLeave = (event) => {
         this.setState({
             sourceCurrency: null,
-            sourceCurrencyType: null
+            sourceCurrencyType: null,
+            tradeable: null
         })
     }
 

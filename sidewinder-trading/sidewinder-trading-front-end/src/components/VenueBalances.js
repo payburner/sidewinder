@@ -11,7 +11,7 @@ export default class VenueBalances extends React.Component {
         const comp = this;
         this.pollingInterval = setInterval(async () => {
             const balancesResponse = await comp.props.coreTradingService.tradingBalancesService().getVenueBalances('bitstamp');
-            console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
+            //console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
             comp.setState({balances: balancesResponse.data.accounts })
         }, 5000);
     }

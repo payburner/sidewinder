@@ -14,7 +14,7 @@ export default class AllTrades extends React.Component {
         const comp = this;
         this.pollingInterval = setInterval(async () => {
            const orderResponse = await comp.props.coreTradingService.tradingOrdersService().getVenueOrders('bitstamp');
-           console.log('Orders:' + JSON.stringify(orderResponse, null, 2));
+           //console.log('Orders:' + JSON.stringify(orderResponse, null, 2));
            comp.setState({orders: orderResponse.data.orders })
         }, 5000);
     }
