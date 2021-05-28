@@ -67,11 +67,7 @@ modal: !this.state.modal
 
     render() {
         const comp = this;
-        if (comp.state.tradeable !== null && comp.state.tradeable === 'FALSE') {
-            setTimeout(()=> {
-                comp.setState({tradeable: null});
-            }, 2000);
-        }
+
         return <li className="media" draggable={true}
                    onDrop={(e) => comp.drop(e)}
                    onDragOver={(e) => comp.onDragOver(e)}
@@ -81,7 +77,12 @@ modal: !this.state.modal
         >
 
             {comp.state.tradeable !== null && comp.state.tradeable === 'FALSE' ? (
-                <Toast show={true} onClose={()=>comp.setState({tradeable: null})}>
+                <Toast style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 0,
+                    zIndex: 1000
+                }} show={true} onClose={()=>comp.setState({tradeable: null})} delay={3000} autohide>
                 <Toast.Header>
                     <strong className="mr-auto">Oops!</strong>
                 </Toast.Header>
