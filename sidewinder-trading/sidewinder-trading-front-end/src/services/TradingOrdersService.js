@@ -29,7 +29,35 @@ export default class TradingOrdersService {
         return new Promise(async (resolve) => {
             try {
                 const result = await axios.post(
-                    'https://trading-api.payburner.com/venues/' + venueId + '/orders',
+                    'https://trading-api.payburner.com/venues/' + venueId + '/orders/instantorder',
+                    {
+                        exchange: venueId,
+                        symbol: symbol,
+                        side: side,
+                        amount: amount
+                    },
+                    {
+                        headers: {
+                            'Authorization' : 'Bearer ' + comp.tokenService.getToken(),
+                            'Content-Type': 'application/json'}
+                    });
+                let data = result.data;
+                resolve(data);
+            } catch (error) {
+                console.log(
+                    'PLACE INSTANT ORDER ERROR ERROR:' + JSON.stringify(error.response.data, null,
+                    2) + ' ' + ('https://trading-api.payburner.com/venues/' + venueId + '/orders'));
+                resolve(error.response.data);
+            }
+        });
+    }
+
+    placeVenueMarketOrder = function ( venueId, symbol, side, amount ) {
+        const comp = this;
+        return new Promise(async (resolve) => {
+            try {
+                const result = await axios.post(
+                    'https://trading-api.payburner.com/venues/' + venueId + '/orders/marketorder',
                     {
                         exchange: venueId,
                         symbol: symbol,

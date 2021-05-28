@@ -40,23 +40,57 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
     });
 });
 
-app.get('/venues/:venueId/gestures/sweepout', function(req, res, next) {
-    const exchange = req.params.venueId;
-    const source_currency = req.params.source_currency;
-    const target_currencies = req.params.target_currencies;
+app.post('/venues/:venueId/orders/marketorder', function(req, res, next) {
+    const body = req.body;
     const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
-    //curl -H "Content-Type: application/json" -X POST -d '{"variables": { "target_address" : {"value":"rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH", "type" : "string"}, "exchange" : { "value" :"bitstamp","type":"string"}, "symbol" : {"value":"BTC/USD","type":"string"}, "side" : {"value":"sell","type":"string"}, "amount":{"value":0.0004, "type" : "double"} }, "businessKey" : "oms-marketorder-rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH-bitstamp-BTC/USD-1" }' https://admin:Y3ll0w41@oms.payburner.com/engine-rest/process-definition/key/marketorder/start
 
     const data = {
         variables : {
             target_address: {value: target_address, type : "string"},
-            source_currency: {value: source_currency, type : "string"},
-            target_currencies: {value: target_currencies, type : "string"},
+            symbol: {value: req.body.symbol, type : "string"},
+            side: {value: req.body.side, type : "string"},
+            amount: {value: req.body.amount, type : "double"},
+            exchange: {value: req.body.exchange, type : "string"},
         },
-        businessKey : target_address + '-sweep-out-' + uuid4()
+        businessKey : target_address + '-marketorder-' + req.body.exchange + '-' + req.body.symbol + '-' + uuid4()
     }
 
-    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/sweepout/start',
+    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/marketorder/start',
+        data, {
+            // Axios looks for the `auth` option, and, if it is set, formats a
+            // basic auth header for you automatically.
+            auth: {
+                username: pConfig.CAMUNDA_USER,
+                password: pConfig.CAMUNDA_PASSWORD
+            }
+        })
+        .then((response) => {
+            const data = response.data;
+            console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
+            res.status(200).send( {status:200})
+        }).catch((error) => {
+        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
+        res.status(400).send({status:400,error:error});
+    })
+
+});
+
+app.post('/venues/:venueId/orders/instantorder', function(req, res, next) {
+    const body = req.body;
+    const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
+
+    const data = {
+        variables : {
+            target_address: {value: target_address, type : "string"},
+            symbol: {value: req.body.symbol, type : "string"},
+            side: {value: req.body.side, type : "string"},
+            amount: {value: req.body.amount, type : "double"},
+            exchange: {value: req.body.exchange, type : "string"},
+        },
+        businessKey : target_address + '-instantorder-' + req.body.exchange + '-' + req.body.symbol + '-' + uuid4()
+    }
+
+    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/instantorder/start',
         data, {
             // Axios looks for the `auth` option, and, if it is set, formats a
             // basic auth header for you automatically.
@@ -87,7 +121,7 @@ app.get('/venues/:venueId/symbols/:base/:counter/orders', function(req, res, nex
         res.status(response.status).send(response);
     });
 });
-
+express.json();
 app.use(express.static('public'));
 app.use(function (req, res, next) {
     res.status(404).send({ status: 404, error: 'The path was not found.'})
