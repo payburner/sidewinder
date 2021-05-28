@@ -82,7 +82,7 @@ modal: !this.state.modal
     async placeInstantOrder() {
         const comp = this;
       await this.props.coreTradingService.tradingOrdersService().placeVenueInstantOrder('bitstamp',
-          this.props.currency + '/' + this.state.sourceCurrency, 'sell', this.props.coreTradingService.tradingMetaDataService()
+          this.props.currency + '/' + this.state.sourceCurrency, 'buy', this.props.coreTradingService.tradingMetaDataService()
               .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(this.state.percentAmount/100)));
         this.toggle();
     }
