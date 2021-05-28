@@ -23,7 +23,6 @@ export default class Login extends React.Component {
              <Header notifierService={this.notifierService}/>
              <Sidebar/>
              <PageTitle/>
-             <Authentication/>
 
              <div className="content-body">
                  <div className="container-fluid">
