@@ -22,7 +22,7 @@ export default class AssetIcon extends React.Component {
         const asset = this.props.asset;
         const assetType = this.assetType( asset );
         const classes = typeof this.props.classes !== 'undefined' ? ' ' + this.props.classes : ' ';
-        const size = this.props.size;
+        const size = typeof this.props.size !== 'undefined' ? this.props.size : 'medium';
         if (assetType === 'FIAT') {
             return <i className={'fiat-icon-' + size + ' fa fa-' + asset.toLowerCase() + ' currency-icon-' + size + classes }></i>
         }
@@ -30,7 +30,14 @@ export default class AssetIcon extends React.Component {
             return <i className={'fiat-icon-' + size + ' fa fa-' + asset.toLowerCase() + ' currency-icon-' + size + classes}></i>
         }
         else {
-            return <img src={'/resources/icons/128/color/' + asset.toLowerCase() + '.png'} className={classes}/>
+            let height = '30px';
+            if (size === 'large') {
+                height = '48px';
+            }
+            else {
+                height = '22px';
+            }
+            return <img height={height} src={'/resources/icons/128/color/' + asset.toLowerCase() + '.png'} className={classes}/>
         }
     }
 }
