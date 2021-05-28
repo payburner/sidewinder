@@ -15,13 +15,23 @@ export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.notifierService = new NotifierService();
-     
+        this.state = {
+            loggedIn: false
+        }
     }
+
+    componentDidMount() {
+        const comp = this;
+        this.props.coreTradingService.tokenService().subscribe((token) => {
+            comp.setState({loggedIn: true});
+        });
+    }
+
 
     render() {
         const comp = this;
 
-        if (comp.props.coreTradingService.tokenService().getToken() === null) {
+        if (!this.state.loggedIn) {
             return <div id="main-wrapper" className="show">
                 <Authentication tokenService={comp.props.coreTradingService.tokenService()}/>
                 <Footer/>

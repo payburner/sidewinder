@@ -1,3 +1,4 @@
+import uuid4 from 'uuid4';
 export default class TokenService {
     constructor() {
         this.subscribers = null;
@@ -10,6 +11,13 @@ export default class TokenService {
 
     getToken() {
         return this.token;
+    }
+
+    convertToToken( password ) {
+        if (password === 'billy') {
+            this.token = uuid4();
+            this.subscribers(this.token);
+        }
     }
 
 }
