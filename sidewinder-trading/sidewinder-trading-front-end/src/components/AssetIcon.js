@@ -5,7 +5,7 @@ export default class AssetIcon extends React.Component {
         super(props);
 
         this.noSymbols = [
-            'USDC','GUSD','PAX','DAI','MKR','LINK'
+             
         ]
     }
 
@@ -34,7 +34,7 @@ export default class AssetIcon extends React.Component {
             if (size === 'large') {
                 height = '48px';
             }
-            else {
+            else if (size === 'small') {
                 height = '22px';
             }
             return <img height={height} src={'/resources/icons/128/color/' + asset.toLowerCase() + '.png'} className={classes}/>
