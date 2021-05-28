@@ -78,9 +78,7 @@ modal: !this.state.modal
 
             {comp.state.tradeable !== null && comp.state.tradeable === 'FALSE' ? (
                 <Toast style={{
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
+                     
                     zIndex: 1000
                 }} show={true} onClose={()=>comp.setState({tradeable: null})} delay={3000} autohide>
                 <Toast.Header>
