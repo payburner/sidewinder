@@ -27,25 +27,24 @@ export default class Login extends React.Component {
 
              <div className="content-body">
                  <div className="container-fluid">
-                     <div className="row">
+                     <div-- className="row">
                          <div className="col-xl-4 col-lg-4 col-md-6">
                              <ProfileCard/>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <AccountBalanceCard/>
                         </div>
-                     </div>
-                     <div className="row">
+                     </div-->
+                     <div-- className="row">
                          <div className="col-xl-12">
                              <AllTrades coreTradingService={comp.props.coreTradingService}/>
                          </div>
-                     </div>
-                     <div className="row">
+                     </div-->
+                     <div-- className="row">
                          <div className="col-xl-12 col-lg-12 col-xxl-4">
                              <VenueNetValue/>
-
                          </div>
-                     </div>
+                     </div-->
                      <div className="row">
                          <div className="col-xl-3 col-lg-4 col-xxl-4">
                              <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
