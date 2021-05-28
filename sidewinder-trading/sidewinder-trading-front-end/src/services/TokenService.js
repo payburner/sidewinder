@@ -13,6 +13,11 @@ export default class TokenService {
         return this.token;
     }
 
+    removeToken() {
+        this.token = null;
+        this.subscribers(this.token);
+    }
+
     convertToToken( password ) {
         if (password === 'billy') {
             this.token = 'jimmy';

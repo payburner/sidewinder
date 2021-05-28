@@ -12,9 +12,11 @@ export default class Authentication extends React.Component {
         this.setState({password: password });
     }
 
-    async doSubmit( ) {
+    async doSubmit( e ) {
+        e.preventDefault();
         if (this.state.password !== null) {
             await this.props.tokenService.convertToToken( this.state.password );
+            this.setState({password: null });
         }
     }
 
@@ -33,7 +35,7 @@ export default class Authentication extends React.Component {
                             </div>
 
                             <div className="card-body">
-                                <form action="index.html">
+                                <form action="#">
                                     <div className="form-group mb-4">
                                         <label htmlFor="">Enter Demo Password</label>
                                         <input type="password" onChange={(e)=>comp.handlePasswordChange( e.target.value.trim() )}

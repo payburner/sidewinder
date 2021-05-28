@@ -16,7 +16,13 @@ export default class Header extends React.Component {
         });
     }
 
+    handleDropDownSelect(e) {
+        console.log('KEY:' + e.target.value );
+        this.props.tokenService.removeToken();
+    }
+
     render() {
+        const comp = this;
         return <div className="header">
             <div className="container-fluid">
                 <div className="row">
@@ -43,32 +49,27 @@ export default class Header extends React.Component {
                                             </li>
                                         </ul>
                                     </div>
-                                    <Dropdown className="profile_log dropdown">
+                                    <Dropdown className="profile_log dropdown" onSelect={(e) => comp.handleDropDownSelect(e )}>
                                         <Dropdown.Toggle>
                                             <span className="thumb"><i
                                                 className="fa fa-user"></i></span>
                                             <span className="name" style={{marginLeft: '12px',marginRight: '12px'}}>Demo User</span>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item><a href="#"
-                                                              className="dropdown-item">
-                                                <i className="fa fa-user"></i> Account
-                                            </a>
+                                            <Dropdown.Item eventKey={'accounts'}>
+                                                <i className="fa fa-user"></i> Accounts
+
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="#"
-                                                              className="dropdown-item">
+                                            <Dropdown.Item eventKey={'history'}>
                                                 <i className="fa fa-book"></i> History
-                                            </a>
+
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="#"
-                                                              className="dropdown-item">
+                                            <Dropdown.Item eventKey={'settings'}>
                                                 <i className="fa fa-cog"></i> Settings
-                                            </a>
+
                                             </Dropdown.Item>
-                                            <Dropdown.Item><a href="#"
-                                                              className="dropdown-item">
+                                            <Dropdown.Item eventKey={'disconnect'}>
                                                 <i className="fa fa-lock"></i> Disconnect
-                                            </a>
                                             </Dropdown.Item>
 
                                         </Dropdown.Menu>

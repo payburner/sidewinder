@@ -23,7 +23,7 @@ export default class Login extends React.Component {
     componentDidMount() {
         const comp = this;
         this.props.coreTradingService.tokenService().subscribe((token) => {
-            comp.setState({loggedIn: true});
+            comp.setState({loggedIn: token !== null});
         });
     }
 
@@ -39,7 +39,7 @@ export default class Login extends React.Component {
         }
         else {
             return <div id="main-wrapper" className="show">
-                <Header notifierService={this.notifierService}/>
+                <Header notifierService={this.notifierService} tokenService={comp.props.coreTradingService.tokenService()}/>
                 <Sidebar/>
                 <PageTitle/>
 
