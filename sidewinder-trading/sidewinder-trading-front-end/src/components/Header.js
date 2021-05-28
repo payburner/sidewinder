@@ -75,7 +75,7 @@ export default class Header extends React.Component {
                                     </Dropdown>
 
                                         {this.state.notification !== null ? (
-                                            <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+                                            <div style={{position: 'relative', minHeight: '200px'}}>
                                             <Toast style={{
                                                 backgroundColor: 'rgba(0, 0, 0, 0.8)',
                                                 zIndex: '999',
