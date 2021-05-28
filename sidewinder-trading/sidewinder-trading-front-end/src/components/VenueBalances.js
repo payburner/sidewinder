@@ -14,6 +14,11 @@ export default class VenueBalances extends React.Component {
             //console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
             comp.setState({balances: balancesResponse.data.accounts })
         }, 5000);
+        setTimeout(async () => {
+            const balancesResponse = await comp.props.coreTradingService.tradingBalancesService().getVenueBalances('bitstamp');
+            //console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
+            comp.setState({balances: balancesResponse.data.accounts })
+        }, 100);
     }
 
     componentWillUnmount() {
@@ -41,9 +46,12 @@ export default class VenueBalances extends React.Component {
             </div>
             <div className="card-body pt-0">
                 <div className="balance-widget">
-                    <ul className="list-unstyled" style={{marginTop: '12px'}}>
+                    {comp.state.balances.length === 0 ? (
+                        <i className={'fa fa-spinner'}/>
+                    ) : (<ul className="list-unstyled" style={{marginTop: '12px'}}>
                         {balances}
-                    </ul>
+                    </ul>)}
+
                 </div>
             </div>
         </div>

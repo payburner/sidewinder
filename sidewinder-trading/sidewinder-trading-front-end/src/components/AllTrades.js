@@ -17,6 +17,11 @@ export default class AllTrades extends React.Component {
            //console.log('Orders:' + JSON.stringify(orderResponse, null, 2));
            comp.setState({orders: orderResponse.data.orders })
         }, 5000);
+        setTimeout(async () => {
+            const orderResponse = await comp.props.coreTradingService.tradingOrdersService().getVenueOrders('bitstamp');
+            //console.log('Orders:' + JSON.stringify(orderResponse, null, 2));
+            comp.setState({orders: orderResponse.data.orders })
+        }, 100);
     }
 
     componentWillUnmount() {
@@ -56,7 +61,9 @@ export default class AllTrades extends React.Component {
                 <h4 className="card-title">All Trades</h4>
             </div>
             <div className="card-body pt-0">
-                <div className="transaction-table">
+                {comp.state.orders.length === 0 ? (
+                    <i className={'fa fa-spinner'} />
+                ) : (<div className="transaction-table">
                     <div className="table-responsive">
                         <table className="table mb-0 table-responsive-sm">
                             <tbody>
@@ -67,7 +74,8 @@ export default class AllTrades extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div>)}
+
             </div>
         </div>
     }
