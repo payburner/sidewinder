@@ -14,6 +14,16 @@ export default class TradingMetadataService {
         }
     }
 
+    scaleAmount( exchange, currency, amount ) {
+        let at = this.assetType(currency);
+        if (at === 'FIAT') {
+            return parseFloat(amount.toFixed(2));
+        }
+        else {
+            return parseFloat(amount.toFixed(6));
+        }
+    }
+
     isTradeable = function( exchange, source_currency, target_currency ) {
         if (source_currency === 'XRP' || target_currency === 'XRP') {
             return false;
