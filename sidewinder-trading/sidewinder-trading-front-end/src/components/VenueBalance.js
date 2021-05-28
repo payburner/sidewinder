@@ -12,7 +12,7 @@ export default class VenueBalance extends React.Component {
             modal: false,
             sourceCurrency: null,
             sourceCurrencyType: null,
-            amount: 100,
+            percentAmount: 100,
             tradeable: null
         }
     }
@@ -110,7 +110,7 @@ modal: !this.state.modal
                     opacity: '0.90', height: '325px'}} >
                     <Row style={{paddingLeft: '36px'}}>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
-                                           currencyName={this.state.sourceCurrency} availableBalance={this.props.availableBalance}/>
+                                           currencyName={this.state.sourceCurrency} availableBalance={this.state.availableBalance*(comp.state.percentAmount/100)}/>
                         <i style={{float: 'left', padding: '80px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={comp.props.currency} currencyName={comp.props.currency}/>
                     </Row>
@@ -120,8 +120,8 @@ modal: !this.state.modal
                     </Row>
                     <Row style={{paddingLeft: '175px', paddingRight: '175px'}}>
                         <RangeSlider min={10}
-                            value={comp.state.amount} step={10}
-                            onChange={changeEvent => comp.setState({amount:changeEvent.target.value})}
+                            value={comp.state.percentAmount} step={10}
+                            onChange={changeEvent => comp.setState({percentAmount:changeEvent.target.value})}
                         />
                     </Row>
                 </ModalBody>
