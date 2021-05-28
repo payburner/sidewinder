@@ -103,14 +103,14 @@ modal: !this.state.modal
                 <h5>{comp.props.availableBalance} {comp.props.currency}</h5>
                 <span>0.125 {comp.props.valueCurrency}</span>
             </div>
-            <Modal contentClassName={'trading-modal'} isOpen={this.state.modal} toggle={(e)=>this.toggle(e)} className={'className'}>
+            { this.state.modal ? (<Modal contentClassName={'trading-modal'} isOpen={this.state.modal} toggle={(e)=>this.toggle(e)} className={'className'}>
                 <ModalHeader style={{backgroundColor:'rgb(58, 51, 97)',   filter: 'alpha(opacity=85)',
                     opacity: '0.90'}} >Transfer Balance</ModalHeader>
                 <ModalBody style={{backgroundColor:'rgb(58, 51, 97)',   filter: 'alpha(opacity=85)',
                     opacity: '0.90', height: '325px'}} >
                     <Row style={{paddingLeft: '36px'}}>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
-                                           currencyName={this.state.sourceCurrency} availableBalance={this.props.coreTradingService.tradingMetaDataService()
+                                               currencyName={this.state.sourceCurrency} availableBalance={this.props.coreTradingService.tradingMetaDataService()
                             .scaleAmount(('bitstamp', this.state.sourceCurrency, this.state.availableBalance*comp.state.percentAmount/100))}/>
                         <i style={{float: 'left', padding: '80px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={comp.props.currency} currencyName={comp.props.currency}/>
@@ -121,8 +121,8 @@ modal: !this.state.modal
                     </Row>
                     <Row style={{paddingLeft: '175px', paddingRight: '175px'}}>
                         <RangeSlider min={10}
-                            value={comp.state.percentAmount} step={10}
-                            onChange={changeEvent => comp.setState({percentAmount:changeEvent.target.value})}
+                                     value={comp.state.percentAmount} step={10}
+                                     onChange={changeEvent => comp.setState({percentAmount:changeEvent.target.value})}
                         />
                     </Row>
                 </ModalBody>
@@ -130,7 +130,8 @@ modal: !this.state.modal
                     opacity: '0.90'}} >
 
                 </ModalFooter>
-            </Modal>
+            </Modal>) :('')}
+
         </li>
 
 
