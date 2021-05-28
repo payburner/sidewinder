@@ -8,7 +8,7 @@ const express = require('express');
 const http = require('http');
 const axios = require('axios');
 const app = express();
-
+const bodyParser = require('body-parser');
 const pConfig = JSON.parse(fs.readFileSync(process.argv[2]).toString());
 
 const basicAuthentication = new BasicAuthInterceptor({
@@ -16,14 +16,8 @@ const basicAuthentication = new BasicAuthInterceptor({
     password: pConfig.CAMUNDA_PASSWORD
 });
 
-
-// configuration for the Client:
-//  - 'baseUrl': url to the Process Engine
-//  - 'logger': utility to automatically log important events
-const config = { interceptors: basicAuthentication, baseUrl: "https://oms.payburner.com/engine-rest", use: logger };
-
-// create a Client instance with custom configuration
-const client = new Client(config);
+const jsonParser = bodyParser.json({limit: '20mb'});
+app.use(jsonParser);
 
 AWS.config.update({
     accessKeyId: pConfig.AWS_ACCESS_ID,
