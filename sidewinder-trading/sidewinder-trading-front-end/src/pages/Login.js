@@ -20,44 +20,24 @@ export default class Login extends React.Component {
     render() {
         const comp = this;
          return <div id="main-wrapper" className="show">
-            <Header notifierService={this.notifierService}/>
-            <Sidebar/>
-            <PageTitle/>
+             <Header notifierService={this.notifierService}/>
+             <Sidebar/>
+             <PageTitle/>
              <Authentication/>
 
              <div className="content-body">
                  <div className="container-fluid">
-                     <div-- className="row">
-                         <div className="col-xl-4 col-lg-4 col-md-6">
-                             <ProfileCard/>
+                    <div className="row">
+                        <div className="col-xl-3 col-lg-4 col-xxl-4">
+                            <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <AccountBalanceCard/>
+                        <div className="col-xl-9 col-lg-8 col-xxl-8">
+                            <AllTrades coreTradingService={comp.props.coreTradingService}/>
                         </div>
-                     </div-->
-                     <div-- className="row">
-                         <div className="col-xl-12">
-                             <AllTrades coreTradingService={comp.props.coreTradingService}/>
-                         </div>
-                     </div-->
-                     <div-- className="row">
-                         <div className="col-xl-12 col-lg-12 col-xxl-4">
-                             <VenueNetValue/>
-                         </div>
-                     </div-->
-                     <div className="row">
-                         <div className="col-xl-3 col-lg-4 col-xxl-4">
-                             <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
-                         </div>
-                         <div className="col-xl-9 col-lg-8 col-xxl-8">
-                             <AllTrades coreTradingService={comp.props.coreTradingService}/>
-                         </div>
-                     </div>
+                    </div>
                  </div>
-                </div>
-
+             </div>
              <Footer/>
-
          </div>
     }
 }
