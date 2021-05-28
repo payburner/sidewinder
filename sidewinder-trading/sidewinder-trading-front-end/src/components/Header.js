@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown'
 import {Toast} from "react-bootstrap";
-
+import mLogo from '../assets/images/m_logo.png'
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -29,8 +29,8 @@ export default class Header extends React.Component {
                     <div className="col-xl-12">
                         <nav
                             className="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                            <a className="navbar-brand" href="index.html"><img
-                                src="../assets/images/w_logo.png" alt=""/>
+                            <a className="navbar-brand" href="#"><img
+                                src={mLogo} alt=""/>
                                 <span>Sidewinder Trading</span></a>
 
 
