@@ -4,6 +4,7 @@ import VenueCurrencyNetValue from "./VenueCurrencyNetValue";
 import {Row} from "react-bootstrap";
 import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
+import AssetIcon from "./AssetIcon";
 export default class VenueBalance extends React.Component {
     constructor(props) {
         super(props);
@@ -66,8 +67,7 @@ modal: !this.state.modal
                    onDragStart={(e) => comp.dragStart(e)}
         >
             <span style={{display: 'flex'}}>
-                <i className={'grabbable ' + comp.assetIconClass(
-                    comp.props.currency, 'medium') + ' mr-3'}></i>
+                <AssetIcon asset={comp.props.currency} size={'medium'} classes={'grabbable mr-3'}/>
             </span>
 
             <div className="media-body">
