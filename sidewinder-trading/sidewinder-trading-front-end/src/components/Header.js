@@ -17,7 +17,7 @@ export default class Header extends React.Component {
     }
 
     handleDropDownSelect(e) {
-        console.log('KEY:' + e.target.value );
+        console.log('KEY:' + e );
         this.props.tokenService.removeToken();
     }
 
