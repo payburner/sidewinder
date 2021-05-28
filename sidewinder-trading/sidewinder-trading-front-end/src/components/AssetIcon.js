@@ -30,7 +30,7 @@ export default class AssetIcon extends React.Component {
             return <i className={'fiat-icon-' + size + ' fa fa-' + asset.toLowerCase() + ' currency-icon-' + size + classes}></i>
         }
         else {
-            return <i className={'cc ' + asset + classes}></i>
+            return <img src={'/resources/icons/128/color/' + asset.toLowerCase() + '.png'} className={classes}/>
         }
     }
 }
