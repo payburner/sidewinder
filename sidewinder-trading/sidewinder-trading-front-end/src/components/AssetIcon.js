@@ -18,7 +18,7 @@ export default class AssetIcon extends React.Component {
         }
     }
 
-    assetIconClass = function ( ) {
+    render() {
         const asset = this.props.asset;
         const assetType = this.assetType( asset );
         const classes = typeof this.props.classes !== 'undefined' ? ' ' + this.props.classes : ' ';
