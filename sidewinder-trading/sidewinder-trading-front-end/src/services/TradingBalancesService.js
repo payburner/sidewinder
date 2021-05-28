@@ -1,7 +1,8 @@
 import axios from 'axios';
 export default class TradingBalancesService {
 
-    constructor() {
+    constructor( tokenService ) {
+        this.tokenService = tokenService;
     }
 
     getVenueBalances = function ( venueId ) {

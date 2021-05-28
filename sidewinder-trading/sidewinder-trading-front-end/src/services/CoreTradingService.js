@@ -4,11 +4,16 @@ import TradingOrdersService from "./TradingOrdersService";
 import TradingBalancesService from "./TradingBalancesService";
 
 export default class CoreTradingService {
-    constructor( ) {
+    constructor( tokenService ) {
+        this.authTokenService = tokenService
         this.mdService = new TradingMetadataService();
         this.mdUIService = new TradingMetadataUIService(this.mdService);
-        this.ordersService = new TradingOrdersService();
-        this.balancesService = new TradingBalancesService();
+        this.ordersService = new TradingOrdersService( tokenService );
+        this.balancesService = new TradingBalancesService( tokenService );
+    }
+
+    tokenService = function() {
+        return this.authTokenService;
     }
 
     tradingMetaDataService = function () {

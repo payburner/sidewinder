@@ -42,7 +42,7 @@ modal: !this.state.modal
                         tradeable: 'FALSE'
                     });
                     event.dataTransfer.clearData();
-                    this.props.notifierService.notify('We can not initiate a trade for this pair.  Your available balance of ' + pData.currency + ' is zero.');
+                    this.props.notifierService.notify('We can not initiate a trade for this pair.  Your available balance of ' + pData.sourceCurrency + ' is zero.');
                 }
                 else {
                     pData.tradeable = 'TRUE';
