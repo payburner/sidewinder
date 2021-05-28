@@ -23,7 +23,8 @@ modal: !this.state.modal
 
     dragStart = (event) => {
         event.dataTransfer.setData("text/plain", JSON.stringify({
-            sourceCurrency: this.props.currency, sourceCurrencyType: this.props.currencyType
+            sourceCurrency: this.props.currency, sourceCurrencyType: this.props.currencyType,
+            availableBalance: this.props.availableBalance
         }))
         this.setState({targetbox: true});
     }
@@ -33,15 +34,29 @@ modal: !this.state.modal
         if (data) {
             const pData = JSON.parse(data);
             if (this.props.coreTradingService.tradingMetaDataService().isTradeable(this.exchange, pData.sourceCurrency, this.props.currency)) {
-                pData.tradeable = 'TRUE';
-                this.setState(pData);
-                event.dataTransfer.clearData();
-                this.toggle();
+                if (pData.availableBalance === 0) {
+                    this.setState({
+                        sourceCurrency: null,
+                        sourceCurrencyType: null,
+                        availableBalance: null,
+                        tradeable: 'FALSE'
+                    });
+                    event.dataTransfer.clearData();
+                    this.props.notifierService.notify('We can not initiate a trade for this pair.  Your available balance of ' + pData.currency + ' is zero.');
+                }
+                else {
+                    pData.tradeable = 'TRUE';
+                    this.setState(pData);
+                    event.dataTransfer.clearData();
+                    this.toggle();
+                }
+
             }
             else {
                 this.setState({
                     sourceCurrency: null,
                     sourceCurrencyType: null,
+                    availableBalance: null,
                     tradeable: 'FALSE'
                 });
                 event.dataTransfer.clearData();
@@ -59,6 +74,7 @@ modal: !this.state.modal
         this.setState({
             sourceCurrency: null,
             sourceCurrencyType: null,
+            availableBalance: null,
             tradeable: null
         })
     }
