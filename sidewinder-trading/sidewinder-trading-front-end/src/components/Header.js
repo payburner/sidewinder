@@ -39,7 +39,7 @@ export default class Header extends React.Component {
                                                     transition: 'all 0.3s ease-in-out',
                                                     padding: '8px 20px 8px 20px'
                                                 }}>
-                                                <span>19.93 USD</span>
+                                                <span>equiv-todo USD</span>
                                             </li>
                                         </ul>
                                     </div>

@@ -101,7 +101,7 @@ modal: !this.state.modal
             </div>
             <div className="text-right">
                 <h5>{comp.props.availableBalance} {comp.props.currency}</h5>
-                <span>0.125 {comp.props.valueCurrency}</span>
+                <span>equiv-todo {comp.props.valueCurrency}</span>
             </div>
             { this.state.modal ? (<Modal contentClassName={'trading-modal'} isOpen={this.state.modal} toggle={(e)=>this.toggle(e)} className={'className'}>
                 <ModalHeader style={{backgroundColor:'rgb(58, 51, 97)',   filter: 'alpha(opacity=85)',
