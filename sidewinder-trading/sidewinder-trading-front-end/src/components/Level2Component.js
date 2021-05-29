@@ -95,7 +95,7 @@ export default class Level2Component extends React.Component {
                     <VenueAssetBoard
                         notifierService={comp.props.notifierService}
                         title={'Crypto Positions'}
-                        onDeselectAsset={(asset) => this.selectCrypto(asset)}
+                        onSelectAsset={(asset) => this.selectCrypto(asset)}
                         onDeselectAsset={(asset) => this.deselectCrypto(asset)}
                         filter={(balance) => comp.props.coreTradingService.tradingMetaDataService().assetType(balance.currency) === 'CRYPTO'}
                         coreTradingService={comp.props.coreTradingService}/>
