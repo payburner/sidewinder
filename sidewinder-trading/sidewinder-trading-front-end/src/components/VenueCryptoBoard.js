@@ -45,7 +45,7 @@ export default class VenueCryptoBoard extends React.Component {
                 <div className="balance-widget">
                     {comp.state.balances.length === 0 ? (
                         <i className={'fa fa-spinner'}/>
-                    ) : (<div onClick={() => comp.toggle()} style={{marginTop: '12px'}}>
+                    ) : (<div onClick={() => comp.toggle()} style={{marginTop: '12px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr));'}}>
                         {balances}
                     </div>)}
 
