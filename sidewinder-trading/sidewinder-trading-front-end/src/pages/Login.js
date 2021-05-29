@@ -97,9 +97,15 @@ export default class Login extends React.Component {
                                                    coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                                 <div className="col-xl-1 col-lg-1 col-xxl-1">
+                                    <div className="card ">
+                                        <div className="card-header border-0">
+                                            <h4 className="card-title">&nbps;</h4>
+                                        </div>
+                                        <div className="card-body pt-0">
                                 <i onClick={(e)=>alert('hi')} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
                                     <i onClick={(e)=>alert('hi')} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-left currency-icon-large execute-button'}/>
-
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="col-xl-9 col-lg-8 col-xxl-8">
                                     <VenueAssetBoard
