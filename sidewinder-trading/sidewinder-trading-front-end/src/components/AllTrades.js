@@ -7,7 +7,11 @@ export default class AllTrades extends React.Component {
     constructor(props) {
         super(props);
         this.pollingInterval = null;
-        this.state = { orders: [] }
+        this.state = { orders: [], workingOnly: false }
+    }
+
+    toggle() {
+        this.setState({workingOnly:!this.state.workingOnly})
     }
 
     componentDidMount() {
@@ -33,9 +37,11 @@ export default class AllTrades extends React.Component {
 
     render() {
         const comp = this;
-        const orders = comp.state.orders.map((order) =>
+        const orders = comp.state.orders
+            .filter((order)=> comp.state.workingOnly? (!(order.status === 'canceled' && order.filled_amount > 0) && order.status !== 'closed') :true)
+            .map((order) =>
             // Correct! Key should be specified inside the array.
-            <tr key={order.orderId}>
+            <tr key={order.orderId} onDoubleClick={(e)=>{alert('hi')}}>
                 <td>
                     <span >{order.status === 'canceled' && order.filled_amount > 0 ? 'closed': order.status}</span>
                 </td>
@@ -65,7 +71,7 @@ export default class AllTrades extends React.Component {
                     <i className={'fa fa-spinner'} />
                 ) : (<div className="transaction-table">
                     <div className="table-responsive">
-                        <table className="table mb-0 table-responsive-sm">
+                        <table onClick={(e)=>comp.toggle()} className="table mb-0 table-responsive-sm">
                             <tbody>
 
                             {orders}
