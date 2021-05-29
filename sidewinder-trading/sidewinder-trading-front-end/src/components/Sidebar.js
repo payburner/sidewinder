@@ -32,7 +32,7 @@ export default class Sidebar extends React.Component {
                          <span><i className="fa fa-exchange"></i></span>
                      </a>
                      </li>
-                     <li><a href="#" onClick={(e)=>this.notifyMenuSwitch('account')} data-toggle="tooltip" data-placement="right"
+                     <li><a href="#" onClick={(e)=>this.notifyMenuSwitch('accounts')} data-toggle="tooltip" data-placement="right"
                             title="Account">
                          <span><i className="fa fa-user"></i></span>
                      </a>
