@@ -9,14 +9,14 @@ export default class Level1Service {
 
     transferFunds = function( venueId, sourceCurrency, targetCurrency, amount ) {
         return new Promise(async (resolve) => {
-            if (this.tradingMetaDataService.assetType(sourceCurrency) === 'CRYPTO') {
+            if (this.tradingMetaDataService.assetType(targetCurrency) === 'CRYPTO') {
                 const response = await this.tradingOrdersService.placeVenueInstantOrder(venueId,
-                    sourceCurrency + '/' + targetCurrency, 'buy', amount );
+                    targetCurrency + '/' + sourceCurrency, 'buy', amount );
                resolve(response);
             }
             else {
                 const response = await this.tradingOrdersService.placeVenueMarketOrder(venueId,
-                    targetCurrency + '/' + sourceCurrency , 'sell', amount);
+                    sourceCurrency + '/' + targetCurrency , 'sell', amount);
                 resolve(response);
             }
         })
