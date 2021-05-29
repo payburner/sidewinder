@@ -13,9 +13,9 @@ export default class VenueCurrencyNetValue extends React.Component {
 
     render() {
         const comp = this;
-        return <div className="venue-currency-net-value-widget" style={{float: 'left', padding: '20px 20px 20px 20px'}}>
+        return <div className="venue-currency-net-value-widget" style={{float: 'left', minWidth: '120px', padding: '20px 20px 20px 20px'}}>
                     <div className="venue-currency-net-value">
-                        <AssetIcon asset={comp.props.currency} size={'large'}/>
+                        <AssetIcon style={{margin: '0 auto'}} asset={comp.props.currency} size={'large'}/>
                         <h5 style={{marginTop: '12px'}}>{comp.props.currencyName}</h5>
                         <h3>{comp.props.availableBalance}</h3>
                     </div>

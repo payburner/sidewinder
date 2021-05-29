@@ -129,7 +129,7 @@ modal: !this.state.modal
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
                                                currencyName={this.state.sourceCurrency} availableBalance={this.props.coreTradingService.tradingMetaDataService()
                             .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(comp.state.percentAmount/100))}/>
-                        <i onClick={(e)=>comp.placeInstantOrder()} style={{float: 'left', padding: '80px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
+                        <i onClick={(e)=>comp.placeInstantOrder()} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
                         <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={comp.props.currency} currencyName={comp.props.currency}/>
                     </Row>
                     <Row style={{paddingLeft: '175px', paddingRight: '175px'}}>
