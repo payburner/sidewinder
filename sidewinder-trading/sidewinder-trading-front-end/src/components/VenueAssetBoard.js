@@ -35,7 +35,7 @@ export default class VenueAssetBoard extends React.Component {
 
 
         });
-        return <div className="card ">
+        return <div className="card" style={{marginBottom: '0px'}}>
             <div className="card-header border-0">
                 <h4 className="card-title">{comp.props.title}</h4>
             </div>

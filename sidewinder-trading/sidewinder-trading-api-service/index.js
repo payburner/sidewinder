@@ -34,6 +34,74 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
     });
 });
 
+app.post('/venues/:venueId/level2/sweepout', function(req, res, next) {
+    const body = req.body;
+    const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
+
+    const data = {
+        variables : {
+            target_address: {value: target_address, type : "string"},
+            source_currency: {value: req.body.source_currency, type : "string"},
+            target_currencies: {value: req.body.target_currencies, type : "string"},
+            exchange: {value: req.body.exchange, type : "string"},
+        },
+        businessKey : target_address + '-marketorder-' + req.body.exchange + '-' + uuid4()
+    }
+
+    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/sweepout/start',
+        data, {
+            // Axios looks for the `auth` option, and, if it is set, formats a
+            // basic auth header for you automatically.
+            auth: {
+                username: pConfig.CAMUNDA_USER,
+                password: pConfig.CAMUNDA_PASSWORD
+            }
+        })
+        .then((response) => {
+            const data = response.data;
+            console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
+            res.status(200).send( {status:200})
+        }).catch((error) => {
+        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
+        res.status(400).send({status:400,error:error});
+    })
+
+});
+
+app.post('/venues/:venueId/level2/sweepin', function(req, res, next) {
+    const body = req.body;
+    const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
+
+    const data = {
+        variables : {
+            target_address: {value: target_address, type : "string"},
+            source_currencies: {value: req.body.source_currencies, type : "string"},
+            target_currency: {value: req.body.target_currency, type : "string"},
+            exchange: {value: req.body.exchange, type : "string"},
+        },
+        businessKey : target_address + '-sweepin-' + req.body.exchange + '-' + uuid4()
+    }
+
+    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/sweepin/start',
+        data, {
+            // Axios looks for the `auth` option, and, if it is set, formats a
+            // basic auth header for you automatically.
+            auth: {
+                username: pConfig.CAMUNDA_USER,
+                password: pConfig.CAMUNDA_PASSWORD
+            }
+        })
+        .then((response) => {
+            const data = response.data;
+            console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
+            res.status(200).send( {status:200})
+        }).catch((error) => {
+        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
+        res.status(400).send({status:400,error:error});
+    })
+
+});
+
 app.post('/venues/:venueId/orders/marketorder', function(req, res, next) {
     const body = req.body;
     const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';

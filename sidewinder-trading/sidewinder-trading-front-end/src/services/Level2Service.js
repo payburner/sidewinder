@@ -6,7 +6,7 @@ export default class Level2Service {
         this.tradingMetaDataService = tradingMetaDataService;
     }
 
-    sweepOut = function ( venueId, sourceCurrency, targetCurrencies, amount ) {
+    sweepOut = function ( venueId, sourceCurrency, targetCurrencies ) {
         const comp = this;
         return new Promise(async (resolve) => {
             try {
@@ -15,8 +15,7 @@ export default class Level2Service {
                     {
                         exchange: venueId,
                         source_currency: sourceCurrency,
-                        target_currencies: targetCurrencies,
-                        amount: amount
+                        target_currencies: targetCurrencies
                     },
                     {
                         headers: {
@@ -34,7 +33,7 @@ export default class Level2Service {
         });
     }
 
-    sweepIn = function ( venueId, sourceCurrencies, targetCurrency, amount ) {
+    sweepIn = function ( venueId, sourceCurrencies, targetCurrency) {
         const comp = this;
         return new Promise(async (resolve) => {
             try {
@@ -43,8 +42,7 @@ export default class Level2Service {
                     {
                         exchange: venueId,
                         source_currencies: sourceCurrencies,
-                        target_currency: targetCurrency,
-                        amount: amount
+                        target_currency: targetCurrency
                     },
                     {
                         headers: {

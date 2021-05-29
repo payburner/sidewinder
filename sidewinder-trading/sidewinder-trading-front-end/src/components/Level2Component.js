@@ -2,6 +2,7 @@ import React from 'react';
 import VenueBalance from "./VenueBalance";
 import uuid4 from "uuid4/browser.mjs";
 import VenueAssetBoard from "./VenueAssetBoard";
+import AllTrades from "./AllTrades";
 export default class Level2Component extends React.Component {
     constructor(props) {
         super(props);
@@ -14,12 +15,20 @@ export default class Level2Component extends React.Component {
     sweepOut() {
         if (this.commonValidation()) {
             alert('sweep out:' + this.state.fiat + ' -> ' + JSON.stringify(this.state.crypto, null, 2));
+            this.props.coreTradingService.level2Service().sweepOut('bitstamp', this.state.fiat, this.state.crypto )
+                .then((response) => {
+                console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
+            });
         }
     }
 
     sweepIn() {
         if (this.commonValidation()) {
-          alert('sweep in:' + JSON.stringify(this.state.crypto, null, 2) + ' -> ' + this.state.fiat);
+         alert('sweep in:' + JSON.stringify(this.state.crypto, null, 2) + ' -> ' + this.state.fiat);
+          this.props.coreTradingService.level2Service().sweepIn('bitstamp', this.state.crypto, this.state.fiat )
+              .then((response) => {
+              console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
+          });
         }
     }
 
@@ -71,7 +80,7 @@ export default class Level2Component extends React.Component {
                                      coreTradingService={comp.props.coreTradingService}/>
                 </div>
                 <div className="col-xl-1 col-lg-1 col-xxl-1">
-                    <div className="card" style={{marginBottom: '0px'}}>
+                    <div className="card">
                         <div className="card-header border-0">
                             <h4 className="card-title"></h4>
                         </div>
@@ -100,6 +109,9 @@ export default class Level2Component extends React.Component {
                         filter={(balance) => comp.props.coreTradingService.tradingMetaDataService().assetType(balance.currency) === 'CRYPTO'}
                         coreTradingService={comp.props.coreTradingService}/>
                 </div>
+            </div>
+            <div className="row">
+                <AllTrades coreTradingService={comp.props.coreTradingService}/>
             </div>
         </div>
 
