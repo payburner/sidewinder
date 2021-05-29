@@ -41,7 +41,7 @@ export default class AssetIcon extends React.Component {
             else if (size === 'small') {
                 height = '22px';
             }
-            return <img id={uuid4()} style={style} height={height} src={'/resources/icons/128/color/' + ( asset !== null ?  asset.toLowerCase() : '' ) + '.png'} className={classes}/>
+            return <img id={uuid4()} draggable={typeof this.props.draggable !== 'undefined' ? this.props.draggable : false} style={style} height={height} src={'/resources/icons/128/color/' + ( asset !== null ?  asset.toLowerCase() : '' ) + '.png'} className={classes}/>
         }
     }
 }

@@ -110,7 +110,7 @@ modal: !this.state.modal
                    onDragStart={(e) => comp.dragStart(e)}
         >
             <span style={{display: 'flex'}}>
-                <AssetIcon asset={comp.props.currency} size={'medium'} classes={'grabbable mr-3'}/>
+                <AssetIcon asset={comp.props.currency} draggable={true} size={'medium'} classes={'grabbable mr-3'}/>
             </span>
 
             <div className="media-body">
