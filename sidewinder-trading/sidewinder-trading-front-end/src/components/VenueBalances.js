@@ -1,24 +1,17 @@
 import React from 'react';
 import VenueBalance from "./VenueBalance";
+import uuid4 from "uuid4/browser.mjs";
 export default class VenueBalances extends React.Component {
     constructor(props) {
         super(props);
-        this.pollingInterval = null;
-        this.state = { balances: [], openOnly: false }
+
+        this.state = { balances: [], openOnly: false, id: uuid4()}
+
     }
 
     componentDidMount() {
         const comp = this;
-        this.pollingInterval = setInterval(async () => {
-            const balancesResponse = await comp.props.coreTradingService.tradingBalancesService().getVenueBalances('bitstamp');
-            //console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
-            comp.setState({balances: balancesResponse.data.accounts })
-        }, 5000);
-        setTimeout(async () => {
-            const balancesResponse = await comp.props.coreTradingService.tradingBalancesService().getVenueBalances('bitstamp');
-            //console.log('Balances:' + JSON.stringify(balancesResponse, null, 2));
-            comp.setState({balances: balancesResponse.data.accounts })
-        }, 100);
+        comp.props.coreTradingService.tradingBalancesService().subscribe(comp.state.id, 'bitstamp', (a)=>comp.setState({balances:a}))
     }
 
     toggle() {
@@ -26,9 +19,7 @@ export default class VenueBalances extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.pollingInterval !== null) {
-            clearInterval(this.pollingInterval);
-        }
+        comp.props.coreTradingService.tradingBalancesService().unsubscribe(comp.state.id);
     }
 
     render() {
