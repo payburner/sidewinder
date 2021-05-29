@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/Level2Component.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/Level2Component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueAssetBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueAssetBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/Level2Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/Level2Service.js" afterDir="false" />
-    </list>
+    <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -372,7 +366,7 @@
       <workItem from="1621954297316" duration="542000" />
       <workItem from="1621986335315" duration="10125000" />
       <workItem from="1622095413206" duration="8877000" />
-      <workItem from="1622191836579" duration="30059000" />
+      <workItem from="1622191836579" duration="30375000" />
     </task>
     <servers />
   </component>

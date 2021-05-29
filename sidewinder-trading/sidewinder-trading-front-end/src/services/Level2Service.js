@@ -10,12 +10,22 @@ export default class Level2Service {
         const comp = this;
         return new Promise(async (resolve) => {
             try {
+                let target_currencies = null;
+                targetCurrencies.forEach((c) => {
+                   if (target_currencies !== null) {
+                       target_currencies += ',' + c;
+                   }
+                   else {
+                       target_currencies = c;
+                   }
+                });
+
                 const result = await axios.post(
                     'https://trading-api.payburner.com/venues/' + venueId + '/level2/sweepout',
                     {
                         exchange: venueId,
                         source_currency: sourceCurrency,
-                        target_currencies: targetCurrencies
+                        target_currencies: target_currencies
                     },
                     {
                         headers: {
@@ -37,11 +47,20 @@ export default class Level2Service {
         const comp = this;
         return new Promise(async (resolve) => {
             try {
+                let source_currencies = null;
+                sourceCurrencies.forEach((c) => {
+                    if (source_currencies !== null) {
+                        source_currencies += ',' + c;
+                    }
+                    else {
+                        source_currencies = c;
+                    }
+                });
                 const result = await axios.post(
                     'https://trading-api.payburner.com/venues/' + venueId + '/level2/sweepin',
                     {
                         exchange: venueId,
-                        source_currencies: sourceCurrencies,
+                        source_currencies: source_currencies,
                         target_currency: targetCurrency
                     },
                     {
