@@ -11,6 +11,7 @@ import AllTrades from "../components/AllTrades";
 import VenueNetValue from '../components/VenueNetValue';
 import VenueBalances from "../components/VenueBalances";
 import NotifierService from "../services/NotifierService";
+import VenueCryptoBoard from "../components/VenueCryptoBoard";
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -92,7 +93,7 @@ export default class Login extends React.Component {
                                     <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                                 <div className="col-xl-9 col-lg-8 col-xxl-8">
-                                    <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
+                                    <VenueCryptoBoard notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                             </div>
                         </div>
