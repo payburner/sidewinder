@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 export default class Level1Service {
 
     constructor(tokenService, tradingMetaDataService, tradingOrdersService) {
@@ -11,12 +11,12 @@ export default class Level1Service {
         return new Promise(async (resolve) => {
             if (this.tradingMetaDataService.assetType(sourceCurrency) === 'CRYPTO') {
                 const response = await this.tradingOrdersService.placeVenueInstantOrder(venueId,
-                    sourceCurrency + '/' + target, 'buy', amount );
+                    sourceCurrency + '/' + targetCurrency, 'buy', amount );
                resolve(response);
             }
             else {
                 const response = await this.tradingOrdersService.placeVenueMarketOrder(venueId,
-                    sourceCurrency + '/' + targetCurrency , 'sell', amount);
+                    targetCurrency + '/' + sourceCurrency , 'sell', amount);
                 resolve(response);
             }
         })
