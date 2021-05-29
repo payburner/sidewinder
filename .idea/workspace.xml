@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueCurrencyNetValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueCurrencyNetValue.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +368,7 @@
       <workItem from="1621954297316" duration="542000" />
       <workItem from="1621986335315" duration="10125000" />
       <workItem from="1622095413206" duration="8877000" />
-      <workItem from="1622191836579" duration="18060000" />
+      <workItem from="1622191836579" duration="18258000" />
     </task>
     <servers />
   </component>

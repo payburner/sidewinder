@@ -14,7 +14,7 @@ export default class VenueCurrencyNetValue extends React.Component {
 
     toggle() {
         if (typeof this.props.toggleable && this.props.toggleable) {
-            this.state.toggled = !this.state.toggled;
+            this.setState( {toggled: !this.state.toggled});
         }
     }
 
