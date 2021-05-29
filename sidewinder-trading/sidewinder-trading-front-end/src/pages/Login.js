@@ -29,10 +29,24 @@ export default class Login extends React.Component {
     }
 
     handleHeaderMenuSelection( i ) {
-        console.log('Header Menu Selection: ' + i );
+
+        if (i === 'disconnect') {
+            this.props.coreTradingService.tokenService().removeToken();
+        }
+        else if (i === 'home' || i === 'exchange') {
+            this.setState({page:i})
+        }
+        else {
+            console.log('unhandled header menu selection:' + i );
+        }
     }
     handleSidebarMenuSelection( i ) {
-        console.log('Sidebar Menu Selection: ' + i );
+        if (i === 'home' || i === 'exchange') {
+            this.setState({page:i})
+        }
+        else {
+            console.log('unhandled sidebar menu selection:' + i );
+        }
     }
     render() {
         const comp = this;
