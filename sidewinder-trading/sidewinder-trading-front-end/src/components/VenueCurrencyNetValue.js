@@ -12,9 +12,11 @@ export default class VenueCurrencyNetValue extends React.Component {
         }
     }
 
-    toggle() {
+    toggle(e) {
         if (typeof this.props.toggleable && this.props.toggleable) {
             this.setState( {toggled: !this.state.toggled});
+            e.preventDefault();
+            e.stopPropagation();
         }
     }
 
@@ -30,7 +32,7 @@ export default class VenueCurrencyNetValue extends React.Component {
             style.marginRight = comp.props.marginRight
         }
 
-        return <div onClick={(e)=>comp.toggle()} className="venue-currency-net-value-widget" style={style}>
+        return <div onClick={(e)=>comp.toggle(e)} className="venue-currency-net-value-widget" style={style}>
                     <div className="venue-currency-net-value">
                         <AssetIcon style={{margin: '0 auto'}} asset={comp.props.currency} size={'large'}/>
                         <h5 style={{marginTop: '12px'}}>{comp.props.currencyName}</h5>
