@@ -29,8 +29,11 @@ export default class VenueCryptoBoard extends React.Component {
         const balances = comp.state.balances
             .filter((balance)=> comp.state.openOnly?balance.available>0:true)
             .map((balance) => {
-            return <VenueCurrencyNetValue toggleable={true} coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
-                                          currencyName={balance.currency} availableBalance={balance.availableBalance}/>
+            return <VenueCurrencyNetValue toggleable={true}
+                                          coreTradingService={this.props.coreTradingService}
+                                          currency={balance.currency}
+                                          currencyName={balance.currency}
+                                          availableBalance={balance.availableBalance}/>
 
 
         });
