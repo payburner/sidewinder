@@ -81,19 +81,11 @@ modal: !this.state.modal
 
     async placeInstantOrder() {
         const comp = this;
-        if (this.props.coreTradingService.tradingMetaDataService().assetType(this.props.currency) === 'CRYPTO') {
-            await this.props.coreTradingService.tradingOrdersService().placeVenueInstantOrder('bitstamp',
-                this.props.currency + '/' + this.state.sourceCurrency, 'buy', this.props.coreTradingService.tradingMetaDataService()
-                    .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(this.state.percentAmount/100)));
-            this.toggle();
-        }
-        else {
-            await this.props.coreTradingService.tradingOrdersService().placeVenueMarketOrder('bitstamp',
-               this.state.sourceCurrency + '/' + this.props.currency , 'sell', this.props.coreTradingService.tradingMetaDataService()
-                    .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(this.state.percentAmount/100)));
-            this.toggle();
-        }
-
+        const amount = this.props.coreTradingService.tradingMetaDataService()
+            .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(this.state.percentAmount/100));
+        await this.props.coreTradingService.level1Service().transferFunds('bitstamp',
+            this.state.sourceCurrency, this.props.currency, amount );
+        this.toggle();
     }
 
     onDragEnter = (event) => {

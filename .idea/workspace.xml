@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295e9846-9e17-4980-b557-bf93483a9184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueAssetBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueAssetBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components/VenueBalance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/CoreTradingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/CoreTradingService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/TradingOrdersService.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services/TradingOrdersService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +224,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611945919661" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -229,9 +233,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/components" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/public/resources/icons" />
-      <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-front-end/src/services" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service/public" />
       <recent name="$PROJECT_DIR$/sidewinder-trading/sidewinder-trading-api-service" />
     </key>
@@ -368,7 +372,7 @@
       <workItem from="1621954297316" duration="542000" />
       <workItem from="1621986335315" duration="10125000" />
       <workItem from="1622095413206" duration="8877000" />
-      <workItem from="1622191836579" duration="25711000" />
+      <workItem from="1622191836579" duration="27136000" />
     </task>
     <servers />
   </component>
