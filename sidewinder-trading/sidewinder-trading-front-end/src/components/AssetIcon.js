@@ -1,5 +1,5 @@
 import React from 'react';
-
+import uuid4 from "uuid4/browser.mjs";
 export default class AssetIcon extends React.Component {
     constructor( props ) {
         super(props);
@@ -41,7 +41,7 @@ export default class AssetIcon extends React.Component {
             else if (size === 'small') {
                 height = '22px';
             }
-            return <img style={style} height={height} src={'/resources/icons/128/color/' + ( asset !== null ?  asset.toLowerCase() : '' ) + '.png'} className={classes}/>
+            return <img id={uuid4()} style={style} height={height} src={'/resources/icons/128/color/' + ( asset !== null ?  asset.toLowerCase() : '' ) + '.png'} className={classes}/>
         }
     }
 }
