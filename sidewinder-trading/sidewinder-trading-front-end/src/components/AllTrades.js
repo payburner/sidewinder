@@ -41,7 +41,7 @@ export default class AllTrades extends React.Component {
             .filter((order)=> comp.state.workingOnly? (!(order.status === 'canceled' && order.filled_amount > 0) && order.status !== 'closed') :true)
             .map((order) =>
             // Correct! Key should be specified inside the array.
-            <tr key={order.orderId} onDoubleClick={(e)=>{e.stopPropagation()}}>
+            <tr key={order.orderId} onDoubleClick={(e)=>{e.preventDefault(); e.stopPropagation(); e.nativeEvent.stopImmediatePropagation();}}>
                 <td>
                     <span >{order.status === 'canceled' && order.filled_amount > 0 ? 'closed': order.status}</span>
                 </td>
