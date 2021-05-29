@@ -14,7 +14,7 @@ export default class Level2Component extends React.Component {
 
     sweepOut() {
         if (this.commonValidation()) {
-            alert('sweep out:' + this.state.fiat + ' -> ' + JSON.stringify(this.state.crypto, null, 2));
+            console.log('sweep out:' + this.state.fiat + ' -> ' + JSON.stringify(this.state.crypto, null, 2));
             this.props.coreTradingService.level2Service().sweepOut('bitstamp', this.state.fiat, this.state.crypto )
                 .then((response) => {
                 console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
@@ -24,7 +24,7 @@ export default class Level2Component extends React.Component {
 
     sweepIn() {
         if (this.commonValidation()) {
-         alert('sweep in:' + JSON.stringify(this.state.crypto, null, 2) + ' -> ' + this.state.fiat);
+         console.log('sweep in:' + JSON.stringify(this.state.crypto, null, 2) + ' -> ' + this.state.fiat);
           this.props.coreTradingService.level2Service().sweepIn('bitstamp', this.state.crypto, this.state.fiat )
               .then((response) => {
               console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
