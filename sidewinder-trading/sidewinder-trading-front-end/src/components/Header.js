@@ -16,9 +16,13 @@ export default class Header extends React.Component {
         });
     }
 
-    handleDropDownSelect(e) {
-        console.log('KEY:' + e );
-        this.props.tokenService.removeToken();
+    handleDropDownSelect(item) {
+        if (typeof this.props.menuListener !== 'undefined') {
+            this.props.menuListener( item );
+        }
+        else {
+            console.log('No MenuListener for Header switch:' + item);
+        }
     }
 
     render() {

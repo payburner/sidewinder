@@ -15,8 +15,8 @@ export default class AllTrades extends React.Component {
         this.setState({workingOnly:!this.state.workingOnly})
     }
 
-    cancelOrder( e ) {
-        console.log('CANCEL');
+    cancelOrder( e, orderId ) {
+        console.log('CANCEL: ' + orderId);
         e.preventDefault();
         e.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
@@ -51,7 +51,7 @@ export default class AllTrades extends React.Component {
             // Correct! Key should be specified inside the array.
             <tr key={order.orderId} onDoubleClick={(e)=>comp.cancelOrder(e)}>
                 <td>
-                    <span onClick={(e)=>comp.cancelOrder(order.orderId + '')}>{order.status === 'canceled' && order.filled_amount > 0 ? 'closed': order.status}</span>
+                    <span onClick={(e)=>comp.cancelOrder(e, order.orderId + '')}>{order.status === 'canceled' && order.filled_amount > 0 ? 'closed': order.status}</span>
                 </td>
                 <td>
                     <span >{order.order_type}</span>

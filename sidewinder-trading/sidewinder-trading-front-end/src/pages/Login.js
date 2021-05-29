@@ -27,7 +27,12 @@ export default class Login extends React.Component {
         });
     }
 
-
+    handleHeaderMenuSelection( i ) {
+        console.log('Header Menu Selection: ' + i );
+    }
+    handleSidebarMenuSelection( i ) {
+        console.log('Sidebar Menu Selection: ' + i );
+    }
     render() {
         const comp = this;
 
@@ -39,8 +44,8 @@ export default class Login extends React.Component {
         }
         else {
             return <div id="main-wrapper" className="show">
-                <Header notifierService={this.notifierService} tokenService={comp.props.coreTradingService.tokenService()}/>
-                <Sidebar/>
+                <Header notifierService={this.notifierService} menuListener={(i)=comp.handleHeaderMenuSelection(i)}/>
+                <Sidebar menuListener={(i)=comp.handleSidebarMenuSelection(i)}/>
                 <PageTitle/>
 
                 <div className="content-body">
