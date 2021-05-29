@@ -14,9 +14,16 @@ export default class VenueCurrencyNetValue extends React.Component {
 
     toggle(e) {
         if (typeof this.props.toggleable && this.props.toggleable) {
+            const selected = !this.state.toggled;
             this.setState( {toggled: !this.state.toggled});
             e.preventDefault();
             e.stopPropagation();
+            if (selected && typeof this.props.onSelectAsset !== 'undefined') {
+                this.props.onSelectAsset( this.props.currency );
+            }
+            else if (!selected && typeof this.props.onDeselectAsset !== 'undefined') {
+                this.props.onDeselectAsset(this.props.currency );
+            }
         }
     }
 

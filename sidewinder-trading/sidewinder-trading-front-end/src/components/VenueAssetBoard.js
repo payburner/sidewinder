@@ -27,6 +27,8 @@ export default class VenueAssetBoard extends React.Component {
             .map((balance) => {
             return <VenueCurrencyNetValue toggleable={true} marginRight={'40px'}
                                           coreTradingService={this.props.coreTradingService}
+                                          onSelectAsset={(asset) => typeof this.props.onSelectAsset !== 'undefined' ? this.props.onSelectAsset(asset):(console.log('No on select asset:' + asset))}
+                                          onDeselectAsset={(asset) => typeof this.props.onDeselectAsset !== 'undefined' ? this.props.onDeselectAsset(asset):(console.log('No on deselect asset:' + asset))}
                                           currency={balance.currency}
                                           currencyName={balance.currency}
                                           availableBalance={balance.available}/>
