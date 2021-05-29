@@ -11,7 +11,7 @@ import AllTrades from "../components/AllTrades";
 import VenueNetValue from '../components/VenueNetValue';
 import VenueBalances from "../components/VenueBalances";
 import NotifierService from "../services/NotifierService";
-import VenueCryptoBoard from "../components/VenueCryptoBoard";
+import VenueAssetBoard from "../components/VenueAssetBoard";
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -90,10 +90,15 @@ export default class Login extends React.Component {
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-xl-3 col-lg-4 col-xxl-4">
-                                    <VenueBalances notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
+                                    <VenueAssetBoard notifierService={this.notifierService} title={'Fiat Positions'}
+                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetadataService().assetType(balance.currency) == 'FIAT'}
+                                                   coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                                 <div className="col-xl-9 col-lg-8 col-xxl-8">
-                                    <VenueCryptoBoard notifierService={this.notifierService} coreTradingService={comp.props.coreTradingService}/>
+                                    <VenueAssetBoard
+                                        notifierService={this.notifierService} title={'Crypto Positions'}
+                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetadataService().assetType(balance.currency) == 'CRYPTO'}
+                                                   coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                             </div>
                         </div>

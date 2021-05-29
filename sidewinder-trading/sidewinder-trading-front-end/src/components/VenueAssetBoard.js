@@ -2,7 +2,7 @@ import React from 'react';
 import VenueBalance from "./VenueBalance";
 import uuid4 from "uuid4/browser.mjs";
 import VenueCurrencyNetValue from "./VenueCurrencyNetValue";
-export default class VenueCryptoBoard extends React.Component {
+export default class VenueAssetBoard extends React.Component {
     constructor(props) {
         super(props);
 
@@ -15,10 +15,6 @@ export default class VenueCryptoBoard extends React.Component {
         comp.props.coreTradingService.tradingBalancesService().subscribe(comp.state.id, 'bitstamp', (a)=>comp.setState({balances:a}))
     }
 
-    toggle() {
-       this.setState({openOnly:!this.state.openOnly});
-    }
-
     componentWillUnmount() {
         const comp = this;
         comp.props.coreTradingService.tradingBalancesService().unsubscribe(comp.state.id);
@@ -27,7 +23,7 @@ export default class VenueCryptoBoard extends React.Component {
     render() {
         const comp = this;
         const balances = comp.state.balances
-            .filter((balance)=> comp.state.openOnly?balance.available>0:true)
+            .filter((balance)=> typeof comp.props.filter !== 'undefined' ? comp.props.filter(balance):true)
             .map((balance) => {
             return <VenueCurrencyNetValue toggleable={true} marginRight={'40px'}
                                           coreTradingService={this.props.coreTradingService}
@@ -39,7 +35,7 @@ export default class VenueCryptoBoard extends React.Component {
         });
         return <div className="card ">
             <div className="card-header border-0">
-                <h4 className="card-title">Crypto Positions</h4>
+                <h4 className="card-title">{comp.props.title}</h4>
             </div>
             <div className="card-body pt-0">
                 <div className="balance-widget">
