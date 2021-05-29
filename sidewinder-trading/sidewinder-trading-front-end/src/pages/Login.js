@@ -12,6 +12,8 @@ import VenueNetValue from '../components/VenueNetValue';
 import VenueBalances from "../components/VenueBalances";
 import NotifierService from "../services/NotifierService";
 import VenueAssetBoard from "../components/VenueAssetBoard";
+import VenueCurrencyNetValue from "../components/VenueCurrencyNetValue";
+import {Row} from "react-bootstrap";
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -89,10 +91,15 @@ export default class Login extends React.Component {
                     <div className="content-body">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-xl-3 col-lg-4 col-xxl-4">
+                                <div className="col-xl-2 col-lg-3 col-xxl-3">
                                     <VenueAssetBoard notifierService={this.notifierService} title={'Fiat Positions'}
                                                    filter={(balance)=>balance.currency === 'USD'}
                                                    coreTradingService={comp.props.coreTradingService}/>
+                                </div>
+                                <div className="col-xl-1 col-lg-1 col-xxl-1">
+                                <i onClick={(e)=>alert('hi')} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
+                                    <i onClick={(e)=>alert('hi')} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-left currency-icon-large execute-button'}/>
+
                                 </div>
                                 <div className="col-xl-9 col-lg-8 col-xxl-8">
                                     <VenueAssetBoard

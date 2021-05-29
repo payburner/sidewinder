@@ -22,7 +22,7 @@ export default class VenueCurrencyNetValue extends React.Component {
 
     render() {
         const comp = this;
-        const style = {float: 'left', minWidth: '120px', maxWidth: '120px', padding: '20px 20px 20px 20px'};
+        const style = {float: 'left', minWidth: '160px', maxWidth: '160px', padding: '20px 20px 20px 20px'};
         if (typeof comp.props.toggleable !== 'undefined' && comp.props.toggleable && comp.state.toggled) {
             style.opacity = '.60';
             style.backgroundColor = 'grey';
