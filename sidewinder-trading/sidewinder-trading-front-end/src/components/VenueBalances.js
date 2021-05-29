@@ -4,7 +4,7 @@ export default class VenueBalances extends React.Component {
     constructor(props) {
         super(props);
         this.pollingInterval = null;
-        this.state = { balances: [] }
+        this.state = { balances: [], openOnly: false }
     }
 
     componentDidMount() {
@@ -21,6 +21,10 @@ export default class VenueBalances extends React.Component {
         }, 100);
     }
 
+    toggle() {
+       this.setState({openOnly:!this.state.openOnly});
+    }
+
     componentWillUnmount() {
         if (this.pollingInterval !== null) {
             clearInterval(this.pollingInterval);
@@ -29,7 +33,9 @@ export default class VenueBalances extends React.Component {
 
     render() {
         const comp = this;
-        const balances = comp.state.balances.map((balance) => {
+        const balances = comp.state.balances
+            .filter((balance)=> comp.state.openOnly?balance.available>0:true)
+            .map((balance) => {
             return <VenueBalance notifierService={this.props.notifierService} key={'bitstamp/' + balance.currency}
                                  coreTradingService={comp.props.coreTradingService}
                                  currency={balance.currency} currencyName={balance.currency}
@@ -48,7 +54,7 @@ export default class VenueBalances extends React.Component {
                 <div className="balance-widget">
                     {comp.state.balances.length === 0 ? (
                         <i className={'fa fa-spinner'}/>
-                    ) : (<ul className="list-unstyled" style={{marginTop: '12px'}}>
+                    ) : (<ul onClick={() => comp.toggle()} className="list-unstyled" style={{marginTop: '12px'}}>
                         {balances}
                     </ul>)}
 
