@@ -44,8 +44,8 @@ export default class Login extends React.Component {
         }
         else {
             return <div id="main-wrapper" className="show">
-                <Header notifierService={this.notifierService} menuListener={(i)=comp.handleHeaderMenuSelection(i)}/>
-                <Sidebar menuListener={(i)=comp.handleSidebarMenuSelection(i)}/>
+                <Header notifierService={this.notifierService} menuListener={(e)=comp.handleHeaderMenuSelection(e)}/>
+                <Sidebar menuListener={(e)=comp.handleSidebarMenuSelection(e)}/>
                 <PageTitle/>
 
                 <div className="content-body">
