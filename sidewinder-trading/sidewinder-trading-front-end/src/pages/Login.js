@@ -91,13 +91,13 @@ export default class Login extends React.Component {
                             <div className="row">
                                 <div className="col-xl-3 col-lg-4 col-xxl-4">
                                     <VenueAssetBoard notifierService={this.notifierService} title={'Fiat Positions'}
-                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetadataService().assetType(balance.currency) == 'FIAT'}
+                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetaDataService().assetType(balance.currency) == 'FIAT'}
                                                    coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                                 <div className="col-xl-9 col-lg-8 col-xxl-8">
                                     <VenueAssetBoard
                                         notifierService={this.notifierService} title={'Crypto Positions'}
-                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetadataService().assetType(balance.currency) == 'CRYPTO'}
+                                                   filter={(balance)=>comp.props.coreTradingService.tradingMetaDataService().assetType(balance.currency) == 'CRYPTO'}
                                                    coreTradingService={comp.props.coreTradingService}/>
                                 </div>
                             </div>
