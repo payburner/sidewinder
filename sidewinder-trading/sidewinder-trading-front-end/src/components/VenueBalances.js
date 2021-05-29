@@ -19,6 +19,7 @@ export default class VenueBalances extends React.Component {
     }
 
     componentWillUnmount() {
+        const comp = this;
         comp.props.coreTradingService.tradingBalancesService().unsubscribe(comp.state.id);
     }
 

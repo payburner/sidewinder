@@ -4,17 +4,23 @@ export default class TradingBalancesService {
     constructor( tokenService ) {
         this.tokenService = tokenService;
         const comp = this;
+        this.cache = {
+
+        }
         this.interval = setInterval(async () => {
            const balancesResponse = await comp.getVenueBalances('bitstamp');
             comp.broadcast('bitstamp', balancesResponse.data.accounts);
+            comp.cache['bitstamp'] = balancesResponse.data.accounts;
         }, 5000);
         setTimeout(async () => {
             const balancesResponse = await comp.getVenueBalances('bitstamp');
             comp.broadcast('bitstamp', balancesResponse.data.accounts);
+            comp.cache['bitstamp'] = balancesResponse.data.accounts;
         }, 100);
         this.subscriptions = {
 
         }
+
     }
 
     subscribe( id, venueId, listener ) {
@@ -22,10 +28,15 @@ export default class TradingBalancesService {
             id:id,
             venueId:venueId,listener:listener
         }
+        if (typeof this.cache[venueId] !== 'undefined' && this.cache[venueId] !== null) {
+            listener(this.cache[venueId]);
+        }
+        console.log('subscribed id:' + id + ', venueId:' + venueId );
     }
 
     unsubscribe( id ) {
         delete this.subscriptions[id];
+        console.log('unsubscribed id:' + id );
     }
 
     broadcast( venueId, accounts ) {
