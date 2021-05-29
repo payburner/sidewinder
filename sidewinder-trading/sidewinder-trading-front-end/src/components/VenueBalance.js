@@ -126,7 +126,7 @@ modal: !this.state.modal
                 <ModalBody style={{backgroundColor:'rgb(58, 51, 97)',   filter: 'alpha(opacity=85)',
                     opacity: '0.90', height: '325px'}} >
                     <Row style={{paddingLeft: '36px'}}>
-                        <VenueCurrencyNetValue coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
+                        <VenueCurrencyNetValue toggleable={true} coreTradingService={this.props.coreTradingService} currency={this.state.sourceCurrency}
                                                currencyName={this.state.sourceCurrency} availableBalance={this.props.coreTradingService.tradingMetaDataService()
                             .scaleAmount('bitstamp', this.state.sourceCurrency, this.state.availableBalance*(comp.state.percentAmount/100))}/>
                         <i onClick={(e)=>comp.placeInstantOrder()} style={{float: 'left', padding: '80px 30px 80px 30px', fontSize: '40px'}} className={'fa fa-arrow-right currency-icon-large execute-button'}/>
