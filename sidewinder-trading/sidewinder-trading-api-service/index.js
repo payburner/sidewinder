@@ -37,7 +37,7 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
 app.get('/venues/:venueId/level2/sweepin/instance', function(req, res, next) {
 
     axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepin&active=true',
-        data, {
+         {
             // Axios looks for the `auth` option, and, if it is set, formats a
             // basic auth header for you automatically.
             auth: {
@@ -59,7 +59,7 @@ app.get('/venues/:venueId/level2/sweepin/instance', function(req, res, next) {
 app.get('/venues/:venueId/level2/sweepout/instance', function(req, res, next) {
 
     axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepout&active=true',
-        data, {
+         {
             // Axios looks for the `auth` option, and, if it is set, formats a
             // basic auth header for you automatically.
             auth: {
