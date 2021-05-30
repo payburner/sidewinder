@@ -3,6 +3,7 @@ import VenueBalance from "./VenueBalance";
 import uuid4 from "uuid4/browser.mjs";
 import VenueAssetBoard from "./VenueAssetBoard";
 import AllTrades from "./AllTrades";
+import {Button} from "react-bootstrap";
 export default class Level2Component extends React.Component {
     constructor(props) {
         super(props);
@@ -66,12 +67,26 @@ export default class Level2Component extends React.Component {
 
     }
 
+    checkSweep() {
+        this.props.coreTradingService.level2Service().sweepOutInstances('bitstamp' )
+            .then((response) => {
+                console.log('Sweep Out Result:' + JSON.stringify(response, null, 2));
+            });
+        this.props.coreTradingService.level2Service().sweepInInstances('bitstamp' )
+            .then((response) => {
+                console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
+            });
+    }
+
     render() {
         const comp = this;
 
         return <div className="container-fluid">
             <div className="row">
                 <div className="col-xl-2 col-lg-3 col-xxl-3">
+
+                    <Button onClick={ (e) => comp.checkSweep()}>Check</Button>
+
                     <VenueAssetBoard notifierService={comp.props.notifierService}
                                      title={'Fiat Positions'}
                                      onSelectAsset={(asset) => this.selectFiat(asset)}

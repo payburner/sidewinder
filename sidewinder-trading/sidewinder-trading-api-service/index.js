@@ -34,6 +34,50 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
     });
 });
 
+app.get('/venues/:venueId/level2/sweepin/instance', function(req, res, next) {
+
+    axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepin&active=true',
+        data, {
+            // Axios looks for the `auth` option, and, if it is set, formats a
+            // basic auth header for you automatically.
+            auth: {
+                username: pConfig.CAMUNDA_USER,
+                password: pConfig.CAMUNDA_PASSWORD
+            }
+        })
+        .then((response) => {
+            const data = response.data;
+            console.log('GET RESPONSE:' + JSON.stringify(data, null, 2));
+            res.status(200).send( {status:200, data: data});
+    }).catch((error) => {
+        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
+        res.status(400).send({status:400,error:error});
+    });
+
+});
+
+app.get('/venues/:venueId/level2/sweepout/instance', function(req, res, next) {
+
+    axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepout&active=true',
+        data, {
+            // Axios looks for the `auth` option, and, if it is set, formats a
+            // basic auth header for you automatically.
+            auth: {
+                username: pConfig.CAMUNDA_USER,
+                password: pConfig.CAMUNDA_PASSWORD
+            }
+        })
+        .then((response) => {
+            const data = response.data;
+            console.log('GET RESPONSE:' + JSON.stringify(data, null, 2));
+            res.status(200).send( {status:200, data: data})
+        }).catch((error) => {
+        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
+        res.status(400).send({status:400,error:error});
+    })
+
+});
+
 app.post('/venues/:venueId/level2/sweepout', function(req, res, next) {
     const body = req.body;
     const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
@@ -60,7 +104,9 @@ app.post('/venues/:venueId/level2/sweepout', function(req, res, next) {
         .then((response) => {
             const data = response.data;
             console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200})
+            res.status(200).send( {status:200, data: {
+                    process_instance_id: data.id
+                }})
         }).catch((error) => {
         console.log('POST ERROR:' + JSON.stringify(error, null, 2));
         res.status(400).send({status:400,error:error});
@@ -94,7 +140,9 @@ app.post('/venues/:venueId/level2/sweepin', function(req, res, next) {
         .then((response) => {
             const data = response.data;
             console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200})
+            res.status(200).send( {status:200, data: {
+                process_instance_id: data.id
+                }})
         }).catch((error) => {
         console.log('POST ERROR:' + JSON.stringify(error, null, 2));
         res.status(400).send({status:400,error:error});
@@ -129,7 +177,9 @@ app.post('/venues/:venueId/orders/marketorder', function(req, res, next) {
         .then((response) => {
             const data = response.data;
             console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200})
+            res.status(200).send( {status:200, data: {
+                    process_instance_id: data.id
+                }})
         }).catch((error) => {
         console.log('POST ERROR:' + JSON.stringify(error, null, 2));
         res.status(400).send({status:400,error:error});
@@ -164,7 +214,9 @@ app.post('/venues/:venueId/orders/instantorder', function(req, res, next) {
         .then((response) => {
             const data = response.data;
             console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200})
+            res.status(200).send( {status:200, data: {
+                    process_instance_id: data.id
+                }})
     }).catch((error) => {
         console.log('POST ERROR:' + JSON.stringify(error, null, 2));
         res.status(400).send({status:400,error:error});
