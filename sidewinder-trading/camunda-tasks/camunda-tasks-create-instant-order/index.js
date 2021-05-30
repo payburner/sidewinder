@@ -103,28 +103,27 @@ client.subscribe("CreateInstantOrder", async function ({task, taskService}) {
         amount: amount,
         symbol: symbol
     });
-    console.log('CCXTInstantOrder response:' + JSON.stringify(pushInstantOrderResponse, null, 2));
+    console.log(order.orderId + ' -- CCXTInstantOrder response:' + JSON.stringify(pushInstantOrderResponse));
 
     const orderResponse = pushInstantOrderResponse.data.task;
     if (orderResponse.task_status === 'FAILED') {
+        console.log(order.orderId + ' -- task status is failed');
         try {
             // Create some variables
             const variables = new Variables().set('date', new Date());
             const reason = JSON.stringify(orderResponse.response_payload.error);
             // Handle a BPMN Failure
             const saveOrderResponse = await p.updateOrderStatus( orderId, "submit_failed", reason);
-            console.log('Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
+            console.log(order.orderId + ' -- Updated Failed Order Response:' + JSON.stringify(saveOrderResponse, null, 2));
             await taskService.handleBpmnError(task, "submit_failed", reason, variables);
-            console.log('ERROR');
+            console.log(order.orderId + ' -- BpmnError Forwarded');
             return;
         }
         catch(error) {
-            console.log('ERROR');
-            console.log('error:' + error);
+            console.log(order.orderId + ' -- FAILED to updated BPMN Error -- ' + error);
             console.log(error);
-
             await taskService.handleBpmnError(task, "submit_failed", JSON.stringify(error), new Variables());
-
+            return;
         }
 
     }

@@ -164,15 +164,18 @@ class SidewinderOmsPersistenceService {
                 ":orderId": orderId
             }
         };
+        console.log(orderId + ' -- params -- ' + JSON.stringify(params));
         return new Promise((resolve) => {
             const t0 = new Date().getTime();
             comp.docClient.query(params, function (err, data) {
-                console.log('Query Time Get Order: ' + (new Date().getTime() - t0))
+                console.log(orderId + ' -- Query Time Get Order: ' + (new Date().getTime() - t0))
                 if (err) {
+                    console.log(orderId + ' -- query error -- ' + err);
                     return {
                         status: 404, error: 'The order was not found'
                     }
                 } else {
+                    console.log(orderId + ' -- items length -- ' + data.Items.length);
                     if (data.Items.length >= 0) {
                         resolve({
                             status: 200,
@@ -181,6 +184,7 @@ class SidewinderOmsPersistenceService {
                             }
                         })
                     } else {
+                        console.log(orderId + ' -- no items returned in query');
                         resolve({
                             status: 404, error: 'The order was not found'
                         });
@@ -218,10 +222,29 @@ class SidewinderOmsPersistenceService {
 
     updateOrderStatus(orderId, status, status_reason) {
         const comp = this;
-        return new Promise(async (resolve) => {
+        console.log(orderId + ' -- updating order status -- status: ' + status + ', status_reason: ' + status_reason);
+        return new Promise(async (resolve, reject) => {
             // Call DynamoDB to add the item to the table
 
-            const order = await comp.getOrder(orderId).data.order;
+            let getOrderResponse = await comp.getOrder(orderId);
+            console.log(orderId + ' -- first get order response status: ' + getOrderResponse.status);
+
+            let count = 0;
+            while( getOrderResponse.status !== 200 && count < 10) {
+                count++;
+                getOrderResponse = await comp.getOrder(orderId);
+                console.log(orderId + ' -- ' + count + ' get order response status: ' + getOrderResponse.status);
+            }
+            if (getOrderResponse.status !== 200) {
+                console.log(orderId + ' -- get order response failed: ' + getOrderResponse.status);
+                reject({status: 500, error: 'Could not fetch original order'});
+                return;
+            }
+
+            console.log(orderId + ' -- get order response: ' + JSON.stringify(getOrderResponse, null, 2));
+
+
+            const order = getOrderResponse.data.order;
             const account_owner_address_exchange_status = order.account_owner_address + '/' + order.exchange + '/' + status;
             const account_owner_address_exchange_symbol_status = order.account_owner_address + '/' + order.exchange + '/' + order.symbol + '/' + status;
 
