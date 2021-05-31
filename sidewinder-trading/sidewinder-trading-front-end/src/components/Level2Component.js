@@ -1,7 +1,7 @@
 import React from 'react';
 import VenueAssetBoard from "./VenueAssetBoard";
 import AllTrades from "./AllTrades";
-import {Button} from "react-bootstrap";
+import {Button, ProgressBar} from "react-bootstrap";
 export default class Level2Component extends React.Component {
     constructor(props) {
         super(props);
@@ -30,7 +30,7 @@ export default class Level2Component extends React.Component {
                         comp.setState({level2Active: true});
                         comp.startPolling();
                     }
-                    
+
                 console.log('Sweep Out Result:' + JSON.stringify(response, null, 2));
 
             });
@@ -153,7 +153,7 @@ export default class Level2Component extends React.Component {
             </div>) : (<div className="row">
                 <div className="col-xl-12 col-lg-12 col-xxl-12">
 
-                     Level 2 Gesture is Working
+                    <ProgressBar style={{width: '100%'}} animated striped variant="success" now={100} />
                 </div>
 
             </div>)}
