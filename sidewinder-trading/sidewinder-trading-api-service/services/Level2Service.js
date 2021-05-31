@@ -1,15 +1,13 @@
 const uuid4 = require('uuid4');
 
-export default class Level2Service {
-    constructor( pConfig ) {
+function Level2Service( pConfig ) {
         this.pConfig = pConfig;
-    }
 
-    getProcessDefinitionKeys() {
+    this.getProcessDefinitionKeys = function() {
         return [ 'sweepout', 'sweepin' ];
     }
 
-    getInputVariables( target_address, process_definition_key, body ) {
+    this.getInputVariables = function( target_address, process_definition_key, body ) {
         if (process_definition_key === 'sweepout') {
             return {
                 variables: {
@@ -38,3 +36,5 @@ export default class Level2Service {
     }
 
 }
+
+exports.Level2Service = Level2Service;

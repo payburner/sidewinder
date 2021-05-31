@@ -7,7 +7,7 @@ const uuid4 = require('uuid4');
 const express = require('express');
 const http = require('http');
 const axios = require('axios');
-const Level2Service = require('./services/Level2Service');
+const {Level2Service} = require('./services/Level2Service');
 const app = express();
 const bodyParser = require('body-parser');
 const pConfig = JSON.parse(fs.readFileSync(process.argv[2]).toString());
@@ -76,7 +76,7 @@ app.get('/venues/:venueId/level2/instance', function(req, res, next) {
 
     Promise.all(promises).then((values) => {
         const all = [];
-        console.log('Values:' + JSON.stringify(values, null, 2));
+        console.log('Values:' + values.length);
         values.map((response) => response.data ).forEach((data) => {
             console.log('DATA:' + JSON.stringify(data, null, 2));
             data.forEach((v)=>all.push(v));
