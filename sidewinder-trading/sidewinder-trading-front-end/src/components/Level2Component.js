@@ -27,8 +27,10 @@ export default class Level2Component extends React.Component {
             this.props.coreTradingService.level2Service().sweepOut('bitstamp', this.state.fiat, this.state.crypto )
                 .then((response) => {
                     if (response.status === 200) {
-                        comp.setState({level2Active: true})
+                        comp.setState({level2Active: true});
+                        comp.startPolling();
                     }
+                    
                 console.log('Sweep Out Result:' + JSON.stringify(response, null, 2));
 
             });
@@ -42,7 +44,8 @@ export default class Level2Component extends React.Component {
           this.props.coreTradingService.level2Service().sweepIn('bitstamp', this.state.crypto, this.state.fiat )
               .then((response) => {
                   if (response.status === 200) {
-                      comp.setState({level2Active: true})
+                      comp.setState({level2Active: true});
+                      comp.startPolling();
                   }
               console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
           });
