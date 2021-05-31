@@ -107,7 +107,7 @@ export default class Level2Component extends React.Component {
         const comp = this;
 
         return <div className="container-fluid">
-            {comp.state.level2Active ? (<div className="row">
+            {!comp.state.level2Active ? (<div className="row">
                 <div className="col-xl-2 col-lg-3 col-xxl-3">
 
                     <VenueAssetBoard notifierService={comp.props.notifierService}
@@ -150,7 +150,7 @@ export default class Level2Component extends React.Component {
             </div>) : (<div className="row">
                 <div className="col-xl-12 col-lg-12 col-xxl-12">
 
-                     Level 2 Gesture is Working 
+                     Level 2 Gesture is Working
                 </div>
 
             </div>)}
