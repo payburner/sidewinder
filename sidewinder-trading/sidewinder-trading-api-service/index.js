@@ -7,10 +7,11 @@ const uuid4 = require('uuid4');
 const express = require('express');
 const http = require('http');
 const axios = require('axios');
+const Level2Service = require('./services/Level2Service');
 const app = express();
 const bodyParser = require('body-parser');
 const pConfig = JSON.parse(fs.readFileSync(process.argv[2]).toString());
-
+const level2Service = new Level2Service(pConfig);
 const basicAuthentication = new BasicAuthInterceptor({
     username: pConfig.CAMUNDA_USER,
     password: pConfig.CAMUNDA_PASSWORD
@@ -34,31 +35,10 @@ app.get('/venues/:venueId/orders', function(req, res, next) {
     });
 });
 
-app.get('/venues/:venueId/level2/sweepin/instance', function(req, res, next) {
+app.get('/venues/:venueId/level2/:processDefinitionKey/instance', function(req, res, next) {
 
-    axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepin&active=true',
-         {
-            // Axios looks for the `auth` option, and, if it is set, formats a
-            // basic auth header for you automatically.
-            auth: {
-                username: pConfig.CAMUNDA_USER,
-                password: pConfig.CAMUNDA_PASSWORD
-            }
-        })
-        .then((response) => {
-            const data = response.data;
-            console.log('GET RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200, data: data});
-    }).catch((error) => {
-        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
-        res.status(400).send({status:400,error:error});
-    });
-
-});
-
-app.get('/venues/:venueId/level2/sweepout/instance', function(req, res, next) {
-
-    axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey=sweepout&active=true',
+    axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey='
+        + req.params.processDefinitionKey + '&active=true',
          {
             // Axios looks for the `auth` option, and, if it is set, formats a
             // basic auth header for you automatically.
@@ -78,21 +58,42 @@ app.get('/venues/:venueId/level2/sweepout/instance', function(req, res, next) {
 
 });
 
-app.post('/venues/:venueId/level2/sweepout', function(req, res, next) {
-    const body = req.body;
+app.get('/venues/:venueId/level2/instance', function(req, res, next) {
+
+    const level2Keys = level2Service.getProcessDefinitionKeys();
+    const promises = level2Keys.map((k) => {
+        return axios.get('https://oms.payburner.com/engine-rest/process-instance?processDefinitionKey='
+            + k + '&active=true',
+            {
+                // Axios looks for the `auth` option, and, if it is set, formats a
+                // basic auth header for you automatically.
+                auth: {
+                    username: pConfig.CAMUNDA_USER,
+                    password: pConfig.CAMUNDA_PASSWORD
+                }
+            });
+    });
+
+    Promise.all(promises).then((values) => {
+        const all = [];
+        console.log('Values:' + JSON.stringify(values, null, 2));
+        values.map((response) => response.data ).forEach((data) => {
+            console.log('DATA:' + JSON.stringify(data, null, 2));
+            data.forEach((v)=>all.push(v));
+        });
+        console.log('ALL:' + JSON.stringify(all, null, 2));
+        res.status(200).send( {status:200, data: all})
+    })
+
+});
+
+app.post('/venues/:venueId/level2/:processDefinitionKey', function(req, res, next) {
+
     const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
 
-    const data = {
-        variables : {
-            target_address: {value: target_address, type : "string"},
-            source_currency: {value: req.body.source_currency, type : "string"},
-            target_currencies: {value: req.body.target_currencies, type : "string"},
-            exchange: {value: req.body.exchange, type : "string"},
-        },
-        businessKey : target_address + '-marketorder-' + req.body.exchange + '-' + uuid4()
-    }
+    const data = level2Service.getInputVariables(target_address, req.params.processDefinitionKey, req.body );
 
-    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/sweepout/start',
+    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/' + req.params.processDefinitionKey + '/start',
         data, {
             // Axios looks for the `auth` option, and, if it is set, formats a
             // basic auth header for you automatically.
@@ -106,42 +107,6 @@ app.post('/venues/:venueId/level2/sweepout', function(req, res, next) {
             console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
             res.status(200).send( {status:200, data: {
                     process_instance_id: data.id
-                }})
-        }).catch((error) => {
-        console.log('POST ERROR:' + JSON.stringify(error, null, 2));
-        res.status(400).send({status:400,error:error});
-    })
-
-});
-
-app.post('/venues/:venueId/level2/sweepin', function(req, res, next) {
-    const body = req.body;
-    const target_address = 'rDDUyP2jvURCnc1PuqF4kvdYAWjzuAaDcH';
-
-    const data = {
-        variables : {
-            target_address: {value: target_address, type : "string"},
-            source_currencies: {value: req.body.source_currencies, type : "string"},
-            target_currency: {value: req.body.target_currency, type : "string"},
-            exchange: {value: req.body.exchange, type : "string"},
-        },
-        businessKey : target_address + '-sweepin-' + req.body.exchange + '-' + uuid4()
-    }
-
-    axios.post('https://oms.payburner.com/engine-rest/process-definition/key/sweepin/start',
-        data, {
-            // Axios looks for the `auth` option, and, if it is set, formats a
-            // basic auth header for you automatically.
-            auth: {
-                username: pConfig.CAMUNDA_USER,
-                password: pConfig.CAMUNDA_PASSWORD
-            }
-        })
-        .then((response) => {
-            const data = response.data;
-            console.log('POST RESPONSE:' + JSON.stringify(data, null, 2));
-            res.status(200).send( {status:200, data: {
-                process_instance_id: data.id
                 }})
         }).catch((error) => {
         console.log('POST ERROR:' + JSON.stringify(error, null, 2));

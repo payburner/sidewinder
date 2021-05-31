@@ -6,14 +6,14 @@ export default class Level2Service {
         this.tradingMetaDataService = tradingMetaDataService;
     }
 
-    sweepOutInstances = function ( venueId ) {
+    instances = function ( venueId ) {
         const comp = this;
         return new Promise(async (resolve) => {
             try {
 
 
                 const result = await axios.get(
-                    'https://trading-api.payburner.com/venues/' + venueId + '/level2/sweepout/instance',
+                    'https://trading-api.payburner.com/venues/' + venueId + '/level2/instance',
                     {
                         headers: {
                             'Authorization' : 'Bearer ' + comp.tokenService.getToken(),
@@ -23,31 +23,7 @@ export default class Level2Service {
                 resolve(data);
             } catch (error) {
                 console.log(
-                    'Sweep Out Instances ERROR:' + JSON.stringify(error.response.data, null,
-                    2) + ' ' + ('https://trading-api.payburner.com/venues/' + venueId + '/orders'));
-                resolve(error.response.data);
-            }
-        });
-    }
-
-    sweepInInstances = function ( venueId ) {
-        const comp = this;
-        return new Promise(async (resolve) => {
-            try {
-
-
-                const result = await axios.get(
-                    'https://trading-api.payburner.com/venues/' + venueId + '/level2/sweepin/instance',
-                    {
-                        headers: {
-                            'Authorization' : 'Bearer ' + comp.tokenService.getToken(),
-                            'Content-Type': 'application/json'}
-                    });
-                let data = result.data;
-                resolve(data);
-            } catch (error) {
-                console.log(
-                    'Sweep In Instances ERROR:' + JSON.stringify(error.response.data, null,
+                    'Level2 Instances ERROR:' + JSON.stringify(error.response.data, null,
                     2) + ' ' + ('https://trading-api.payburner.com/venues/' + venueId + '/orders'));
                 resolve(error.response.data);
             }

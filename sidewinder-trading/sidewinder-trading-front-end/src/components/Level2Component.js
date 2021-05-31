@@ -68,14 +68,11 @@ export default class Level2Component extends React.Component {
     }
 
     checkSweep() {
-        this.props.coreTradingService.level2Service().sweepOutInstances('bitstamp' )
+        this.props.coreTradingService.level2Service().instances('bitstamp' )
             .then((response) => {
-                console.log('Sweep Out Result:' + JSON.stringify(response, null, 2));
+                console.log('Level 2 Instances Result:' + JSON.stringify(response, null, 2));
             });
-        this.props.coreTradingService.level2Service().sweepInInstances('bitstamp' )
-            .then((response) => {
-                console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
-            });
+
     }
 
     render() {
