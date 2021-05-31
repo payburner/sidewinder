@@ -1,6 +1,4 @@
 import React from 'react';
-import VenueBalance from "./VenueBalance";
-import uuid4 from "uuid4/browser.mjs";
 import VenueAssetBoard from "./VenueAssetBoard";
 import AllTrades from "./AllTrades";
 import {Button} from "react-bootstrap";
@@ -9,38 +7,63 @@ export default class Level2Component extends React.Component {
         super(props);
         this.state = {
             fiat: null,
-            crypto: []
+            crypto: [],
+            level2Active: false,
         }
+        this.interval = null;
+    }
+
+    startPolling() {
+        const comp = this;
+      this.interval = setInterval(()=> {
+          comp.checkSweep();
+      }, 5000);
     }
 
     sweepOut() {
+        const comp = this;
         if (this.commonValidation()) {
             console.log('sweep out:' + this.state.fiat + ' -> ' + JSON.stringify(this.state.crypto, null, 2));
             this.props.coreTradingService.level2Service().sweepOut('bitstamp', this.state.fiat, this.state.crypto )
                 .then((response) => {
-                console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
+                    if (response.status === 200) {
+                        comp.setState({level2Active: true})
+                    }
+                console.log('Sweep Out Result:' + JSON.stringify(response, null, 2));
+
             });
         }
     }
 
     sweepIn() {
+        const comp = this;
         if (this.commonValidation()) {
          console.log('sweep in:' + JSON.stringify(this.state.crypto, null, 2) + ' -> ' + this.state.fiat);
           this.props.coreTradingService.level2Service().sweepIn('bitstamp', this.state.crypto, this.state.fiat )
               .then((response) => {
+                  if (response.status === 200) {
+                      comp.setState({level2Active: true})
+                  }
               console.log('Sweep In Result:' + JSON.stringify(response, null, 2));
           });
         }
     }
 
     commonValidation() {
-        if (this.state.fiat === null) {
+        if (this.state.level2Active) {
+            this.props.notifierService.notify('There is a level2 gesture in progress.  Please wait...');
+        }
+        else if (this.state.fiat === null) {
             this.props.notifierService.notify('Please select a fiat currency');
             return false;
         }
         else if (this.state.crypto.length === 0) {
             this.props.notifierService.notify('Please select at least one crypto currency');
             return false
+        }
+        if (this.interval !== null) {
+            clearInterval(this.interval);
+            this.interval = null;
         }
         return true;
     }
@@ -68,21 +91,24 @@ export default class Level2Component extends React.Component {
     }
 
     checkSweep() {
+        const comp = this;
         this.props.coreTradingService.level2Service().instances('bitstamp' )
             .then((response) => {
                 console.log('Level 2 Instances Result:' + JSON.stringify(response, null, 2));
+                comp.setState({level2Active:response.status === 200 && response.data.length > 0});
+                if (!(response.status === 200 && response.data.length > 0) && comp.interval !== null) {
+                    clearInterval(comp.interval);
+                    comp.interval = null;
+                }
             });
-
     }
 
     render() {
         const comp = this;
 
         return <div className="container-fluid">
-            <div className="row">
+            {comp.state.level2Active ? (<div className="row">
                 <div className="col-xl-2 col-lg-3 col-xxl-3">
-
-                    <Button onClick={ (e) => comp.checkSweep()}>Check</Button>
 
                     <VenueAssetBoard notifierService={comp.props.notifierService}
                                      title={'Fiat Positions'}
@@ -121,7 +147,14 @@ export default class Level2Component extends React.Component {
                         filter={(balance) => comp.props.coreTradingService.tradingMetaDataService().assetType(balance.currency) === 'CRYPTO'}
                         coreTradingService={comp.props.coreTradingService}/>
                 </div>
-            </div>
+            </div>) : (<div className="row">
+                <div className="col-xl-12 col-lg-12 col-xxl-12">
+
+                     Level 2 Gesture is Working 
+                </div>
+
+            </div>)}
+
             <div className="row">
                 <AllTrades coreTradingService={comp.props.coreTradingService}/>
             </div>
